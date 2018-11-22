@@ -1,0 +1,27 @@
+/*********            画像            *********/
+img.bongo--img-fit{
+	border: none;
+	max-width: 100%;
+	height: auto;
+}
+.bongo--icon{
+	display: block;
+	height: 100%;
+	overflow: hidden; text-indent: 100%; white-space: nowrap;
+	background-size: contain;
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+.bongo--icon:hover{
+	opacity: 0.70;
+}
+.bongo--cursor-pointer{
+	cursor: pointer;
+}
+.bongo--img-hover-action{
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+.bongo--img-hover-action:hover{
+	opacity: 0.70;
+}
