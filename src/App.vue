@@ -60,7 +60,9 @@
 
   
       <v-toolbar app fixed class="white pt-4 pb-2"> 
-        <v-toolbar-title><img src="/lib/img/logo/ishuri_logo.svg"></v-toolbar-title>
+        <v-toolbar-title>
+          <h1> <router-link to="/"> 
+        <img src="/lib/img/logo/ishuri_logo.svg">  </router-link> </h1> </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn  flat large color="primary"  > 

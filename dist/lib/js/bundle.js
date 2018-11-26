@@ -147,6 +147,115 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -215,7 +324,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(23);
+var	fixUrls = __webpack_require__(25);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -552,7 +661,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -579,7 +688,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
@@ -11530,122 +11639,15 @@ return Vue;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(8).setImmediate))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file.
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier /* server only */
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = injectStyles
-  }
-
-  if (hook) {
-    var functional = options.functional
-    var existing = functional
-      ? options.render
-      : options.beforeCreate
-
-    if (!functional) {
-      // inject component registration as beforeCreate hook
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    } else {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return existing(h, context)
-      }
-    }
-  }
-
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(8).setImmediate))
 
 /***/ }),
 /* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
 //
 //
 //
@@ -12003,6 +12005,13 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -12028,7 +12037,7 @@ module.exports = function normalizeComponent (
 "use strict";
 
 
-var _vue = __webpack_require__(3);
+var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
@@ -12048,13 +12057,21 @@ var _home = __webpack_require__(19);
 
 var _home2 = _interopRequireDefault(_home);
 
-__webpack_require__(21);
+var _search = __webpack_require__(21);
 
-__webpack_require__(24);
+var _search2 = _interopRequireDefault(_search);
+
+var _school_details = __webpack_require__(22);
+
+var _school_details2 = _interopRequireDefault(_school_details);
+
+__webpack_require__(23);
 
 __webpack_require__(26);
 
 __webpack_require__(28);
+
+__webpack_require__(30);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12081,6 +12098,16 @@ var router = new _vueRouter2.default({
 		path: '/',
 		name: 'home',
 		component: _home2.default
+	}, {
+		path: '/search',
+		name: 'search',
+		component: _search2.default
+
+	}, {
+		path: '/school_details',
+		name: 'school_details',
+		component: _school_details2.default
+
 	}],
 	scrollBehavior: function scrollBehavior(to, from, savedPosition) {
 		return { x: 0, y: 0 };
@@ -12164,7 +12191,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 9 */
@@ -12357,7 +12384,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(10)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(10)))
 
 /***/ }),
 /* 10 */
@@ -12555,7 +12582,7 @@ process.umask = function() { return 0; };
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(true)
-		module.exports = factory(__webpack_require__(3));
+		module.exports = factory(__webpack_require__(4));
 	else if(typeof define === 'function' && define.amd)
 		define(["vue"], factory);
 	else if(typeof exports === 'object')
@@ -36421,7 +36448,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(14)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 
@@ -36499,7 +36526,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AA+GA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-3>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University-Higher Learning</v-list-tile-title>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white pt-4 pb-2\"> \r\n        <v-toolbar-title><img src=\"/lib/img/logo/ishuri_logo.svg\"></v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Blog',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAiHA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-3>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University-Higher Learning</v-list-tile-title>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white pt-4 pb-2\"> \r\n        <v-toolbar-title>\r\n          <h1> <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Blog',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -36908,7 +36935,15 @@ var render = function() {
         { staticClass: "white pt-4 pb-2", attrs: { app: "", fixed: "" } },
         [
           _c("v-toolbar-title", [
-            _c("img", { attrs: { src: "/lib/img/logo/ishuri_logo.svg" } })
+            _c(
+              "h1",
+              [
+                _c("router-link", { attrs: { to: "/" } }, [
+                  _c("img", { attrs: { src: "/lib/img/logo/ishuri_logo.svg" } })
+                ])
+              ],
+              1
+            )
           ]),
           _vm._v(" "),
           _c("v-spacer"),
@@ -37008,7 +37043,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1fa66eb8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__ = __webpack_require__(20);
 var disposed = false
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(1)
 /* script */
 
 
@@ -37065,121 +37100,86 @@ var render = function() {
     [
       _c(
         "v-img",
-        { attrs: { dark: "", src: "/lib/img/top-image.jpg", height: "600" } },
+        { attrs: { dark: "", src: "/lib/img/top-image.jpg", height: "550" } },
         [
           _c(
             "v-layout",
-            { attrs: { "align-center": "", "justify-center": "" } },
+            { attrs: { "pt-5": "", "align-center": "", "justify-center": "" } },
             [
-              _c("h4", { staticClass: "display-2 font-weight-thin " }, [
-                _vm._v("Find and Compare Schools In Rwanda ")
-              ])
+              _c(
+                "h4",
+                { staticClass: "display-2 font-weight-thin white--text" },
+                [_vm._v("Find and Compare Schools In Rwanda ")]
+              )
             ]
           ),
           _vm._v(" "),
           _c(
-            "v-flex",
-            { attrs: { xs12: "", sm6: "", "offset-sm3": "" } },
+            "v-layout",
+            { attrs: { "pt-3": "", "align-center": "", "justify-center": "" } },
             [
               _c(
-                "v-card",
-                { attrs: { tile: "", color: "grey lighten-2" } },
+                "v-flex",
+                { attrs: { xs12: "", sm6: "" } },
                 [
                   _c(
-                    "v-form",
+                    "v-card",
+                    { attrs: { tile: "", color: "grey lighten-2" } },
                     [
                       _c(
-                        "v-container",
+                        "v-form",
                         [
                           _c(
-                            "v-layout",
+                            "v-container",
                             [
                               _c(
-                                "v-flex",
-                                { attrs: { xs12: "" } },
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    "align-center": "",
+                                    "justify-center": ""
+                                  }
+                                },
                                 [
                                   _c(
-                                    "v-layout",
-                                    { attrs: { row: "" } },
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
                                     [
                                       _c(
-                                        "v-flex",
-                                        {
-                                          attrs: {
-                                            xs8: "",
-                                            "order-md2": "",
-                                            "order-xs1": "",
-                                            "d-flex": ""
-                                          }
-                                        },
+                                        "v-layout",
+                                        { attrs: { row: "" } },
                                         [
                                           _c(
-                                            "v-card",
+                                            "v-flex",
                                             {
                                               attrs: {
-                                                tile: "",
-                                                flat: "",
-                                                color: "white"
+                                                xs8: "",
+                                                "order-md2": "",
+                                                "order-xs1": "",
+                                                "d-flex": ""
                                               }
                                             },
                                             [
                                               _c(
-                                                "v-card-text",
-                                                [
-                                                  _c("v-text-field", {
-                                                    attrs: {
-                                                      label:
-                                                        "Search school by district or school's name",
-                                                      type: "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        {
-                                          attrs: {
-                                            xs4: "",
-                                            "order-md3": "",
-                                            "order-xs2": "",
-                                            "d-flex": ""
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-card",
-                                            {
-                                              attrs: {
-                                                tile: "",
-                                                color: "error"
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "v-card-text",
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    flat: "",
+                                                    color: "white"
+                                                  }
+                                                },
                                                 [
                                                   _c(
-                                                    "v-btn",
-                                                    {
-                                                      attrs: {
-                                                        block: "",
-                                                        depressed: "",
-                                                        color: "error"
-                                                      }
-                                                    },
+                                                    "v-card-text",
                                                     [
-                                                      _c("v-icon", [
-                                                        _vm._v(" search ")
-                                                      ]),
-                                                      _vm._v(" Search ")
+                                                      _c("v-text-field", {
+                                                        attrs: {
+                                                          label:
+                                                            "Search school by district or school's name",
+                                                          type: "text"
+                                                        }
+                                                      })
                                                     ],
                                                     1
                                                   )
@@ -37188,57 +37188,60 @@ var render = function() {
                                               )
                                             ],
                                             1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-layout",
-                                    { attrs: { row: "" } },
-                                    [
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs6: "", "order-lg2": "" } },
-                                        [
+                                          ),
+                                          _vm._v(" "),
                                           _c(
-                                            "v-card",
+                                            "v-flex",
                                             {
                                               attrs: {
-                                                tile: "",
-                                                flat: "",
-                                                color: "success"
+                                                xs4: "",
+                                                "order-md3": "",
+                                                "order-xs2": "",
+                                                "d-flex": ""
                                               }
                                             },
                                             [
                                               _c(
-                                                "v-card-text",
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    color: "error"
+                                                  }
+                                                },
                                                 [
                                                   _c(
-                                                    "v-btn",
-                                                    {
-                                                      attrs: {
-                                                        depressed: "",
-                                                        block: "",
-                                                        color: "success"
-                                                      },
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          _vm.advancedSearch = !_vm.advancedSearch
-                                                        }
-                                                      }
-                                                    },
+                                                    "v-card-text",
                                                     [
-                                                      _c("v-icon", [
-                                                        _vm._v(" search ")
-                                                      ]),
-                                                      _vm._v(
-                                                        "   Advanced Search "
+                                                      _c(
+                                                        "router-link",
+                                                        {
+                                                          attrs: {
+                                                            to: "/search"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-btn",
+                                                            {
+                                                              attrs: {
+                                                                block: "",
+                                                                depressed: "",
+                                                                color: "error"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  " search "
+                                                                )
+                                                              ]),
+                                                              _vm._v(" Search ")
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
                                                       )
                                                     ],
                                                     1
@@ -37254,36 +37257,103 @@ var render = function() {
                                       ),
                                       _vm._v(" "),
                                       _c(
-                                        "v-flex",
-                                        { attrs: { xs6: "" } },
+                                        "v-layout",
+                                        { attrs: { row: "" } },
                                         [
                                           _c(
-                                            "v-card",
+                                            "v-flex",
                                             {
                                               attrs: {
-                                                tile: "",
-                                                flat: "",
-                                                color: "warning"
+                                                xs6: "",
+                                                "order-lg2": ""
                                               }
                                             },
                                             [
                                               _c(
-                                                "v-card-text",
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    flat: "",
+                                                    color: "success"
+                                                  }
+                                                },
                                                 [
                                                   _c(
-                                                    "v-btn",
-                                                    {
-                                                      attrs: {
-                                                        depressed: "",
-                                                        block: "",
-                                                        color: "warning"
-                                                      }
-                                                    },
+                                                    "v-card-text",
                                                     [
-                                                      _c("v-icon", [
-                                                        _vm._v(" search ")
-                                                      ]),
-                                                      _vm._v(" Search by Map ")
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            depressed: "",
+                                                            block: "",
+                                                            color: "success"
+                                                          },
+                                                          on: {
+                                                            click: function(
+                                                              $event
+                                                            ) {
+                                                              _vm.advancedSearch = !_vm.advancedSearch
+                                                            }
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v(" search ")
+                                                          ]),
+                                                          _vm._v(
+                                                            "   Advanced Search "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            { attrs: { xs6: "" } },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    flat: "",
+                                                    color: "warning"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card-text",
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            depressed: "",
+                                                            block: "",
+                                                            color: "warning"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v(" search ")
+                                                          ]),
+                                                          _vm._v(
+                                                            " Search by Map "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
                                                     ],
                                                     1
                                                   )
@@ -37541,13 +37611,16 @@ var render = function() {
                       _c("v-img", {
                         attrs: {
                           src: "/lib/img/Pre-Nursery.jpg",
-                          height: "400px"
+                          height: "350"
                         }
                       }),
                       _vm._v(" "),
                       _c(
                         "v-btn",
-                        { staticClass: "red flat ", attrs: { block: "" } },
+                        {
+                          staticClass: "red",
+                          attrs: { "pa-3": "", block: "", depressed: "" }
+                        },
                         [
                           _vm._v("Pre-Nursery  "),
                           _c("v-spacer"),
@@ -37571,7 +37644,7 @@ var render = function() {
                     { attrs: { color: "green" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/Nursery.jpg", height: "400px" }
+                        attrs: { src: "/lib/img/Nursery.jpg", height: "350px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -37596,7 +37669,7 @@ var render = function() {
                     { attrs: { color: "orange" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/Primary.jpg", height: "400px" }
+                        attrs: { src: "/lib/img/Primary.jpg", height: "350px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -37627,7 +37700,7 @@ var render = function() {
                       _c("v-img", {
                         attrs: {
                           src: "/lib/img/Secondary.jpg",
-                          height: "400px"
+                          height: "350px"
                         }
                       }),
                       _vm._v(" "),
@@ -37652,7 +37725,7 @@ var render = function() {
                     { attrs: { color: "yellow" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/TVET.jpg", height: "400px" }
+                        attrs: { src: "/lib/img/TVET.jpg", height: "350px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -37676,7 +37749,7 @@ var render = function() {
                     { attrs: { color: "purple" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/Tertiary.jpg", height: "400px" }
+                        attrs: { src: "/lib/img/Tertiary.jpg", height: "350px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -37797,10 +37870,92 @@ if (false) {
 
 /***/ }),
 /* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a220b27e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_search_vue__ = __webpack_require__(32);
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a220b27e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_search_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/search.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a220b27e", Component.options)
+  } else {
+    hotAPI.reload("data-v-a220b27e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = null
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/school_details.vue"
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(22);
+var content = __webpack_require__(24);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -37814,7 +37969,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -37846,7 +38001,7 @@ if(false) {
 }
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -37860,7 +38015,7 @@ exports.push([module.i, "/*!\n* Vuetify v1.2.6\n* Forged by John Leider\n* Relea
 
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports) {
 
 
@@ -37955,11 +38110,11 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(25);
+var content = __webpack_require__(27);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -37973,7 +38128,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -38005,7 +38160,7 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -38019,11 +38174,11 @@ exports.push([module.i, "@charset \"utf-8\";\r\n/*********        Hack:Vuetify  
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(27);
+var content = __webpack_require__(29);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -38037,7 +38192,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -38069,7 +38224,7 @@ if(false) {
 }
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -38089,11 +38244,11 @@ exports.push([module.i, "@charset \"utf-8\";\r\n\r\n/* Fonts & Icon */\r\n\r\n",
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(29);
+var content = __webpack_require__(31);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -38107,7 +38262,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(1)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -38139,7 +38294,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
@@ -38151,6 +38306,28 @@ exports.push([module.i, "/*********            画像            *********/\r\ni
 
 // exports
 
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_vm._v("\n    Hello\n")])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a220b27e", esExports)
+  }
+}
 
 /***/ })
 /******/ ]);

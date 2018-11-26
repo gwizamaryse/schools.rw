@@ -2,15 +2,18 @@
 <div>
 <!-- Header -->
 
-    <v-img dark src="/lib/img/top-image.jpg" height="600" >
-    <v-layout align-center  justify-center >
-      <h4 class="display-2 font-weight-thin ">Find and Compare Schools In Rwanda </h4>
-       </v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+    <v-img dark  src="/lib/img/top-image.jpg" height="550" >
+    
+      <v-layout pt-5 align-center  justify-center >
+ 
+      <h4 class="display-2 font-weight-thin white--text">Find and Compare Schools In Rwanda </h4>
+      </v-layout> 
+       <v-layout pt-3 align-center  justify-center >
+      <v-flex xs12 sm6 > 
         <v-card tile color="grey lighten-2">
            <v-form>
             <v-container >
-            <v-layout >
+            <v-layout   align-center  justify-center >
                 <v-flex xs12 >
                   <v-layout row>
                     <v-flex xs8 order-md2 order-xs1 d-flex> <v-card tile flat color="white"> 
@@ -18,8 +21,13 @@
                         </v-text-field></v-card-text> </v-card>
                         </v-flex>
                      <v-flex xs4 order-md3 order-xs2 d-flex> 
-                    <v-card tile color="error" > <v-card-text> <v-btn  block depressed color="error"><v-icon> search </v-icon> Search </v-btn> 
-                    </v-card-text> </v-card> </v-flex>
+                    <v-card tile color="error" > 
+                      <v-card-text> 
+                        <router-link to = '/search'>
+                        <v-btn  block depressed color="error">
+                          <v-icon> search </v-icon> Search </v-btn> 
+                          </router-link> 
+                          </v-card-text> </v-card> </v-flex>
                   </v-layout>
                   <v-layout row>
                     <v-flex xs6 order-lg2> <v-card tile flat color="success">
@@ -35,7 +43,8 @@
             </v-container>        
            </v-form>
         </v-card>
-      </v-flex>
+     </v-flex>
+       </v-layout>
  </v-img>
 
 <!--   Advanced search  -->
@@ -45,7 +54,6 @@
   
     <v-layout row wrap >
       <v-flex xs12 sm3>
-    
         <v-overflow-btn
           :items="dropdown_edit"
           label="Distance"
@@ -113,11 +121,8 @@
        <v-flex xs12 sm3 dflex>
       <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
       </v-flex>
-   
     </v-layout>
-   
   </v-container>
-
   </v-card>
 </section>
   
@@ -130,6 +135,7 @@
         <v-card class="elevation-0 transparent" tile>
             <v-card-title primary-title class="layout justify-center">
               <div class="display-3 light-blue--text">Schools Listed</div>
+               
             </v-card-title> 
           </v-card>
       </v-flex>
@@ -142,13 +148,14 @@
     <v-layout row wrap>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="red">
+        <v-card  color="red">
         <v-img
           src="/lib/img/Pre-Nursery.jpg"
-          height="400px"
+          height="350"
         >
         </v-img>
-        <v-btn block class="red flat ">Pre-Nursery  <v-spacer></v-spacer> 90</v-btn>
+        
+        <v-btn pa-3  block depressed class="red">Pre-Nursery  <v-spacer></v-spacer> 90</v-btn> 
       </v-card>
         
       </v-flex>
@@ -157,7 +164,7 @@
         <v-card color="green">
         <v-img
           src="/lib/img/Nursery.jpg"
-          height="400px"
+          height="350px"
         >
         </v-img>
         <v-btn block class="green flat ">Nursery<v-spacer></v-spacer>3,186</v-btn>
@@ -169,7 +176,7 @@
         <v-card color="orange">
         <v-img
           src="/lib/img/Primary.jpg"
-          height="400px"
+          height="350px"
         >
         </v-img>
         <v-btn block class="orange flat ">Primary Schools <v-spacer></v-spacer> 2,877</v-btn>
@@ -181,7 +188,7 @@
         <v-card color="red">
         <v-img
           src="/lib/img/Secondary.jpg"
-          height="400px"
+          height="350px"
         >
         </v-img>
         <v-btn block class="red flat ">Secondary Schools </v-btn>
@@ -193,7 +200,7 @@
         <v-card color="yellow">
         <v-img
           src="/lib/img/TVET.jpg"
-          height="400px"
+          height="350px"
         >
         </v-img>
         <v-btn block class="yellow flat ">TVET</v-btn>
@@ -205,7 +212,7 @@
         <v-card color="purple">
         <v-img
           src="/lib/img/Tertiary.jpg"
-          height="400px"
+          height="350px"
         >
         </v-img>
         <v-btn block class="purple flat ">Pre-Nursery</v-btn>

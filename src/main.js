@@ -4,12 +4,16 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
+
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 
 // Vue JS Components
 import App from './App.vue';
 import home from './home.vue';
+import search from './search.vue';
+import school_details from './school_details.vue'
+
 
 // CSS
 import 'vuetify/dist/vuetify.min.css';
@@ -26,9 +30,21 @@ const router = new VueRouter({
 	,base	: '/'
 	,routes	: [
 		{
-			 path		: '/'
-			,name		: 'home'
-			,component	: home
+			 path		: '/',
+			 name		: 'home',
+			component	: home,
+		},
+		{
+			path		: '/search',
+			name		: 'search',
+			component	: search,
+			
+		},
+		{
+			path		: '/school_details',
+			name		: 'school_details',
+			component	: school_details
+			
 		}
 	]
 	,scrollBehavior : function( to, from, savedPosition ){
