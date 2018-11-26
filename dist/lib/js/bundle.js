@@ -12012,6 +12012,9 @@ return Vue;
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -36526,7 +36529,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAiHA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-3>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University-Higher Learning</v-list-tile-title>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white pt-4 pb-2\"> \r\n        <v-toolbar-title>\r\n          <h1> <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Blog',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAiHA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Blog',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -36807,7 +36810,7 @@ var render = function() {
       _c(
         "v-navigation-drawer",
         {
-          attrs: { app: "", right: "", fixed: "", "pt-3": "" },
+          attrs: { app: "", right: "", fixed: "", "pt-2": "" },
           model: {
             value: _vm.drawer,
             callback: function($$v) {
@@ -36917,9 +36920,12 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("v-list-tile-title", [
-                    _vm._v("University-Higher Learning")
-                  ])
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/school_details" } },
+                    [_c("v-list-tile-title", [_vm._v("School Details page")])],
+                    1
+                  )
                 ],
                 1
               )
@@ -36932,7 +36938,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-toolbar",
-        { staticClass: "white pt-4 pb-2", attrs: { app: "", fixed: "" } },
+        { staticClass: "white", attrs: { app: "", fixed: "", height: "90" } },
         [
           _c("v-toolbar-title", [
             _c(
@@ -37100,7 +37106,15 @@ var render = function() {
     [
       _c(
         "v-img",
-        { attrs: { dark: "", src: "/lib/img/top-image.jpg", height: "550" } },
+        {
+          attrs: {
+            dark: "",
+            src: "/lib/img/top-image.jpg",
+            height: "600",
+            "align-center": "",
+            "justify-center": ""
+          }
+        },
         [
           _c(
             "v-layout",
@@ -37134,12 +37148,6 @@ var render = function() {
                             [
                               _c(
                                 "v-layout",
-                                {
-                                  attrs: {
-                                    "align-center": "",
-                                    "justify-center": ""
-                                  }
-                                },
                                 [
                                   _c(
                                     "v-flex",
@@ -37606,25 +37614,35 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "red" } },
+                    { attrs: { color: "error" } },
                     [
                       _c("v-img", {
                         attrs: {
                           src: "/lib/img/Pre-Nursery.jpg",
-                          height: "350"
+                          height: "300"
                         }
                       }),
                       _vm._v(" "),
                       _c(
-                        "v-btn",
-                        {
-                          staticClass: "red",
-                          attrs: { "pa-3": "", block: "", depressed: "" }
-                        },
+                        "v-card-text",
                         [
-                          _vm._v("Pre-Nursery  "),
-                          _c("v-spacer"),
-                          _vm._v(" 90")
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                large: "",
+                                block: "",
+                                depressed: "",
+                                color: "error"
+                              }
+                            },
+                            [
+                              _vm._v("Pre-Nursery  "),
+                              _c("v-spacer"),
+                              _vm._v(" 90")
+                            ],
+                            1
+                          )
                         ],
                         1
                       )
@@ -37641,16 +37659,33 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "green" } },
+                    { attrs: { color: "success" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/Nursery.jpg", height: "350px" }
+                        attrs: { src: "/lib/img/Nursery.jpg", height: "300px" }
                       }),
                       _vm._v(" "),
                       _c(
-                        "v-btn",
-                        { staticClass: "green flat ", attrs: { block: "" } },
-                        [_vm._v("Nursery"), _c("v-spacer"), _vm._v("3,186")],
+                        "v-card-text",
+                        [
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: {
+                                large: "",
+                                block: "",
+                                depressed: "",
+                                color: "success"
+                              }
+                            },
+                            [
+                              _vm._v("Nursery"),
+                              _c("v-spacer"),
+                              _vm._v("3,186")
+                            ],
+                            1
+                          )
+                        ],
                         1
                       )
                     ],
@@ -37666,7 +37701,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "orange" } },
+                    { attrs: { color: "warning" } },
                     [
                       _c("v-img", {
                         attrs: { src: "/lib/img/Primary.jpg", height: "350px" }
@@ -37674,7 +37709,9 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-btn",
-                        { staticClass: "orange flat ", attrs: { block: "" } },
+                        {
+                          attrs: { block: "", depressed: "", color: "warning" }
+                        },
                         [
                           _vm._v("Primary Schools "),
                           _c("v-spacer"),
@@ -37924,11 +37961,13 @@ if (false) {(function () {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__ = __webpack_require__(33);
+var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = null
+
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -37939,13 +37978,29 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __vue_script__,
-  __vue_template__,
+  __WEBPACK_IMPORTED_MODULE_0__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
 Component.options.__file = "src/school_details.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7dd87110", Component.options)
+  } else {
+    hotAPI.reload("data-v-7dd87110", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -38316,7 +38371,116 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n    Hello\n")])
+  return _c(
+    "div",
+    [
+      _c(
+        "v-container",
+        { attrs: { fluid: "" } },
+        [
+          _c(
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
+            [
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", xs12: "" } },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { column: "" } },
+                    [
+                      _c(
+                        "v-flex",
+                        { attrs: { "d-flex": "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              attrs: {
+                                color: "grey lighten-2",
+                                dark: "",
+                                tile: "",
+                                flat: ""
+                              }
+                            },
+                            [_c("v-card-text", [_vm._v("Hello")])],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", xs12: "", sm9: "" } },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    [
+                      _c(
+                        "v-flex",
+                        { attrs: { "d-flex": "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              attrs: {
+                                color: "white",
+                                dark: "",
+                                tile: "",
+                                flat: ""
+                              }
+                            },
+                            [_c("v-card-text", [_vm._v("Hello ")])],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", xs12: "", sm3: "" } },
+                [
+                  _c(
+                    "v-card",
+                    {
+                      attrs: {
+                        color: "amber lighten-5",
+                        dark: "",
+                        tile: "",
+                        flat: ""
+                      }
+                    },
+                    [_c("v-card-text", [_vm._v("Hello   eeeeeee ")])],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38326,6 +38490,515 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-a220b27e", esExports)
+  }
+}
+
+/***/ }),
+/* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-container",
+        { attrs: { fluid: "" } },
+        [
+          _c(
+            "v-layout",
+            { attrs: { row: "", wrap: "" } },
+            [
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", xs12: "" } },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { column: "" } },
+                    [
+                      _c(
+                        "v-flex",
+                        { attrs: { "d-flex": "" } },
+                        [
+                          _c(
+                            "v-card",
+                            {
+                              attrs: {
+                                color: "grey lighten-3",
+                                tile: "",
+                                flat: ""
+                              }
+                            },
+                            [
+                              _c(
+                                "v-form",
+                                [
+                                  _c(
+                                    "v-container",
+                                    { attrs: { fluid: "" } },
+                                    [
+                                      _c(
+                                        "v-layout",
+                                        {
+                                          attrs: {
+                                            row: "",
+                                            wrap: "",
+                                            "pa-4": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                {
+                                                  attrs: {
+                                                    xs8: "",
+                                                    "order-md2": "",
+                                                    "order-xs1": "",
+                                                    "d-flex": ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    [
+                                                      _c("v-text-field", {
+                                                        attrs: {
+                                                          type: "text",
+                                                          label:
+                                                            "Search school by district or school's name"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                {
+                                                  attrs: {
+                                                    xs4: "",
+                                                    "order-md3": "",
+                                                    "order-xs2": "",
+                                                    "d-flex": ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      attrs: {
+                                                        tile: "",
+                                                        color: "error"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "router-link",
+                                                        {
+                                                          attrs: {
+                                                            to: "/search"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-btn",
+                                                            {
+                                                              attrs: {
+                                                                block: "",
+                                                                depressed: "",
+                                                                color: "error"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  " search "
+                                                                )
+                                                              ]),
+                                                              _vm._v(" Search ")
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-spacer"),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-layout",
+                                            {
+                                              attrs: {
+                                                row: "",
+                                                "align-end": "",
+                                                right: ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                {
+                                                  attrs: {
+                                                    xs4: "",
+                                                    "order-lg2": ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      attrs: {
+                                                        tile: "",
+                                                        flat: "",
+                                                        color: "success"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-card-text",
+                                                        [
+                                                          _c(
+                                                            "v-btn",
+                                                            {
+                                                              attrs: {
+                                                                depressed: "",
+                                                                block: "",
+                                                                color: "success"
+                                                              },
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  _vm.advancedSearch = !_vm.advancedSearch
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  " search "
+                                                                )
+                                                              ]),
+                                                              _vm._v(
+                                                                "   Advanced Search "
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs4: "" } },
+                                                [
+                                                  _c(
+                                                    "v-card",
+                                                    {
+                                                      attrs: {
+                                                        tile: "",
+                                                        flat: "",
+                                                        color: "warning"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-card-text",
+                                                        [
+                                                          _c(
+                                                            "v-btn",
+                                                            {
+                                                              attrs: {
+                                                                depressed: "",
+                                                                block: "",
+                                                                color: "warning"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  " search "
+                                                                )
+                                                              ]),
+                                                              _vm._v(
+                                                                " Search by Map "
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", md8: "", xs12: "", sm8: "" } },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    [
+                      _c(
+                        "v-flex",
+                        { attrs: { "d-flex": "" } },
+                        [
+                          _c(
+                            "v-card",
+                            { attrs: { color: "white", tile: "", flat: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { "d-flex": "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    { attrs: { "align-end": "", right: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            large: "",
+                                            round: "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [_vm._v(" print ")]),
+                                          _vm._v("  Print ")
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            round: "",
+                                            large: "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [_vm._v(" compare ")]),
+                                          _vm._v(" Compare ")
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { "d-flex": "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    { attrs: { row: "", wrap: "" } },
+                                    [
+                                      _c(
+                                        "v-flex",
+                                        {
+                                          attrs: {
+                                            md4: "",
+                                            sm4: "",
+                                            "d-flex": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-card",
+                                            { attrs: { tile: "" } },
+                                            [
+                                              _c("v-img", {
+                                                attrs: {
+                                                  src:
+                                                    "/lib/img/logo/logo-school.jpg"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        {
+                                          attrs: {
+                                            md8: "",
+                                            xs8: "",
+                                            "d-flex": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-card",
+                                            { attrs: { tile: "" } },
+                                            [
+                                              _c(
+                                                "v-card-text",
+                                                { staticClass: "display-2" },
+                                                [
+                                                  _vm._v(
+                                                    "\n         APAPER Primary School\n     "
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { "d-flex": "" } },
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      attrs: {
+                                        height: "300",
+                                        color: "red",
+                                        dark: "",
+                                        tile: "",
+                                        flat: ""
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                 gggggggggggggggggggggggggggggggggggggggggggggggggggggg \n              "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-flex",
+                { attrs: { "d-flex": "", md4: "", xs12: "", sm4: "" } },
+                [
+                  _c(
+                    "v-card",
+                    { attrs: { color: "amber lighten-5", tile: "", flat: "" } },
+                    [
+                      _c(
+                        "v-card-text",
+                        { staticClass: "orange--text display-2" },
+                        [_vm._v(" Information ")]
+                      ),
+                      _vm._v(" "),
+                      _c("v-card-text", { staticClass: "display-1" }, [
+                        _vm._v(" APAPER Primary School ")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7dd87110", esExports)
   }
 }
 

@@ -2,9 +2,9 @@
 <div>
 <!-- Header -->
 
-    <v-img dark  src="/lib/img/top-image.jpg" height="550" >
+    <v-img dark  src="/lib/img/top-image.jpg" height="600" align-center  justify-center >
     
-      <v-layout pt-5 align-center  justify-center >
+      <v-layout pt-5 align-center justify-center >
  
       <h4 class="display-2 font-weight-thin white--text">Find and Compare Schools In Rwanda </h4>
       </v-layout> 
@@ -13,7 +13,7 @@
         <v-card tile color="grey lighten-2">
            <v-form>
             <v-container >
-            <v-layout   align-center  justify-center >
+            <v-layout   >
                 <v-flex xs12 >
                   <v-layout row>
                     <v-flex xs8 order-md2 order-xs1 d-flex> <v-card tile flat color="white"> 
@@ -148,38 +148,41 @@
     <v-layout row wrap>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card  color="red">
+        <v-card  color="error">
         <v-img
           src="/lib/img/Pre-Nursery.jpg"
-          height="350"
+          height="300"
         >
         </v-img>
-        
-        <v-btn pa-3  block depressed class="red">Pre-Nursery  <v-spacer></v-spacer> 90</v-btn> 
+        <v-card-text>
+        <v-btn large block depressed color="error">Pre-Nursery  <v-spacer></v-spacer> 90</v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="green">
+        <v-card 
+        color="success">
+        
         <v-img
           src="/lib/img/Nursery.jpg"
-          height="350px"
+          height="300px"
         >
         </v-img>
-        <v-btn block class="green flat ">Nursery<v-spacer></v-spacer>3,186</v-btn>
+        <v-card-text>
+        <v-btn large block depressed  color="success">Nursery<v-spacer></v-spacer>3,186</v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="orange">
+        <v-card color="warning">
         <v-img
           src="/lib/img/Primary.jpg"
           height="350px"
         >
         </v-img>
-        <v-btn block class="orange flat ">Primary Schools <v-spacer></v-spacer> 2,877</v-btn>
+        <v-btn block  depressed color="warning">Primary Schools <v-spacer></v-spacer> 2,877</v-btn>
       </v-card>
         
       </v-flex>

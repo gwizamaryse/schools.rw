@@ -1,6 +1,6 @@
 <template>
   <v-app >
-    <v-navigation-drawer app v-model="drawer" right fixed pt-3>
+    <v-navigation-drawer app v-model="drawer" right fixed pt-2>
     
 
     <v-divider></v-divider>
@@ -53,15 +53,15 @@
         <v-list-tile-action>
           <v-icon>school</v-icon>
         </v-list-tile-action>
-        <v-list-tile-title>University-Higher Learning</v-list-tile-title>
+      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>
       </v-list-tile>
     </v-list>  
     </v-navigation-drawer>
 
   
-      <v-toolbar app fixed class="white pt-4 pb-2"> 
+      <v-toolbar app fixed class="white" height="90"> 
         <v-toolbar-title>
-          <h1> <router-link to="/"> 
+          <h1 > <router-link to="/"> 
         <img src="/lib/img/logo/ishuri_logo.svg">  </router-link> </h1> </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
