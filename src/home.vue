@@ -148,7 +148,7 @@
     <v-layout row wrap>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card  color="error">
+        <v-card  color="error" hover>
         <v-img
           src="/lib/img/Pre-Nursery.jpg"
           height="300"
@@ -162,7 +162,7 @@
       <v-flex xs12 sm4 pa-2>
 
         <v-card 
-        color="success">
+        color="success" hover>
         
         <v-img
           src="/lib/img/Nursery.jpg"
@@ -176,49 +176,53 @@
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="warning">
+        <v-card color="warning" hover>
         <v-img
           src="/lib/img/Primary.jpg"
-          height="350px"
+          height="300px"
         >
         </v-img>
-        <v-btn block  depressed color="warning">Primary Schools <v-spacer></v-spacer> 2,877</v-btn>
+        <v-card-text>
+        <v-btn large block depressed color="warning">Primary Schools <v-spacer></v-spacer> 2,877</v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="red">
+        <v-card color="info" hover>
         <v-img
           src="/lib/img/Secondary.jpg"
-          height="350px"
+          height="300px"
         >
         </v-img>
-        <v-btn block class="red flat ">Secondary Schools </v-btn>
+        <v-card-text>
+         <v-btn flat large class="info"> Secondary School  </v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="yellow">
+        <v-card color="lime" hover>
         <v-img
           src="/lib/img/TVET.jpg"
-          height="350px"
+          height="305px"
         >
         </v-img>
-        <v-btn block class="yellow flat ">TVET</v-btn>
+        <v-card-text>
+        <v-btn  flat block class="lime white--text">TVET</v-btn></v-card-text>
       </v-card>
         
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="purple">
+        <v-card color="pink" hover>
         <v-img
           src="/lib/img/Tertiary.jpg"
-          height="350px"
+          height="300px"
         >
         </v-img>
-        <v-btn block class="purple flat ">Pre-Nursery</v-btn>
+        <v-card-text>
+        <v-btn block flat class="pink white--text">University, Polytechnics</v-btn></v-card-text>
       </v-card>
         
       </v-flex>

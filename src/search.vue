@@ -1,34 +1,125 @@
 <template>
     <div>
-     <v-container fluid >
-      <v-layout row wrap>
-        <v-flex d-flex xs12>
-          <v-layout column>
-            <v-flex d-flex>
-              <v-card color="grey lighten-2" dark tile flat>
-                <v-card-text>Hello</v-card-text>
-              </v-card>
-            </v-flex>
-            
-          </v-layout>
-        </v-flex>
-        <v-flex d-flex xs12 sm9>
-          <v-layout row wrap>
-            <v-flex d-flex>
-              <v-card color="white" dark tile flat>
-                <v-card-text>Hello </v-card-text>
-              </v-card>
-            </v-flex>
-            
-          </v-layout>
-        </v-flex>
+      <!--  top search  -->
+      <v-card  color="grey lighten-3" tile flat>
+                        <v-form>
+                            <v-container fluid >
+                                <v-layout row wrap pa-4>
+                                    <v-layout row>
+                                        <v-flex xs8 order-md2 order-xs1 d-flex> 
+                                            <v-card><v-text-field   type="text" label="Search school by district or school's name" >   
+                                                </v-text-field></v-card> 
+                                        </v-flex>
+                                        <v-flex xs4 order-md3 order-xs2 d-flex> 
+                                            <v-card tile color="error" >  <router-link to = '/search'> <v-btn  block depressed color="error">
+                                                <v-icon> search </v-icon> Search </v-btn>  </router-link> </v-card> </v-flex> </v-layout>
+               <v-spacer></v-spacer>
+                <v-layout row  align-end right >
+                    
+                    <v-flex xs4 order-lg2> <v-card tile flat color="success">
+                    <v-card-text><v-btn depressed block color="success" @click="advancedSearch = !advancedSearch"> <v-icon> search </v-icon>   Advanced Search </v-btn>
+                    </v-card-text> </v-card> 
+                    </v-flex>
+                    <v-flex xs4> <v-card tile flat color="warning"> 
+                    <v-card-text><v-btn depressed block color="warning"><v-icon> search </v-icon> Search by Map </v-btn>
+                    </v-card-text> </v-card> </v-flex>     
+                </v-layout>  
+        </v-layout>
+
         
-        <v-flex d-flex xs12 sm3>
-          <v-card color="amber lighten-5" dark tile flat>
-            <v-card-text>Hello   eeeeeee </v-card-text>
-          </v-card>
-        </v-flex>
-      </v-layout>
+
     </v-container>
+</v-form>
+<!--   Advanced search  -->
+<section v-if="advancedSearch"> 
+<v-card color="grey lighten-2">
+ <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+      <v-flex xs12 sm3>
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Distance"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+       <v-flex xs12 sm3>
+     
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="City Area"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+       <v-flex xs12 sm3>
+        
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Private, Public"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+      
+      <v-flex xs12 sm3>
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Language"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+       <v-flex xs12 sm3>
+     
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Gender Mixed"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+       <v-flex xs12 sm3>
+     
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Primary School"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+      <v-flex xs12 sm3 d-flex>
+         <v-overflow-btn
+          :items="dropdown_edit"
+          label="Boarding School"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+       <v-flex xs12 sm3 dflex>
+      <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
+      </v-flex>
+    </v-layout>
+  </v-container>
+  </v-card>
+ </section> 
+</v-card>
+    
+ 
     </div>
 </template>
+
+<script>
+export default {
+  data (){
+    return{
+       advancedSearch : true
+    }
+  }
+}
+</script>
