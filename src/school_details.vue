@@ -122,10 +122,10 @@
 <!-- container with school details/white container  -->
 
 
-    <v-flex d-flex md9 xs12 sm9 pa-2>
+    <v-flex d-flex md9 xs12 sm9 pl-3> 
           <v-layout row wrap>
          <v-flex d-flex>
-              <v-card color="white" tile flat>
+              <v-card color="white" tile flat >
     <!-- print/compare buttons -->
    <v-flex d-flex>
               <v-layout  >
@@ -146,7 +146,7 @@
     <v-flex d-flex>
        <v-layout row wrap>
             <v-flex md4 sm4 d-flex >
-                <v-card  flat tile> 
+                <v-card  flat tile > 
                <v-img height="100" src="/lib/img/logo/logo-school.jpg" > </v-img> </v-card> </v-flex>
          <v-flex md8 xs8 d-flex >
  <v-card  flat tile align-content-center>
@@ -162,14 +162,13 @@
        <!-- carousel with school images -->
        <v-flex d-flex>
               <v-card  tile flat>
-                  <v-carousel>
+                  <v-carousel >
     <v-carousel-item
       v-for="(images_slider,i) in images_slider"
       :key="i"
       :src="images_slider.src"
       reverse-transition="fade"
       transition="fade"
-      height="400"
     ></v-carousel-item>
   </v-carousel>
               </v-card>
@@ -202,20 +201,237 @@
       </v-tabs-items>
               </v-card>
             </v-flex>
-
+<!-- Basic Information -->
    <v-flex d-flex>
               <v-card  tile flat>
-                  <v-card-text  class="light-blue--text display-1 ">
+                  <v-card-text  class="light-blue--text display-2 ">
                        <p class="text-md-center">Basic Information</p> 
              <v-divider class="light-blue pb-1"></v-divider>  </v-card-text>
              <v-btn large color="error"> Pre-Nursery School</v-btn>
              <v-btn  large color="success"> Nursery School</v-btn>
              <v-btn large color="warning"> Primary school </v-btn>
-             <v-btn large class="indigo accent-1  white--text"> General Secondary  </v-btn>  
+             <v-btn large class="info"> General Secondary  </v-btn>  
 
-            <v-card-text>  <v-divider class="light-blue"></v-divider> </v-card-text>
+            <v-card-text pl-5>  <v-divider class="light-blue"></v-divider> </v-card-text>
 
-            <v-icon large color="light-blue">fa-search</v-icon>
+            
+
+            <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">person</v-icon>
+     <p class="title">400 students</p>
+      </v-flex>
+       <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> supervised_user_circle</v-icon>
+     <p class="title">Average 30 students per class</p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> language </v-icon>
+     <p class="title">English <br> French <br> kinyarwanda </p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-tshirt</v-icon>
+     <p class="title">Uniform is Mandatory</p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-school</v-icon>
+     <p class="title">Private School</p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-church </v-icon>
+     <p class="title">Secular</p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> wc </v-icon>
+     <p class="title">Gender Mixed </p>
+      </v-flex>
+
+        <v-card-text pl-5>  <v-divider class="light-blue"></v-divider> </v-card-text>
+    <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas fa-vials</v-icon>
+     <p class="title">Science Lab </p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-desktop </v-icon>
+     <p class="title">Computer Lab</p>
+      </v-flex>
+
+       <v-card-text pl-5>  <v-divider class="light-blue"></v-divider> </v-card-text>
+
+       <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas fa-book-reader</v-icon>
+     <p class="title">Library <br> 3000 books </p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-swimmer </v-icon>
+     <p class="title">4 sports Activities </p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas fa-music</v-icon>
+     <p class="title">10 Music Activities </p>
+      </v-flex>
+      <v-flex xs12 sm3 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas fa-palette</v-icon>
+     <p class="title">10 others Activities </p>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+ <!--  School Fees -->
+
+     <v-card-text  class="light-blue--text display-2 ">
+                       <p class="text-md-center">School Fees</p> 
+             <v-divider class="light-blue pb-1"></v-divider>  </v-card-text>
+
+             <v-card-text  class="light-blue--text title ">
+                       <p class="text-md-center"> Pre-Nursery and Nursery </p> 
+             </v-card-text>
+      <v-flex xs12 sm6 offset-sm3 >
+         <v-card pa-3> 
+           <v-card-text class="subheading">
+           Grade 1: 568000
+           <v-divider></v-divider>
+            Grade 2: 568000
+           <v-divider></v-divider>
+           Grade 2: 568000
+           </v-card-text>
+         </v-card>
+         </v-flex>\
+ 
+          <v-card-text  class="light-blue--text title ">
+                       <p class="text-md-center"> Primary school</p> 
+             </v-card-text>
+      <v-flex xs12 sm6 offset-sm3 >
+         <v-card pa-3> 
+           <v-card-text class="subheading">
+           Grade 1: 568000
+           <v-divider></v-divider>
+            Grade 2: 568000
+           <v-divider></v-divider>
+           Grade 3: 568000
+            <v-divider></v-divider>
+           Grade 4: 568000
+           <v-divider></v-divider>
+            Grade 5: 568000
+           <v-divider></v-divider>
+           Grade 6: 568000
+           </v-card-text>
+         </v-card>
+         </v-flex>
+
+        
+          <v-card-text  class="light-blue--text title ">
+                       <p class="text-md-center"> Secondary School</p> 
+             </v-card-text>
+      <v-flex xs12 sm6 offset-sm3 >
+         <v-card pb-5> 
+           <v-card-text class="subheading">
+           Grade 1: 568000
+           <v-divider></v-divider>
+            Grade 2: 568000
+           <v-divider></v-divider>
+           Grade 3: 568000
+            <v-divider></v-divider>
+           Grade 4: 568000
+           <v-divider></v-divider>
+            Grade 5: 568000
+           <v-divider></v-divider>
+           Grade 6: 568000
+           </v-card-text>
+         </v-card>
+         </v-flex>
+    
+
+<!-- Ranking at National Exams -->
+
+   
+
+<v-card-text  class="light-blue--text display-2 ">
+                       <p class="text-md-center">Ranking at National Exams </p> 
+             <v-divider class="light-blue pb-1"></v-divider>  </v-card-text>
+
+              <v-flex xs12 sm6 offset-sm3 >
+         <v-card pa-3> 
+           <v-card-text class="subheading">
+           Primary 6 (P6): 2017 : 30th on 230 : 90% of students passed
+           <v-divider></v-divider>
+            Senior 3 (S3): 2017 : 30th on 230 : 70% of students passed
+           <v-divider></v-divider>
+           Senior 6 (S6): 2017 : 30th on 230 : 60% of students passed
+            <v-divider></v-divider>
+          
+           </v-card-text>
+         </v-card>
+         </v-flex>
+    
+             
+
+<!-- Admissions -->
+
+   
+
+<v-card-text  class="light-blue--text display-2 ">
+                       <p class="text-md-center"> Admission Requirements </p> 
+             <v-divider class="light-blue pb-1"></v-divider>  </v-card-text>
+
+             
+                     <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+     
+      
+      <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-info-circle </v-icon>
+     <p class="title">Entrance Exam</p>
+      </v-flex>
+    
+
+       
+    <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas  fa-info-circle </v-icon>
+     <p class="title">3 applicants for 1 place </p>
+      </v-flex>
+      <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue">fas  fa-info-circle</v-icon>
+     <p class="title">for S1 and S4 Entrance Based on National Exam's Result</p>
+      </v-flex>
+
+      
+    </v-layout>
+  </v-container>
+<!-- Curriculum -->
+  <v-card-text  class="light-blue--text display-2 ">
+                       <p class="text-md-center"> Curriculums </p> 
+             <v-divider class="light-blue pb-1"></v-divider>  </v-card-text>
+
+
+               <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+     
+      
+      <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue">fas fa-info-circle </v-icon>
+     <p class="title">Montessori </p>
+      </v-flex>
+    
+
+       
+    <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue"> fas  fa-info-circle </v-icon>
+     <p class="title">Rwanda National Curriculum </p>
+      </v-flex>
+      <v-flex xs12 sm4 text-xs-center>
+     <v-icon size="80" color="light-blue">fas  fa-info-circle</v-icon>
+     <p class="title">Cambridge Curriculum</p>
+      </v-flex>
+
+      
+    </v-layout>
+  </v-container>
+    
                 </v-card>
             </v-flex>
           </v-card>
@@ -246,7 +462,7 @@
        <!--       Reviews Section -->
        
              <v-card-text>
-             <p class="text-md-center orange--text headline"> Reviews </p>
+             <p class="text-md-center orange--text display-2"> Reviews </p>
              </v-card-text>
  
 
@@ -281,7 +497,7 @@
       </v-card-text>
       
     </v-card>
-<v-divider></v-divider>
+<v-divider class="pb-2" ></v-divider>
 
     <v-card class="elevation-12 mx-auto" width="280">
       <v-card-title
@@ -292,7 +508,7 @@
         Great School !!
       </v-card-title>
       
-         <v-divider></v-divider>
+         <v-divider ></v-divider>
       <v-card-text class="subheading">  <v-icon> person </v-icon>  Review by Mary Kabalisa</v-card-text>
          <v-divider></v-divider>
       <v-card-text>
@@ -312,7 +528,7 @@
       
     </v-card>
     
-<v-divider></v-divider>
+<v-divider class="pb-2"></v-divider>
     <v-card
      
       width="280"
@@ -326,7 +542,7 @@
       </v-card-title>
       
          <v-divider></v-divider>
-      <v-card-text class="subheading">  <v-icon> person </v-icon>  Review by Mary Kabalisa</v-card-text>
+      <v-card-text  class="subheading white">  <v-icon> person </v-icon>  Review by Mary Kabalisa</v-card-text>
          <v-divider></v-divider>
       <v-card-text>
      This school is great. I would highly recommend. the teachers are very encouraging

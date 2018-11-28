@@ -2,17 +2,17 @@
 <div>
 <!-- Header -->
 
-    <v-img dark  src="/lib/img/top-image.jpg" height="600" align-center  justify-center >
-    
-      <v-layout pt-5 align-center justify-center >
+   <v-img   src="/lib/img/top-image.jpg" height="600">
+
+        <v-layout pt-5 align-center justify-center >
  
-      <h4 class="display-2 font-weight-thin white--text">Find and Compare Schools In Rwanda </h4>
+      <h4 class="display-3  white--text">Find and Compare Schools In Rwanda </h4>
       </v-layout> 
-       <v-layout pt-3 align-center  justify-center >
+       <v-layout pt-5 align-center  justify-center >
       <v-flex xs12 sm6 > 
         <v-card tile color="grey lighten-2">
            <v-form>
-            <v-container >
+            <v-container fluid >
             <v-layout   >
                 <v-flex xs12 >
                   <v-layout row>
@@ -45,7 +45,9 @@
         </v-card>
      </v-flex>
        </v-layout>
+
  </v-img>
+
 
 <!--   Advanced search  -->
 <section v-if="advancedSearch">
