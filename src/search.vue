@@ -30,6 +30,7 @@
 
     </v-container>
 </v-form>
+</v-card>
 <!--   Advanced search  -->
 <section v-if="advancedSearch"> 
 <v-card color="grey lighten-2">
@@ -108,8 +109,167 @@
   </v-container>
   </v-card>
  </section> 
-</v-card>
+
+   <!--  search results -->
+
+   <div id="search results">
+     
+     <v-card tile flat>
+       <v-card-text class="title grey--text ">
+         we have found 686 schools matching your criteria
+          <v-btn round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
+       </v-card-text>
+     
+
+    <v-card-text>  <v-divider class="light-blue"></v-divider> </v-card-text>
     
+    <v-card flat tile>
+  
+     
+<!--   search result #1 -->
+<v-card flat tile >
+ <v-container  grid-list-xl>
+   <v-layout row wrap >
+      <v-flex xs16 sm2>
+         <v-img src="/lib/img/logo/logo-school.jpg" ></v-img>
+        </v-flex>
+    
+       <v-flex xs12 sm8>
+         <v-flex xs12 sm8>
+           <p  class="display-1">Green Hills Academy</p> </v-flex>
+           <v-flex xs12>
+           <v-btn depressed small color="error"> Pre-Nursery School</v-btn>
+             <v-btn  depressed small color="success"> Nursery School</v-btn>
+             <v-btn depressed small color="warning"> Primary school </v-btn>
+             <v-btn  depressed small class="info"> General Secondary  </v-btn>  </v-flex>
+
+      <v-flex xs12 sm8>
+       
+         <v-icon>fas fa-building</v-icon> sector: Private
+         
+         <v-icon>wc</v-icon> Gender: Mixed 
+       
+         <v-icon>fas fa-church</v-icon> Religion: Secular 
+       
+         <v-icon>fas fa-users</v-icon> Levels: Combined  
+          </v-flex>
+
+          
+      </v-flex>
+      
+      <v-flex xs12 sm2>
+       <v-btn block round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
+      </v-flex>
+      
+    </v-layout>
+  </v-container>
+  </v-card>
+  <v-card color="light-blue lighten-5">
+ <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+      <v-flex xs16 sm2>
+         <v-img
+        src="/lib/img/logo/logo-school.jpg" >
+      </v-img>
+        
+      </v-flex>
+    
+       <v-flex xs12 sm8>
+        
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Private, Public"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+      
+      <v-flex xs12 sm2>
+       <v-btn block round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
+      </v-flex>
+      
+    </v-layout>
+  </v-container>
+  </v-card>
+  <v-card >
+ <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+      <v-flex xs16 sm2>
+         <v-img
+        src="/lib/img/logo/logo-school.jpg" >
+      </v-img>
+        
+      </v-flex>
+    
+       <v-flex xs12 sm8>
+        
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Private, Public"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+      
+      <v-flex xs12 sm2>
+       <v-btn block round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
+      </v-flex>
+      
+    </v-layout>
+  </v-container>
+  </v-card>
+  <v-card color="light-blue lighten-5">
+ <v-container  grid-list-xl>
+  
+    <v-layout row wrap >
+      <v-flex xs16 sm2>
+         <v-img
+        src="/lib/img/logo/logo-school.jpg" >
+      </v-img>
+        
+      </v-flex>
+    
+       <v-flex xs12 sm8>
+        
+
+        <v-overflow-btn
+          :items="dropdown_edit"
+          label="Private, Public"
+          editable
+          item-value="text"
+        ></v-overflow-btn>
+      </v-flex>
+      
+      <v-flex xs12 sm2>
+       <v-btn block round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
+      </v-flex>
+      
+    </v-layout>
+  </v-container>
+  </v-card>
+    </v-card>
+    <!-- pagination -->
+  <div class="text-xs-center pa-4">
+    <v-pagination
+      v-model="page"
+      :length="5"
+      circle
+      color="info"
+    ></v-pagination>
+  </div>
+</v-card>
+
+   </div>
+  
  
     </div>
 </template>
@@ -118,7 +278,8 @@
 export default {
   data (){
     return{
-       advancedSearch : true
+       advancedSearch : true,
+       page: 2
     }
   }
 }

@@ -12249,6 +12249,8 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -12388,11 +12390,172 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      advancedSearch: true
+      advancedSearch: true,
+      page: 2
     };
   }
 });
@@ -12402,6 +12565,7 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
 //
 //
 //
@@ -40176,7 +40340,11 @@ var render = function() {
                     { attrs: { color: "lime", hover: "" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/TVET.jpg", height: "305px" }
+                        attrs: {
+                          src: "/lib/img/TVET.jpg",
+                          height: "305px",
+                          "aspect-ratio": "1.2"
+                        }
                       }),
                       _vm._v(" "),
                       _c(
@@ -40209,7 +40377,11 @@ var render = function() {
                     { attrs: { color: "pink", hover: "" } },
                     [
                       _c("v-img", {
-                        attrs: { src: "/lib/img/Tertiary.jpg", height: "300px" }
+                        attrs: {
+                          src: "/lib/img/Tertiary.jpg",
+                          height: "305px",
+                          "aspect-ratio": "1.7"
+                        }
                       }),
                       _vm._v(" "),
                       _c(
@@ -40601,15 +40773,210 @@ var render = function() {
               )
             ],
             1
-          ),
-          _vm._v(" "),
-          _vm.advancedSearch
-            ? _c(
-                "section",
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _vm.advancedSearch
+        ? _c(
+            "section",
+            [
+              _c(
+                "v-card",
+                { attrs: { color: "grey lighten-2" } },
+                [
+                  _c(
+                    "v-container",
+                    { attrs: { "grid-list-xl": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { row: "", wrap: "" } },
+                        [
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Distance",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "City Area",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Private, Public",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Language",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Gender Mixed",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Primary School",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "", "d-flex": "" } },
+                            [
+                              _c("v-overflow-btn", {
+                                attrs: {
+                                  items: _vm.dropdown_edit,
+                                  label: "Boarding School",
+                                  editable: "",
+                                  "item-value": "text"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { xs12: "", sm3: "", dflex: "" } },
+                            [
+                              _c(
+                                "v-btn",
+                                { attrs: { block: "", color: "info" } },
+                                [
+                                  _c("v-icon", [_vm._v(" search ")]),
+                                  _vm._v(" Advanced Search")
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "div",
+        { attrs: { id: "search results" } },
+        [
+          _c(
+            "v-card",
+            { attrs: { tile: "", flat: "" } },
+            [
+              _c(
+                "v-card-text",
+                { staticClass: "title grey--text " },
+                [
+                  _vm._v(
+                    "\n         we have found 686 schools matching your criteria\n          "
+                  ),
+                  _c(
+                    "v-btn",
+                    { attrs: { round: "", "x-large": "", color: "info" } },
+                    [
+                      _c("v-icon", [_vm._v(" fas fa-balance-scale ")]),
+                      _vm._v("Compare ")
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [_c("v-divider", { staticClass: "light-blue" })],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card",
+                { attrs: { flat: "", tile: "" } },
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "grey lighten-2" } },
+                    { attrs: { flat: "", tile: "" } },
                     [
                       _c(
                         "v-container",
@@ -40621,14 +40988,11 @@ var render = function() {
                             [
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
+                                { attrs: { xs16: "", sm2: "" } },
                                 [
-                                  _c("v-overflow-btn", {
+                                  _c("v-img", {
                                     attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Distance",
-                                      editable: "",
-                                      "item-value": "text"
+                                      src: "/lib/img/logo/logo-school.jpg"
                                     }
                                   })
                                 ],
@@ -40637,14 +41001,149 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
+                                { attrs: { xs12: "", sm8: "" } },
                                 [
-                                  _c("v-overflow-btn", {
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "", sm8: "" } },
+                                    [
+                                      _c("p", { staticClass: "display-1" }, [
+                                        _vm._v("Green Hills Academy")
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "error"
+                                          }
+                                        },
+                                        [_vm._v(" Pre-Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "success"
+                                          }
+                                        },
+                                        [_vm._v(" Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "warning"
+                                          }
+                                        },
+                                        [_vm._v(" Primary school ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "info",
+                                          attrs: { depressed: "", small: "" }
+                                        },
+                                        [_vm._v(" General Secondary  ")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "", sm8: "" } },
+                                    [
+                                      _c("v-icon", [_vm._v("fas fa-building")]),
+                                      _vm._v(
+                                        " sector: Private\n         \n         "
+                                      ),
+                                      _c("v-icon", [_vm._v("wc")]),
+                                      _vm._v(
+                                        " Gender: Mixed \n       \n         "
+                                      ),
+                                      _c("v-icon", [_vm._v("fas fa-church")]),
+                                      _vm._v(
+                                        " Religion: Secular \n       \n         "
+                                      ),
+                                      _c("v-icon", [_vm._v("fas fa-users")]),
+                                      _vm._v(" Levels: Combined  \n          ")
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        block: "",
+                                        round: "",
+                                        "x-large": "",
+                                        color: "info"
+                                      }
+                                    },
+                                    [
+                                      _c("v-icon", [
+                                        _vm._v(" fas fa-balance-scale ")
+                                      ]),
+                                      _vm._v("Compare ")
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    { attrs: { color: "light-blue lighten-5" } },
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { "grid-list-xl": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs16: "", sm2: "" } },
+                                [
+                                  _c("v-img", {
                                     attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "City Area",
-                                      editable: "",
-                                      "item-value": "text"
+                                      src: "/lib/img/logo/logo-school.jpg"
                                     }
                                   })
                                 ],
@@ -40653,7 +41152,7 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
+                                { attrs: { xs12: "", sm8: "" } },
                                 [
                                   _c("v-overflow-btn", {
                                     attrs: {
@@ -40669,78 +41168,174 @@ var render = function() {
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
-                                [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Language",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
-                                [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Gender Mixed",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm3: "" } },
-                                [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Primary School",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm3: "", "d-flex": "" } },
-                                [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Boarding School",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm3: "", dflex: "" } },
+                                { attrs: { xs12: "", sm2: "" } },
                                 [
                                   _c(
                                     "v-btn",
-                                    { attrs: { block: "", color: "info" } },
+                                    {
+                                      attrs: {
+                                        block: "",
+                                        round: "",
+                                        "x-large": "",
+                                        color: "info"
+                                      }
+                                    },
                                     [
-                                      _c("v-icon", [_vm._v(" search ")]),
-                                      _vm._v(" Advanced Search")
+                                      _c("v-icon", [
+                                        _vm._v(" fas fa-balance-scale ")
+                                      ]),
+                                      _vm._v("Compare ")
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { "grid-list-xl": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs16: "", sm2: "" } },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src: "/lib/img/logo/logo-school.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm8: "" } },
+                                [
+                                  _c("v-overflow-btn", {
+                                    attrs: {
+                                      items: _vm.dropdown_edit,
+                                      label: "Private, Public",
+                                      editable: "",
+                                      "item-value": "text"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        block: "",
+                                        round: "",
+                                        "x-large": "",
+                                        color: "info"
+                                      }
+                                    },
+                                    [
+                                      _c("v-icon", [
+                                        _vm._v(" fas fa-balance-scale ")
+                                      ]),
+                                      _vm._v("Compare ")
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    { attrs: { color: "light-blue lighten-5" } },
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { "grid-list-xl": "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs16: "", sm2: "" } },
+                                [
+                                  _c("v-img", {
+                                    attrs: {
+                                      src: "/lib/img/logo/logo-school.jpg"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm8: "" } },
+                                [
+                                  _c("v-overflow-btn", {
+                                    attrs: {
+                                      items: _vm.dropdown_edit,
+                                      label: "Private, Public",
+                                      editable: "",
+                                      "item-value": "text"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        block: "",
+                                        round: "",
+                                        "x-large": "",
+                                        color: "info"
+                                      }
+                                    },
+                                    [
+                                      _c("v-icon", [
+                                        _vm._v(" fas fa-balance-scale ")
+                                      ]),
+                                      _vm._v("Compare ")
                                     ],
                                     1
                                   )
@@ -40758,8 +41353,28 @@ var render = function() {
                   )
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "text-xs-center pa-4" },
+                [
+                  _c("v-pagination", {
+                    attrs: { length: 5, circle: "", color: "info" },
+                    model: {
+                      value: _vm.page,
+                      callback: function($$v) {
+                        _vm.page = $$v
+                      },
+                      expression: "page"
+                    }
+                  })
+                ],
+                1
               )
-            : _vm._e()
+            ],
+            1
+          )
         ],
         1
       )
@@ -40870,7 +41485,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAgoBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CC7nBL;AD+nBG;;;EACE,WAAA;CC3nBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition\n  .fade\n    &-enter-active, &-leave-active, &-leave-to\n      transition: .3s ease-out\n      position: absolute\n      top: 0\n      left: 0\n\n    &-enter, &-leave, &-leave-to\n      opacity: 0\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAioBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CC9nBL;ADgoBG;;;EACE,WAAA;CC5nBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition\n  .fade\n    &-enter-active, &-leave-active, &-leave-to\n      transition: .3s ease-out\n      position: absolute\n      top: 0\n      left: 0\n\n    &-enter, &-leave, &-leave-to\n      opacity: 0\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -41361,12 +41976,19 @@ var render = function() {
                             [
                               _c(
                                 "v-layout",
+                                {
+                                  attrs: {
+                                    "align-center": "",
+                                    "justify-end": "",
+                                    "fill-height": ""
+                                  }
+                                },
                                 [
                                   _c(
                                     "v-btn",
                                     {
                                       attrs: {
-                                        large: "",
+                                        "x-large": "",
                                         round: "",
                                         color: "info"
                                       }
@@ -41383,13 +42005,15 @@ var render = function() {
                                     {
                                       attrs: {
                                         round: "",
-                                        large: "",
+                                        "x-large": "",
                                         color: "info"
                                       }
                                     },
                                     [
-                                      _c("v-icon", [_vm._v(" compare ")]),
-                                      _vm._v(" Compare ")
+                                      _c("v-icon", [
+                                        _vm._v(" fas fa-balance-scale ")
+                                      ]),
+                                      _vm._v("Compare ")
                                     ],
                                     1
                                   )
@@ -41418,13 +42042,20 @@ var render = function() {
                                         "v-card",
                                         { attrs: { flat: "", tile: "" } },
                                         [
-                                          _c("v-img", {
-                                            attrs: {
-                                              height: "100",
-                                              src:
-                                                "/lib/img/logo/logo-school.jpg"
-                                            }
-                                          })
+                                          _c(
+                                            "v-flex",
+                                            { attrs: { xs6: "" } },
+                                            [
+                                              _c("v-img", {
+                                                attrs: {
+                                                  height: "150",
+                                                  src:
+                                                    "/lib/img/logo/logo-school.jpg"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          )
                                         ],
                                         1
                                       )
@@ -41452,13 +42083,9 @@ var render = function() {
                                             "v-card-text",
                                             { staticClass: "display-2" },
                                             [
-                                              _c(
-                                                "p",
-                                                {
-                                                  staticClass: "text-md-center"
-                                                },
-                                                [_vm._v(" Green Hills Academy")]
-                                              )
+                                              _c("p", [
+                                                _vm._v(" Green Hills Academy")
+                                              ])
                                             ]
                                           )
                                         ],
@@ -41684,7 +42311,7 @@ var render = function() {
                                               _c(
                                                 "p",
                                                 { staticClass: "title" },
-                                                [_vm._v("400 students")]
+                                                [_vm._v("1600 students")]
                                               )
                                             ],
                                             1
@@ -41720,7 +42347,7 @@ var render = function() {
                                                 { staticClass: "title" },
                                                 [
                                                   _vm._v(
-                                                    "Average 30 students per class"
+                                                    "Average 20 students per class"
                                                   )
                                                 ]
                                               )
@@ -42018,7 +42645,11 @@ var render = function() {
                                                     color: "light-blue"
                                                   }
                                                 },
-                                                [_vm._v("fas fa-swimmer ")]
+                                                [
+                                                  _vm._v(
+                                                    "fas fa-volleyball-ball "
+                                                  )
+                                                ]
                                               ),
                                               _vm._v(" "),
                                               _c(
@@ -42396,7 +43027,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },
@@ -42426,7 +43057,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },
@@ -42464,7 +43095,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },
@@ -42531,7 +43162,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },
@@ -42561,7 +43192,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },
@@ -42599,7 +43230,7 @@ var render = function() {
                                                 "v-icon",
                                                 {
                                                   attrs: {
-                                                    size: "80",
+                                                    size: "50",
                                                     color: "light-blue"
                                                   }
                                                 },

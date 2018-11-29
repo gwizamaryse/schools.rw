@@ -128,13 +128,13 @@
               <v-card color="white" tile flat >
     <!-- print/compare buttons -->
    <v-flex d-flex>
-              <v-layout  >
-                
+        
+               <v-layout align-center justify-end fill-height> 
             
-             <v-btn  large round color="info"> 
+             <v-btn  x-large round color="info"> 
                      <v-icon> print </v-icon>  Print </v-btn>
-                <v-btn round large color="info">
-                    <v-icon> compare </v-icon> Compare </v-btn>  
+                <v-btn round x-large color="info">
+                    <v-icon> fas fa-balance-scale </v-icon>Compare </v-btn>  
               
 
                  </v-layout>  
@@ -147,11 +147,12 @@
        <v-layout row wrap>
             <v-flex md4 sm4 d-flex >
                 <v-card  flat tile > 
-               <v-img height="100" src="/lib/img/logo/logo-school.jpg" > </v-img> </v-card> </v-flex>
+                  <v-flex xs6>
+               <v-img height="150" src="/lib/img/logo/logo-school.jpg" > </v-img> </v-flex></v-card> </v-flex>
          <v-flex md8 xs8 d-flex >
  <v-card  flat tile align-content-center>
      <v-card-text class="display-2">
-          <p class="text-md-center"> Green Hills Academy</p>
+          <p > Green Hills Academy</p>
        
      </v-card-text>
  </v-card>
@@ -221,11 +222,11 @@
     <v-layout row wrap >
       <v-flex xs12 sm3 text-xs-center>
      <v-icon size="80" color="light-blue">person</v-icon>
-     <p class="title">400 students</p>
+     <p class="title">1600 students</p>
       </v-flex>
        <v-flex xs12 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> supervised_user_circle</v-icon>
-     <p class="title">Average 30 students per class</p>
+     <p class="title">Average 20 students per class</p>
       </v-flex>
       <v-flex xs12 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> language </v-icon>
@@ -265,7 +266,7 @@
      <p class="title">Library <br> 3000 books </p>
       </v-flex>
       <v-flex xs12 sm3 text-xs-center>
-     <v-icon size="80" color="light-blue">fas fa-swimmer </v-icon>
+     <v-icon size="80" color="light-blue">fas fa-volleyball-ball </v-icon>
      <p class="title">4 sports Activities </p>
       </v-flex>
       <v-flex xs12 sm3 text-xs-center>
@@ -383,18 +384,18 @@
      
       
       <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue">fas fa-info-circle </v-icon>
+     <v-icon size="50" color="light-blue">fas fa-info-circle </v-icon>
      <p class="title">Entrance Exam</p>
       </v-flex>
     
 
        
     <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue"> fas  fa-info-circle </v-icon>
+     <v-icon size="50" color="light-blue"> fas  fa-info-circle </v-icon>
      <p class="title">3 applicants for 1 place </p>
       </v-flex>
       <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue">fas  fa-info-circle</v-icon>
+     <v-icon size="50" color="light-blue">fas  fa-info-circle</v-icon>
      <p class="title">for S1 and S4 Entrance Based on National Exam's Result</p>
       </v-flex>
 
@@ -413,18 +414,18 @@
      
       
       <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue">fas fa-info-circle </v-icon>
+     <v-icon size="50" color="light-blue">fas fa-info-circle </v-icon>
      <p class="title">Montessori </p>
       </v-flex>
     
 
        
     <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue"> fas  fa-info-circle </v-icon>
+     <v-icon size="50" color="light-blue"> fas  fa-info-circle </v-icon>
      <p class="title">Rwanda National Curriculum </p>
       </v-flex>
       <v-flex xs12 sm4 text-xs-center>
-     <v-icon size="80" color="light-blue">fas  fa-info-circle</v-icon>
+     <v-icon size="50" color="light-blue">fas  fa-info-circle</v-icon>
      <p class="title">Cambridge Curriculum</p>
       </v-flex>
 

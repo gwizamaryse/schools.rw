@@ -208,6 +208,7 @@
         <v-img
           src="/lib/img/TVET.jpg"
           height="305px"
+          aspect-ratio="1.2"
         >
         </v-img>
         <v-card-text>
@@ -220,7 +221,8 @@
         <v-card color="pink" hover>
         <v-img
           src="/lib/img/Tertiary.jpg"
-          height="300px"
+          height="305px"
+          aspect-ratio="1.7"
         >
         </v-img>
         <v-card-text>
