@@ -25,89 +25,75 @@
                     </v-card-text> </v-card> </v-flex>     
                 </v-layout>  
         </v-layout>
-
-        
-
     </v-container>
 </v-form>
 </v-card>
+
+
 <!--   Advanced search  -->
 <section v-if="advancedSearch"> 
-<v-card color="grey lighten-2">
- <v-container  grid-list-xl>
-  
-    <v-layout row wrap >
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Distance"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="City Area"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-        
-
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Private, Public"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
+  <v-card tile flat color="grey lighten-3">
+    <form>
+      <v-container grid-list-xl>
+        <v-layout row wrap >
+          <v-flex xs6 sm3>
+      <v-select
+        :items="items"
+        label="Distance"
+      ></v-select>
+           </v-flex>
+            
+      <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="District"></v-select>
+     </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Public or Private"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Gender"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Primary School"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Language"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Boarding"
+      ></v-select>
+            </v-flex>
+         <v-flex xs6 sm3>
+     <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
       </v-flex>
       
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Language"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
+          </v-layout>
+        </v-container>
+    </form>
+      </v-card>
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Gender Mixed"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Primary School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-      <v-flex xs12 sm3 d-flex>
-         <v-overflow-btn
-          :items="dropdown_edit"
-          label="Boarding School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3 dflex>
-      <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
-      </v-flex>
-    </v-layout>
-  </v-container>
-  </v-card>
  </section> 
 
    <!--  search results -->
@@ -360,7 +346,13 @@ export default {
   data (){
     return{
        advancedSearch : false,
-       page: 2
+       page: 2,
+           items: [
+      'Item 1',
+      'Item 2',
+      'Item 3',
+      'Item 4'
+    ]
     }
   }
 }

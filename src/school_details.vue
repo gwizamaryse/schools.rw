@@ -38,81 +38,66 @@
 </v-form>
 <!--   Advanced search  -->
 <section v-if="advancedSearch"> 
-<v-card color="white">
- <v-container  grid-list-xl>
-  
-    <v-layout row wrap >
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Distance"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="City Area"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-        
-
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Private, Public"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
+  <v-card tile flat color="grey lighten-3">
+    <form>
+      <v-container grid-list-xl>
+        <v-layout row wrap >
+          <v-flex xs6 sm3>
+      <v-select
+        :items="items"
+        label="Distance"
+      ></v-select>
+           </v-flex>
+            
+      <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="District"></v-select>
+     </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Public or Private"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Gender"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Primary School"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Language"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Boarding"
+      ></v-select>
+            </v-flex>
+         <v-flex xs6 sm3>
+     <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
       </v-flex>
       
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Language"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
-
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Gender Mixed"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
-
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Primary School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-      <v-flex xs12 sm3 d-flex>
-         <v-overflow-btn
-          :items="dropdown_edit"
-          label="Boarding School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3 dflex>
-      <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
-      </v-flex>
-    </v-layout>
-  </v-container>
-  </v-card>
+          </v-layout>
+        </v-container>
+    </form>
+      </v-card>
  </section> 
 </v-card>
 </v-flex>
@@ -224,27 +209,27 @@
      <v-icon size="80" color="light-blue">person</v-icon>
      <p class="title">1600 students</p>
       </v-flex>
-       <v-flex xs12 sm3 text-xs-center>
+       <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> supervised_user_circle</v-icon>
      <p class="title">Average 20 students per class</p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> language </v-icon>
      <p class="title">English <br> French <br> kinyarwanda </p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue">fas fa-tshirt</v-icon>
      <p class="title">Uniform is Mandatory</p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue">fas fa-school</v-icon>
      <p class="title">Private School</p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue">fas fa-church </v-icon>
      <p class="title">Secular</p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs4 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> wc </v-icon>
      <p class="title">Gender Mixed </p>
       </v-flex>
@@ -261,19 +246,19 @@
 
        <v-card-text pl-5>  <v-divider class="light-blue"></v-divider> </v-card-text>
 
-       <v-flex xs12 sm3 text-xs-center>
+       <v-flex xs6 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> fas fa-book-reader</v-icon>
      <p class="title">Library <br> 3000 books </p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs6 sm3 text-xs-center>
      <v-icon size="80" color="light-blue">fas fa-volleyball-ball </v-icon>
      <p class="title">4 sports Activities </p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs6 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> fas fa-music</v-icon>
      <p class="title">10 Music Activities </p>
       </v-flex>
-      <v-flex xs12 sm3 text-xs-center>
+      <v-flex xs6 sm3 text-xs-center>
      <v-icon size="80" color="light-blue"> fas fa-palette</v-icon>
      <p class="title">10 others Activities </p>
       </v-flex>
@@ -460,7 +445,7 @@
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5285372368317!2d30.102248015144955!3d-1.9412390372397264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6dd770ef2e5%3A0x494d6bac0a0eb50b!2sGreen+Hills+Academy!5e0!3m2!1sen!2sjp!4v1543291263894" width="300" height="300" frameborder="2" style="border:0" allowfullscreen></iframe>
              </p>
 
-       <!--       Reviews Section -->
+       <!-- Reviews Section -->
        
              <v-card-text>
              <p class="text-md-center orange--text display-2"> Reviews </p>
@@ -480,6 +465,7 @@
       </v-card-title>
       
          <v-divider></v-divider>
+
       <v-card-text class="subheading">  <v-icon> person </v-icon>  Review by Mary Kabalisa</v-card-text>
          <v-divider></v-divider>
       <v-card-text>
@@ -562,24 +548,27 @@
       
     </v-card>
 
-    <v-card-text class="orange--text title">
-        <p class="text-xs-center display-1">Write a Review</p>
+    <v-card-text class="orange--text title pt-4">
+        <p class="text-xs-center display-1">Write a Review</p></v-card-text>
          <p class="text-xs-center"> Are you a student or parent at this school? Help others make a well-informed choice.<br>
          rate this school and leave a comment! Thank you</p>
-     </v-card-text>
+     
       <div class="text-xs-center">
     <v-rating  large hover v-model="user_rating"></v-rating>
   </div>
-  <v-form  >
+  <v-layout align-center justify-center>
+    <v-form  >
       <v-text-field
         label="Title"
         required
+        light
               
       ></v-text-field>
       <v-textarea
         label="review"
         required
         outline
+        light
         ></v-textarea>
   
       <v-btn >
@@ -587,6 +576,53 @@
       </v-btn>
     
     </v-form>
+
+    </v-layout>
+
+       <v-card-text class="orange--text title pt-4">
+        <p class="text-xs-center display-1"> Contact Us</p></v-card-text>
+
+     <v-layout align-center justify-center>
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <v-text-field
+        v-model="name"
+        :rules="nameRules"
+        :counter="10"
+        label="Name"
+        required
+      ></v-text-field>
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        label="E-mail"
+        required
+      ></v-text-field>
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        label="Telephone"
+        required
+      ></v-text-field>
+      <v-textarea
+        label="Comments / Questions"
+        required
+        outline
+        solo
+        light
+        ></v-textarea>
+      
+  
+      <v-btn
+        :disabled="!valid"
+        @click="submit"
+      >
+        submit
+      </v-btn>
+    
+    </v-form>
+
+     </v-layout>
+
 
 
 

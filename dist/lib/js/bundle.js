@@ -11967,12 +11967,39 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
       drawer: null,
-      links: ['Home', 'About Us', 'Team', 'Services', 'Blog', 'Contact Us']
+      links: ['Home', 'About Us', 'Team', 'Services', 'Contact Us']
     };
   }
 });
@@ -11982,19 +12009,6 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -12615,26 +12629,13 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
       advancedSearch: false,
-      page: 2
+      page: 2,
+      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4']
     };
   }
 });
@@ -12644,6 +12645,42 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -39403,7 +39440,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAiHA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Blog',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AA2IA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"error\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"green\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"warning\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"cyan\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"lime\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"pink\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University and Polytechnics </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>English </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Kinyarwanda </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>French </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -39474,7 +39511,15 @@ var render = function() {
               _c(
                 "v-list-tile",
                 [
-                  _c("v-list-tile-action", [_c("v-icon", [_vm._v("home")])], 1),
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "light-blue" } }, [
+                        _vm._v("home")
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("v-list-tile-title", [_vm._v("Home")])
                 ],
@@ -39486,7 +39531,11 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("school")])],
+                    [
+                      _c("v-icon", { attrs: { color: "error" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
@@ -39500,7 +39549,11 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("school")])],
+                    [
+                      _c("v-icon", { attrs: { color: "green" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
@@ -39514,7 +39567,11 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("school")])],
+                    [
+                      _c("v-icon", { attrs: { color: "warning" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
@@ -39530,7 +39587,11 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("school")])],
+                    [
+                      _c("v-icon", { attrs: { color: "cyan" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
@@ -39546,7 +39607,11 @@ var render = function() {
                 [
                   _c(
                     "v-list-tile-action",
-                    [_c("v-icon", [_vm._v("school")])],
+                    [
+                      _c("v-icon", { attrs: { color: "lime" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
                     1
                   ),
                   _vm._v(" "),
@@ -39556,6 +39621,82 @@ var render = function() {
               ),
               _vm._v(" "),
               _c("v-divider"),
+              _vm._v(" "),
+              _c(
+                "v-list-tile",
+                [
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "pink" } }, [
+                        _vm._v("school")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-tile-title", [
+                    _vm._v("University and Polytechnics ")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-divider"),
+              _vm._v(" "),
+              _c(
+                "v-list-tile",
+                [
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "light-blue" } }, [
+                        _vm._v("language")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-tile-title", [_vm._v("English ")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-tile",
+                [
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "light-blue" } }, [
+                        _vm._v("language")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-tile-title", [_vm._v("Kinyarwanda ")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-tile",
+                [
+                  _c(
+                    "v-list-tile-action",
+                    [
+                      _c("v-icon", { attrs: { color: "light-blue" } }, [
+                        _vm._v("language")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-tile-title", [_vm._v("French ")])
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "v-list-tile",
@@ -40042,138 +40183,144 @@ var render = function() {
             [
               _c(
                 "v-card",
-                { attrs: { color: "white" } },
+                { attrs: { tile: "", flat: "", color: "grey lighten-3" } },
                 [
                   _c(
-                    "v-container",
-                    { attrs: { "grid-list-xl": "" } },
+                    "form",
                     [
                       _c(
-                        "v-layout",
-                        { attrs: { row: "", wrap: "" } },
+                        "v-container",
+                        { attrs: { "grid-list-xl": "" } },
                         [
                           _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Distance",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "City Area",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Private, Public",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Language",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Gender Mixed",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Primary School",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "", "d-flex": "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Boarding School",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "", dflex: "" } },
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
                             [
                               _c(
-                                "v-btn",
-                                { attrs: { block: "", color: "info" } },
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
                                 [
-                                  _c("v-icon", [_vm._v(" search ")]),
-                                  _vm._v(" Advanced Search")
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Distance"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "District"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Public or Private"
+                                    },
+                                    model: {
+                                      value: _vm.select,
+                                      callback: function($$v) {
+                                        _vm.select = $$v
+                                      },
+                                      expression: "select"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Gender"
+                                    },
+                                    model: {
+                                      value: _vm.select,
+                                      callback: function($$v) {
+                                        _vm.select = $$v
+                                      },
+                                      expression: "select"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Primary School"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Language"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Boarding"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    { attrs: { block: "", color: "info" } },
+                                    [
+                                      _c("v-icon", [_vm._v(" search ")]),
+                                      _vm._v(" Advanced Search")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
@@ -40186,8 +40333,7 @@ var render = function() {
                     ],
                     1
                   )
-                ],
-                1
+                ]
               )
             ],
             1
@@ -40403,7 +40549,12 @@ var render = function() {
                                 large: ""
                               }
                             },
-                            [_vm._v(" Secondary School  ")]
+                            [
+                              _vm._v(" Secondary School   "),
+                              _c("v-spacer"),
+                              _vm._v(" 1,375")
+                            ],
+                            1
                           )
                         ],
                         1
@@ -40436,7 +40587,8 @@ var render = function() {
                               staticClass: "lime white--text",
                               attrs: { flat: "", depressed: "", block: "" }
                             },
-                            [_vm._v("TVET")]
+                            [_vm._v("TVET  "), _c("v-spacer"), _vm._v(" 402 ")],
+                            1
                           )
                         ],
                         1
@@ -40469,7 +40621,12 @@ var render = function() {
                               staticClass: "pink white--text",
                               attrs: { block: "", flat: "" }
                             },
-                            [_vm._v("University, Polytechnics")]
+                            [
+                              _vm._v("Universities and Polytechnics "),
+                              _c("v-spacer"),
+                              _vm._v(" 37 ")
+                            ],
+                            1
                           )
                         ],
                         1
@@ -40860,138 +41017,144 @@ var render = function() {
             [
               _c(
                 "v-card",
-                { attrs: { color: "grey lighten-2" } },
+                { attrs: { tile: "", flat: "", color: "grey lighten-3" } },
                 [
                   _c(
-                    "v-container",
-                    { attrs: { "grid-list-xl": "" } },
+                    "form",
                     [
                       _c(
-                        "v-layout",
-                        { attrs: { row: "", wrap: "" } },
+                        "v-container",
+                        { attrs: { "grid-list-xl": "" } },
                         [
                           _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Distance",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "City Area",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Private, Public",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Language",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Gender Mixed",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Primary School",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "", "d-flex": "" } },
-                            [
-                              _c("v-overflow-btn", {
-                                attrs: {
-                                  items: _vm.dropdown_edit,
-                                  label: "Boarding School",
-                                  editable: "",
-                                  "item-value": "text"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-flex",
-                            { attrs: { xs12: "", sm3: "", dflex: "" } },
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
                             [
                               _c(
-                                "v-btn",
-                                { attrs: { block: "", color: "info" } },
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
                                 [
-                                  _c("v-icon", [_vm._v(" search ")]),
-                                  _vm._v(" Advanced Search")
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Distance"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "District"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Public or Private"
+                                    },
+                                    model: {
+                                      value: _vm.select,
+                                      callback: function($$v) {
+                                        _vm.select = $$v
+                                      },
+                                      expression: "select"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Gender"
+                                    },
+                                    model: {
+                                      value: _vm.select,
+                                      callback: function($$v) {
+                                        _vm.select = $$v
+                                      },
+                                      expression: "select"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Primary School"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Language"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      items: _vm.items,
+                                      label: "Boarding"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs6: "", sm3: "" } },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    { attrs: { block: "", color: "info" } },
+                                    [
+                                      _c("v-icon", [_vm._v(" search ")]),
+                                      _vm._v(" Advanced Search")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
@@ -41004,8 +41167,7 @@ var render = function() {
                     ],
                     1
                   )
-                ],
-                1
+                ]
               )
             ],
             1
@@ -42402,7 +42564,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAioBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CC9nBL;ADgoBG;;;EACE,WAAA;CC5nBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition\n  .fade\n    &-enter-active, &-leave-active, &-leave-to\n      transition: .3s ease-out\n      position: absolute\n      top: 0\n      left: 0\n\n    &-enter, &-leave, &-leave-to\n      opacity: 0\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAqqBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CClqBL;ADoqBG;;;EACE,WAAA;CChqBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition\n  .fade\n    &-enter-active, &-leave-active, &-leave-to\n      transition: .3s ease-out\n      position: absolute\n      top: 0\n      left: 0\n\n    &-enter, &-leave, &-leave-to\n      opacity: 0\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -42681,169 +42843,207 @@ var render = function() {
                                 [
                                   _c(
                                     "v-card",
-                                    { attrs: { color: "white" } },
+                                    {
+                                      attrs: {
+                                        tile: "",
+                                        flat: "",
+                                        color: "grey lighten-3"
+                                      }
+                                    },
                                     [
                                       _c(
-                                        "v-container",
-                                        { attrs: { "grid-list-xl": "" } },
+                                        "form",
                                         [
                                           _c(
-                                            "v-layout",
-                                            { attrs: { row: "", wrap: "" } },
+                                            "v-container",
+                                            { attrs: { "grid-list-xl": "" } },
                                             [
                                               _c(
-                                                "v-flex",
+                                                "v-layout",
                                                 {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Distance",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "City Area",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Private, Public",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Language",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Gender Mixed",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: { xs12: "", sm3: "" }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Primary School",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: {
-                                                    xs12: "",
-                                                    sm3: "",
-                                                    "d-flex": ""
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-overflow-btn", {
-                                                    attrs: {
-                                                      items: _vm.dropdown_edit,
-                                                      label: "Boarding School",
-                                                      editable: "",
-                                                      "item-value": "text"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-flex",
-                                                {
-                                                  attrs: {
-                                                    xs12: "",
-                                                    sm3: "",
-                                                    dflex: ""
-                                                  }
+                                                  attrs: { row: "", wrap: "" }
                                                 },
                                                 [
                                                   _c(
-                                                    "v-btn",
+                                                    "v-flex",
                                                     {
                                                       attrs: {
-                                                        block: "",
-                                                        color: "info"
+                                                        xs6: "",
+                                                        sm3: ""
                                                       }
                                                     },
                                                     [
-                                                      _c("v-icon", [
-                                                        _vm._v(" search ")
-                                                      ]),
-                                                      _vm._v(" Advanced Search")
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Distance"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "District"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label:
+                                                            "Public or Private"
+                                                        },
+                                                        model: {
+                                                          value: _vm.select,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.select = $$v
+                                                          },
+                                                          expression: "select"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Gender"
+                                                        },
+                                                        model: {
+                                                          value: _vm.select,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.select = $$v
+                                                          },
+                                                          expression: "select"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label:
+                                                            "Primary School"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Language"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Boarding"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            block: "",
+                                                            color: "info"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v(" search ")
+                                                          ]),
+                                                          _vm._v(
+                                                            " Advanced Search"
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
                                                     ],
                                                     1
                                                   )
@@ -42856,8 +43056,7 @@ var render = function() {
                                         ],
                                         1
                                       )
-                                    ],
-                                    1
+                                    ]
                                   )
                                 ],
                                 1
@@ -43243,7 +43442,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43281,7 +43480,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43317,7 +43516,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43347,7 +43546,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43377,7 +43576,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43407,7 +43606,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs4: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43519,7 +43718,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs6: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43553,7 +43752,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs6: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43587,7 +43786,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs6: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -43617,7 +43816,7 @@ var render = function() {
                                             "v-flex",
                                             {
                                               attrs: {
-                                                xs12: "",
+                                                xs6: "",
                                                 sm3: "",
                                                 "text-xs-center": ""
                                               }
@@ -44434,20 +44633,24 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("v-card-text", { staticClass: "orange--text title" }, [
-                    _c("p", { staticClass: "text-xs-center display-1" }, [
-                      _vm._v("Write a Review")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "text-xs-center" }, [
-                      _vm._v(
-                        " Are you a student or parent at this school? Help others make a well-informed choice."
-                      ),
-                      _c("br"),
-                      _vm._v(
-                        "\n         rate this school and leave a comment! Thank you"
-                      )
-                    ])
+                  _c(
+                    "v-card-text",
+                    { staticClass: "orange--text title pt-4" },
+                    [
+                      _c("p", { staticClass: "text-xs-center display-1" }, [
+                        _vm._v("Write a Review")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-xs-center" }, [
+                    _vm._v(
+                      " Are you a student or parent at this school? Help others make a well-informed choice."
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "\n         rate this school and leave a comment! Thank you"
+                    )
                   ]),
                   _vm._v(" "),
                   _c(
@@ -44469,17 +44672,128 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c(
-                    "v-form",
+                    "v-layout",
+                    { attrs: { "align-center": "", "justify-center": "" } },
                     [
-                      _c("v-text-field", {
-                        attrs: { label: "Title", required: "" }
-                      }),
-                      _vm._v(" "),
-                      _c("v-textarea", {
-                        attrs: { label: "review", required: "", outline: "" }
-                      }),
-                      _vm._v(" "),
-                      _c("v-btn", [_vm._v("\n        submit\n      ")])
+                      _c(
+                        "v-form",
+                        [
+                          _c("v-text-field", {
+                            attrs: { label: "Title", required: "", light: "" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-textarea", {
+                            attrs: {
+                              label: "review",
+                              required: "",
+                              outline: "",
+                              light: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-btn", [_vm._v("\n        submit\n      ")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    { staticClass: "orange--text title pt-4" },
+                    [
+                      _c("p", { staticClass: "text-xs-center display-1" }, [
+                        _vm._v(" Contact Us")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-layout",
+                    { attrs: { "align-center": "", "justify-center": "" } },
+                    [
+                      _c(
+                        "v-form",
+                        {
+                          ref: "form",
+                          attrs: { "lazy-validation": "" },
+                          model: {
+                            value: _vm.valid,
+                            callback: function($$v) {
+                              _vm.valid = $$v
+                            },
+                            expression: "valid"
+                          }
+                        },
+                        [
+                          _c("v-text-field", {
+                            attrs: {
+                              rules: _vm.nameRules,
+                              counter: 10,
+                              label: "Name",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.name,
+                              callback: function($$v) {
+                                _vm.name = $$v
+                              },
+                              expression: "name"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: {
+                              rules: _vm.emailRules,
+                              label: "E-mail",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.email,
+                              callback: function($$v) {
+                                _vm.email = $$v
+                              },
+                              expression: "email"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: {
+                              rules: _vm.emailRules,
+                              label: "Telephone",
+                              required: ""
+                            },
+                            model: {
+                              value: _vm.email,
+                              callback: function($$v) {
+                                _vm.email = $$v
+                              },
+                              expression: "email"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-textarea", {
+                            attrs: {
+                              label: "Comments / Questions",
+                              required: "",
+                              outline: "",
+                              solo: "",
+                              light: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { disabled: !_vm.valid },
+                              on: { click: _vm.submit }
+                            },
+                            [_vm._v("\n        submit\n      ")]
+                          )
+                        ],
+                        1
+                      )
                     ],
                     1
                   )

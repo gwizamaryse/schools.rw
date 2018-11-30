@@ -49,85 +49,72 @@
  </v-img>
 
 
+
 <!--   Advanced search  -->
-<section v-if="advancedSearch">
-<v-card color="white">
- <v-container  grid-list-xl>
-  
-    <v-layout row wrap >
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Distance"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
+<section v-if="advancedSearch"> 
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="City Area"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-        
-
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Private, Public"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
+  <v-card tile flat color="grey lighten-3">
+    <form>
+      <v-container grid-list-xl>
+        <v-layout row wrap >
+          <v-flex xs6 sm3>
+      <v-select
+        :items="items"
+        label="Distance"
+      ></v-select>
+           </v-flex>
+            
+      <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="District"></v-select>
+     </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Public or Private"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        v-model="select"
+        label="Gender"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Primary School"
+      ></v-select>
+            </v-flex>
+          
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Language"
+      ></v-select>
+            </v-flex>
+          <v-flex xs6 sm3>
+         <v-select
+        :items="items"
+        label="Boarding"
+      ></v-select>
+            </v-flex>
+         <v-flex xs6 sm3>
+     <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
       </v-flex>
       
-      <v-flex xs12 sm3>
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Language"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
+          </v-layout>
+        </v-container>
+    </form>
+      </v-card>
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Gender Mixed"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3>
-     
 
-        <v-overflow-btn
-          :items="dropdown_edit"
-          label="Primary School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-      <v-flex xs12 sm3 d-flex>
-         <v-overflow-btn
-          :items="dropdown_edit"
-          label="Boarding School"
-          editable
-          item-value="text"
-        ></v-overflow-btn>
-      </v-flex>
-       <v-flex xs12 sm3 dflex>
-      <v-btn block color="info"> <v-icon> search </v-icon> Advanced Search</v-btn> 
-      </v-flex>
-    </v-layout>
-  </v-container>
-  </v-card>
-</section>
-  
+ </section> 
 
   <!-- schools listed -->
 
@@ -198,7 +185,7 @@
         >
         </v-img>
         <v-card-text>
-         <v-btn block depressed flat large class="cyan white--text"> Secondary School  </v-btn> </v-card-text>
+         <v-btn block depressed flat large class="cyan white--text"> Secondary School   <v-spacer></v-spacer> 1,375</v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
@@ -210,7 +197,7 @@
           height="305px">
         </v-img>
         <v-card-text>
-        <v-btn  flat depressed block class="lime white--text">TVET</v-btn></v-card-text>
+        <v-btn  flat depressed block class="lime white--text">TVET  <v-spacer></v-spacer> 402 </v-btn></v-card-text>
       </v-card>
         
       </v-flex>
@@ -224,7 +211,7 @@
         >
         </v-img>
         <v-card-text>
-        <v-btn block flat class="pink white--text">University, Polytechnics</v-btn></v-card-text>
+        <v-btn block flat class="pink white--text">Universities and Polytechnics <v-spacer></v-spacer> 37 </v-btn></v-card-text>
       </v-card>
         
       </v-flex>

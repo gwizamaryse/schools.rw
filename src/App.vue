@@ -8,7 +8,7 @@
     <v-list>
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>home</v-icon>
+          <v-icon color="light-blue">home</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Home</v-list-tile-title>
       </v-list-tile>
@@ -16,39 +16,66 @@
     
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>school</v-icon>
+          <v-icon color="error">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Pre-Nursery</v-list-tile-title>
       </v-list-tile>
       
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>school</v-icon>
+          <v-icon color="green">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Nursery</v-list-tile-title>
       </v-list-tile>
       
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>school</v-icon>
+          <v-icon color="warning">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Primary</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>school</v-icon>
+          <v-icon color="cyan">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Secondary Schools</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon>school</v-icon>
+          <v-icon color="lime">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
+       <v-list-tile>
+        <v-list-tile-action>
+          <v-icon color="pink">school</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title>University and Polytechnics </v-list-tile-title>
+      </v-list-tile>
+      <v-divider></v-divider>
+       <v-list-tile>
+        <v-list-tile-action>
+          <v-icon color="light-blue">language</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title>English </v-list-tile-title>
+      </v-list-tile>
+      
+       <v-list-tile>
+        <v-list-tile-action>
+          <v-icon color="light-blue">language</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title>Kinyarwanda </v-list-tile-title>
+      </v-list-tile>
+      
+       <v-list-tile>
+        <v-list-tile-action>
+          <v-icon color="light-blue">language</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title>French </v-list-tile-title>
+      </v-list-tile>
       <v-list-tile>
         <v-list-tile-action>
           <v-icon>school</v-icon>
@@ -101,7 +128,6 @@
         'About Us',
         'Team',
         'Services',
-        'Blog',
         'Contact Us'
       ]
       }
