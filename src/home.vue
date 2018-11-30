@@ -191,14 +191,14 @@
       </v-flex>
       <v-flex xs12 sm4 pa-2>
 
-        <v-card color="info" hover>
+        <v-card class="cyan" hover>
         <v-img
           src="/lib/img/Secondary.jpg"
           height="300px"
         >
         </v-img>
         <v-card-text>
-         <v-btn flat large class="info"> Secondary School  </v-btn> </v-card-text>
+         <v-btn block depressed flat large class="cyan white--text"> Secondary School  </v-btn> </v-card-text>
       </v-card>
         
       </v-flex>
@@ -207,12 +207,10 @@
         <v-card color="lime" hover>
         <v-img
           src="/lib/img/TVET.jpg"
-          height="305px"
-          aspect-ratio="1.2"
-        >
+          height="305px">
         </v-img>
         <v-card-text>
-        <v-btn  flat block class="lime white--text">TVET</v-btn></v-card-text>
+        <v-btn  flat depressed block class="lime white--text">TVET</v-btn></v-card-text>
       </v-card>
         
       </v-flex>
@@ -222,7 +220,7 @@
         <v-img
           src="/lib/img/Tertiary.jpg"
           height="305px"
-          aspect-ratio="1.7"
+          
         >
         </v-img>
         <v-card-text>

@@ -10,7 +10,7 @@
                     <v-card  color="grey lighten-3" tile flat>
                         <v-form>
                             <v-container fluid >
-                                <v-layout row wrap pa-4>
+                                <v-layout row wrap pa-2 ml-5>
                                     <v-layout row>
                                         <v-flex xs8 order-md2 order-xs1 d-flex> 
                                             <v-card><v-text-field   type="text" label="Search school by district or school's name" >   

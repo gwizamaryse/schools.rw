@@ -12249,8 +12249,6 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -12550,11 +12548,92 @@ function applyToTag (styleElement, obj) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      advancedSearch: true,
+      advancedSearch: false,
       page: 2
     };
   }
@@ -40301,7 +40380,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "info", hover: "" } },
+                    { staticClass: "cyan", attrs: { hover: "" } },
                     [
                       _c("v-img", {
                         attrs: {
@@ -40316,8 +40395,13 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
-                              staticClass: "info",
-                              attrs: { flat: "", large: "" }
+                              staticClass: "cyan white--text",
+                              attrs: {
+                                block: "",
+                                depressed: "",
+                                flat: "",
+                                large: ""
+                              }
                             },
                             [_vm._v(" Secondary School  ")]
                           )
@@ -40340,11 +40424,7 @@ var render = function() {
                     { attrs: { color: "lime", hover: "" } },
                     [
                       _c("v-img", {
-                        attrs: {
-                          src: "/lib/img/TVET.jpg",
-                          height: "305px",
-                          "aspect-ratio": "1.2"
-                        }
+                        attrs: { src: "/lib/img/TVET.jpg", height: "305px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -40354,7 +40434,7 @@ var render = function() {
                             "v-btn",
                             {
                               staticClass: "lime white--text",
-                              attrs: { flat: "", block: "" }
+                              attrs: { flat: "", depressed: "", block: "" }
                             },
                             [_vm._v("TVET")]
                           )
@@ -40377,11 +40457,7 @@ var render = function() {
                     { attrs: { color: "pink", hover: "" } },
                     [
                       _c("v-img", {
-                        attrs: {
-                          src: "/lib/img/Tertiary.jpg",
-                          height: "305px",
-                          "aspect-ratio": "1.7"
-                        }
+                        attrs: { src: "/lib/img/Tertiary.jpg", height: "305px" }
                       }),
                       _vm._v(" "),
                       _c(
@@ -40587,7 +40663,7 @@ var render = function() {
                 [
                   _c(
                     "v-layout",
-                    { attrs: { row: "", wrap: "", "pa-4": "" } },
+                    { attrs: { row: "", wrap: "", "pl-4": "" } },
                     [
                       _c(
                         "v-layout",
@@ -40964,11 +41040,7 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c(
-                "v-card-text",
-                [_c("v-divider", { staticClass: "light-blue" })],
-                1
-              ),
+              _c("v-divider", { staticClass: "light-blue" }),
               _vm._v(" "),
               _c(
                 "v-card",
@@ -40980,7 +41052,7 @@ var render = function() {
                     [
                       _c(
                         "v-container",
-                        { attrs: { "grid-list-xl": "" } },
+                        { attrs: { fluid: "" } },
                         [
                           _c(
                             "v-layout",
@@ -40990,27 +41062,303 @@ var render = function() {
                                 "v-flex",
                                 { attrs: { xs16: "", sm2: "" } },
                                 [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src: "/lib/img/logo/logo-school.jpg"
-                                    }
-                                  })
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: "/lib/img/logo/logo-school.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               ),
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm8: "" } },
+                                { attrs: { xs12: "", sm8: "", md8: "" } },
                                 [
                                   _c(
                                     "v-flex",
                                     { attrs: { xs12: "", sm8: "" } },
                                     [
-                                      _c("p", { staticClass: "display-1" }, [
-                                        _vm._v("Green Hills Academy")
+                                      _c("v-card-text", [
+                                        _c("p", { staticClass: "display-1" }, [
+                                          _vm._v("Green Hills Academy")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "subheading" },
+                                          [
+                                            _vm._v(
+                                              "kigali, gasabo, nyarutarama "
+                                            ),
+                                            _c("v-icon", [
+                                              _vm._v("fas fa-map-marker-alt")
+                                            ])
+                                          ],
+                                          1
+                                        )
                                       ])
-                                    ]
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "error"
+                                          }
+                                        },
+                                        [_vm._v(" Pre-Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "success"
+                                          }
+                                        },
+                                        [_vm._v(" Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "warning"
+                                          }
+                                        },
+                                        [_vm._v(" Primary school ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "cyan white--text",
+                                          attrs: { depressed: "", small: "" }
+                                        },
+                                        [_vm._v(" General Secondary  ")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-container",
+                                        { attrs: { fluid: "" } },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "", wrap: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-building ")
+                                                  ]),
+                                                  _vm._v(
+                                                    " Sector : Private     "
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [_vm._v("wc")]),
+                                                  _vm._v(" Gender: Mixed ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-church")
+                                                  ]),
+                                                  _vm._v(" Religion: Secular  ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-users")
+                                                  ]),
+                                                  _vm._v(" Levels: Combined ")
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            round: "",
+                                            "x-large": "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(" fas fa-balance-scale ")
+                                          ]),
+                                          _vm._v("Compare ")
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "light-blue" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    { attrs: { color: "light-blue lighten-5" } },
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs16: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: "/lib/img/logo/logo-school.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm8: "", md8: "" } },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "", sm8: "" } },
+                                    [
+                                      _c("v-card-text", [
+                                        _c("p", { staticClass: "display-1" }, [
+                                          _vm._v("Green Hills Academy")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "subheading" },
+                                          [
+                                            _vm._v(
+                                              "kigali, gasabo, nyarutarama "
+                                            ),
+                                            _c("v-icon", [
+                                              _vm._v("fas fa-map-marker-alt")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ])
+                                    ],
+                                    1
                                   ),
                                   _vm._v(" "),
                                   _c(
@@ -41067,22 +41415,313 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-container",
+                                        { attrs: { fluid: "" } },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "", wrap: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-building ")
+                                                  ]),
+                                                  _vm._v(
+                                                    " Sector : Private     "
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [_vm._v("wc")]),
+                                                  _vm._v(" Gender: Mixed ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-church")
+                                                  ]),
+                                                  _vm._v(" Religion: Secular  ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-users")
+                                                  ]),
+                                                  _vm._v(" Levels: Combined ")
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            round: "",
+                                            "x-large": "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(" fas fa-balance-scale ")
+                                          ]),
+                                          _vm._v("Compare ")
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "light-blue" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-card",
+                    [
+                      _c(
+                        "v-container",
+                        { attrs: { fluid: "" } },
+                        [
+                          _c(
+                            "v-layout",
+                            { attrs: { row: "", wrap: "" } },
+                            [
+                              _c(
+                                "v-flex",
+                                { attrs: { xs16: "", sm2: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: "/lib/img/logo/logo-school.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-flex",
+                                { attrs: { xs12: "", sm8: "", md8: "" } },
+                                [
+                                  _c(
+                                    "v-flex",
                                     { attrs: { xs12: "", sm8: "" } },
                                     [
-                                      _c("v-icon", [_vm._v("fas fa-building")]),
-                                      _vm._v(
-                                        " sector: Private\n         \n         "
+                                      _c("v-card-text", [
+                                        _c("p", { staticClass: "display-1" }, [
+                                          _vm._v("Green Hills Academy")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "subheading" },
+                                          [
+                                            _vm._v(
+                                              "kigali, gasabo, nyarutarama "
+                                            ),
+                                            _c("v-icon", [
+                                              _vm._v("fas fa-map-marker-alt")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "error"
+                                          }
+                                        },
+                                        [_vm._v(" Pre-Nursery School")]
                                       ),
-                                      _c("v-icon", [_vm._v("wc")]),
-                                      _vm._v(
-                                        " Gender: Mixed \n       \n         "
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "success"
+                                          }
+                                        },
+                                        [_vm._v(" Nursery School")]
                                       ),
-                                      _c("v-icon", [_vm._v("fas fa-church")]),
-                                      _vm._v(
-                                        " Religion: Secular \n       \n         "
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "warning"
+                                          }
+                                        },
+                                        [_vm._v(" Primary school ")]
                                       ),
-                                      _c("v-icon", [_vm._v("fas fa-users")]),
-                                      _vm._v(" Levels: Combined  \n          ")
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "info",
+                                          attrs: { depressed: "", small: "" }
+                                        },
+                                        [_vm._v(" General Secondary  ")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-container",
+                                        { attrs: { fluid: "" } },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "", wrap: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-building ")
+                                                  ]),
+                                                  _vm._v(
+                                                    " Sector : Private     "
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [_vm._v("wc")]),
+                                                  _vm._v(" Gender: Mixed ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-church")
+                                                  ]),
+                                                  _vm._v(" Religion: Secular  ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-users")
+                                                  ]),
+                                                  _vm._v(" Levels: Combined ")
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -41095,20 +41734,34 @@ var render = function() {
                                 { attrs: { xs12: "", sm2: "" } },
                                 [
                                   _c(
-                                    "v-btn",
+                                    "v-layout",
                                     {
                                       attrs: {
-                                        block: "",
-                                        round: "",
-                                        "x-large": "",
-                                        color: "info"
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
                                       }
                                     },
                                     [
-                                      _c("v-icon", [
-                                        _vm._v(" fas fa-balance-scale ")
-                                      ]),
-                                      _vm._v("Compare ")
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            round: "",
+                                            "x-large": "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(" fas fa-balance-scale ")
+                                          ]),
+                                          _vm._v("Compare ")
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -41124,6 +41777,8 @@ var render = function() {
                     ],
                     1
                   ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "light-blue" }),
                   _vm._v(" "),
                   _c(
                     "v-card",
@@ -41131,7 +41786,7 @@ var render = function() {
                     [
                       _c(
                         "v-container",
-                        { attrs: { "grid-list-xl": "" } },
+                        { attrs: { fluid: "" } },
                         [
                           _c(
                             "v-layout",
@@ -41141,27 +41796,180 @@ var render = function() {
                                 "v-flex",
                                 { attrs: { xs16: "", sm2: "" } },
                                 [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src: "/lib/img/logo/logo-school.jpg"
-                                    }
-                                  })
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: "/lib/img/logo/logo-school.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               ),
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm8: "" } },
+                                { attrs: { xs12: "", sm8: "", md8: "" } },
                                 [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Private, Public",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "", sm8: "" } },
+                                    [
+                                      _c("v-card-text", [
+                                        _c("p", { staticClass: "display-1" }, [
+                                          _vm._v("Green Hills Academy")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "subheading" },
+                                          [
+                                            _vm._v(
+                                              "kigali, gasabo, nyarutarama "
+                                            ),
+                                            _c("v-icon", [
+                                              _vm._v("fas fa-map-marker-alt")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "error"
+                                          }
+                                        },
+                                        [_vm._v(" Pre-Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "success"
+                                          }
+                                        },
+                                        [_vm._v(" Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "warning"
+                                          }
+                                        },
+                                        [_vm._v(" Primary school ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "info",
+                                          attrs: { depressed: "", small: "" }
+                                        },
+                                        [_vm._v(" General Secondary  ")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-container",
+                                        { attrs: { fluid: "" } },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "", wrap: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-building ")
+                                                  ]),
+                                                  _vm._v(
+                                                    " Sector : Private     "
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [_vm._v("wc")]),
+                                                  _vm._v(" Gender: Mixed ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-church")
+                                                  ]),
+                                                  _vm._v(" Religion: Secular  ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-users")
+                                                  ]),
+                                                  _vm._v(" Levels: Combined ")
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               ),
@@ -41171,20 +41979,34 @@ var render = function() {
                                 { attrs: { xs12: "", sm2: "" } },
                                 [
                                   _c(
-                                    "v-btn",
+                                    "v-layout",
                                     {
                                       attrs: {
-                                        block: "",
-                                        round: "",
-                                        "x-large": "",
-                                        color: "info"
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
                                       }
                                     },
                                     [
-                                      _c("v-icon", [
-                                        _vm._v(" fas fa-balance-scale ")
-                                      ]),
-                                      _vm._v("Compare ")
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            round: "",
+                                            "x-large": "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(" fas fa-balance-scale ")
+                                          ]),
+                                          _vm._v("Compare ")
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -41201,12 +42023,14 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
+                  _c("v-divider", { staticClass: "light-blue" }),
+                  _vm._v(" "),
                   _c(
                     "v-card",
                     [
                       _c(
                         "v-container",
-                        { attrs: { "grid-list-xl": "" } },
+                        { attrs: { fluid: "" } },
                         [
                           _c(
                             "v-layout",
@@ -41216,27 +42040,180 @@ var render = function() {
                                 "v-flex",
                                 { attrs: { xs16: "", sm2: "" } },
                                 [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src: "/lib/img/logo/logo-school.jpg"
-                                    }
-                                  })
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
+                                      }
+                                    },
+                                    [
+                                      _c("v-img", {
+                                        attrs: {
+                                          src: "/lib/img/logo/logo-school.jpg"
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               ),
                               _vm._v(" "),
                               _c(
                                 "v-flex",
-                                { attrs: { xs12: "", sm8: "" } },
+                                { attrs: { xs12: "", sm8: "", md8: "" } },
                                 [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Private, Public",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "", sm8: "" } },
+                                    [
+                                      _c("v-card-text", [
+                                        _c("p", { staticClass: "display-1" }, [
+                                          _vm._v("Green Hills Academy")
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "p",
+                                          { staticClass: "subheading" },
+                                          [
+                                            _vm._v(
+                                              "kigali, gasabo, nyarutarama "
+                                            ),
+                                            _c("v-icon", [
+                                              _vm._v("fas fa-map-marker-alt")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "error"
+                                          }
+                                        },
+                                        [_vm._v(" Pre-Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "success"
+                                          }
+                                        },
+                                        [_vm._v(" Nursery School")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            depressed: "",
+                                            small: "",
+                                            color: "warning"
+                                          }
+                                        },
+                                        [_vm._v(" Primary school ")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "info",
+                                          attrs: { depressed: "", small: "" }
+                                        },
+                                        [_vm._v(" General Secondary  ")]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    { attrs: { xs12: "" } },
+                                    [
+                                      _c(
+                                        "v-container",
+                                        { attrs: { fluid: "" } },
+                                        [
+                                          _c(
+                                            "v-layout",
+                                            { attrs: { row: "", wrap: "" } },
+                                            [
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-building ")
+                                                  ]),
+                                                  _vm._v(
+                                                    " Sector : Private     "
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [_vm._v("wc")]),
+                                                  _vm._v(" Gender: Mixed ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-church")
+                                                  ]),
+                                                  _vm._v(" Religion: Secular  ")
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-flex",
+                                                { attrs: { xs3: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("fas fa-users")
+                                                  ]),
+                                                  _vm._v(" Levels: Combined ")
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               ),
@@ -41246,20 +42223,34 @@ var render = function() {
                                 { attrs: { xs12: "", sm2: "" } },
                                 [
                                   _c(
-                                    "v-btn",
+                                    "v-layout",
                                     {
                                       attrs: {
-                                        block: "",
-                                        round: "",
-                                        "x-large": "",
-                                        color: "info"
+                                        "align-center": "",
+                                        "justify-center": "",
+                                        row: "",
+                                        "fill-height": ""
                                       }
                                     },
                                     [
-                                      _c("v-icon", [
-                                        _vm._v(" fas fa-balance-scale ")
-                                      ]),
-                                      _vm._v("Compare ")
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            block: "",
+                                            round: "",
+                                            "x-large": "",
+                                            color: "info"
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v(" fas fa-balance-scale ")
+                                          ]),
+                                          _vm._v("Compare ")
+                                        ],
+                                        1
+                                      )
                                     ],
                                     1
                                   )
@@ -41276,81 +42267,7 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "v-card",
-                    { attrs: { color: "light-blue lighten-5" } },
-                    [
-                      _c(
-                        "v-container",
-                        { attrs: { "grid-list-xl": "" } },
-                        [
-                          _c(
-                            "v-layout",
-                            { attrs: { row: "", wrap: "" } },
-                            [
-                              _c(
-                                "v-flex",
-                                { attrs: { xs16: "", sm2: "" } },
-                                [
-                                  _c("v-img", {
-                                    attrs: {
-                                      src: "/lib/img/logo/logo-school.jpg"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm8: "" } },
-                                [
-                                  _c("v-overflow-btn", {
-                                    attrs: {
-                                      items: _vm.dropdown_edit,
-                                      label: "Private, Public",
-                                      editable: "",
-                                      "item-value": "text"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                { attrs: { xs12: "", sm2: "" } },
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: {
-                                        block: "",
-                                        round: "",
-                                        "x-large": "",
-                                        color: "info"
-                                      }
-                                    },
-                                    [
-                                      _c("v-icon", [
-                                        _vm._v(" fas fa-balance-scale ")
-                                      ]),
-                                      _vm._v("Compare ")
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
+                  _c("v-divider", { staticClass: "light-blue" })
                 ],
                 1
               ),
@@ -41534,7 +42451,12 @@ var render = function() {
                                   _c(
                                     "v-layout",
                                     {
-                                      attrs: { row: "", wrap: "", "pa-4": "" }
+                                      attrs: {
+                                        row: "",
+                                        wrap: "",
+                                        "pa-2": "",
+                                        "ml-5": ""
+                                      }
                                     },
                                     [
                                       _c(
