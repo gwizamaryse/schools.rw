@@ -82,6 +82,18 @@
         </v-list-tile-action>
       <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>
       </v-list-tile>
+      <v-list-tile>
+        <v-list-tile-action>
+          <v-icon>school</v-icon>
+        </v-list-tile-action>
+      <router-link to='/test'>  <v-list-tile-title>test page-Axios</v-list-tile-title></router-link>
+      </v-list-tile>
+       <v-list-tile>
+        <v-list-tile-action>
+          <v-icon>school</v-icon>
+        </v-list-tile-action>
+      <router-link to='/test2'>  <v-list-tile-title>test page2-Vue</v-list-tile-title></router-link>
+      </v-list-tile>
     </v-list>  
     </v-navigation-drawer>
 

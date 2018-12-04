@@ -12,7 +12,9 @@ Vue.use(VueRouter);
 import App from './App.vue';
 import home from './home.vue';
 import search from './search.vue';
-import school_details from './school_details.vue'
+import school_details from './school_details.vue';
+import test from './test.vue';
+import test2 from './test2.vue'
 
 
 // CSS
@@ -20,6 +22,7 @@ import 'vuetify/dist/vuetify.min.css';
 import './css/hack.css';
 import './css/loader.css';
 import './css/main.css';
+
 
 // Config (true = Development mode, false = Production mode)
 Vue.config.productionTip = false;
@@ -44,6 +47,18 @@ const router = new VueRouter({
 			path		: '/school_details',
 			name		: 'school_details',
 			component	: school_details
+			
+		},
+		{
+			path		: '/test',
+			name		: 'test',
+			component	: test
+			
+		},
+		{
+			path		: '/test2',
+			name		: 'test2',
+			component	: test2
 			
 		}
 	]
