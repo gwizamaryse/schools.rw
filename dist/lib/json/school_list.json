@@ -1,0 +1,36 @@
+{
+	"list": [
+		{
+			"school_name" : "Riviera",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"Sector": "Private",
+			"Gender": "Mixed",
+			"Religion" : "Secular",
+			"Level" : "Combined"
+		}
+		,{
+			"school_name" : "Green Hills Academy",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"Sector": "Private",
+			"Gender": "Mixed",
+			"Religion" : "Secular",
+			"Level" : "Combined"
+		},
+		{
+			"school_name" : "APAPER",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"Sector": "Private",
+			"Gender": "Mixed",
+			"Religion" : "Secular",
+			"Level" : "Combined"
+		},
+		{
+			"school_name" : "Ecole Internationale de Kigali",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"Sector": "Private",
+			"Gender": "Mixed",
+			"Religion" : "Secular",
+			"Level" : "Combined"
+		}
+   ]
+}	

@@ -1,74 +1,70 @@
 <template>
   <div id="app">
-        <header>
+    <header>
       <span>Handling Ajax Request with Axios in Vue</span>
     </header>
     <main>
-        <h2>Click the button to get Random jokes</h2>
-        <button id="btn" class="btn" v-on:click="getJokes">Get Jokes</button>
+      <h2>Click the button to get Random jokes</h2>
+      <button id="btn" class="btn" v-on:click="getJokes">Get Jokes</button>
 
-        <div v-if="loading">
-          
-          Loading.....
-        </div>
+      <div v-if="loading">Loading.....</div>
 
       <div class="wrapper">
         <div class="row">
           <div v-for="joke in jokes" :key="joke.id">
-          <div class="col-md-4 cards">
-             <img src="https://placeimg.com/300/300/nature" class="img-responsive" alt="Random images placeholder"> 
-            <div>
-              <h3>{{ joke.id }}</h3>
-              <p>{{ joke.joke }}</p>
-              <p>{{ joke.category }}</p>
+            <div class="col-md-4 cards">
+              <img
+                src="https://placeimg.com/300/300/nature"
+                class="img-responsive"
+                alt="Random images placeholder"
+              >
+              <div>
+                <h3>{{ joke.id }}</h3>
+                <p>{{ joke.joke }}</p>
+                <p>{{ joke.category }}</p>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </main>
     <div id="app-2">
-  <span v-bind:title="message">
-    Hover your mouse over me for a few seconds
-    to see my dynamically bound title!
-     <p> {{ info }} </p>
-  </span>
-</div>
-      
-    </div>   
+      <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+        <p>{{ info }}</p>
+      </span>
+    </div>
+  </div>
 </template>
 
 <script>
-import axios from 'axios';
-  
+import axios from "axios";
+
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
       jokes: [],
       loading: false,
       info: null
-    }
-  }, 
+    };
+  },
   methods: {
-    getJokes: function () {
+    getJokes: function() {
       this.loading = true;
-      axios.get("http://api.icndb.com/jokes/random/10")
-      .then((response)  =>  {
-        this.loading = false;
-        this.jokes = response.data.value;
-      }, (error)  =>  {
-        this.loading = false;
-      })
-    },
-    mounted () {
-        axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
+      axios.get("http://api.icndb.com/jokes/random/10").then(
+        response => {
+          this.loading = false;
+          this.jokes = response.data.value;
+        },
+        error => {
+          this.loading = false;
+        }
+      );
     }
   }
-
-}
+};
 </script>
 
 
@@ -80,7 +76,7 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -95,7 +91,7 @@ header {
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495E;
+  background-color: #35495e;
   color: #ffffff;
 }
 
@@ -104,15 +100,14 @@ header span {
   position: relative;
   font-size: 20px;
   line-height: 1;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
 }
 
-
 btn {
-  background: #51B767;
+  background: #51b767;
   color: #ffffff;
   padding: 15px;
   border-radius: 0;
@@ -122,20 +117,17 @@ btn {
 }
 
 .cards {
-  background: #F5F5F5;
-  height:400px;
+  background: #f5f5f5;
+  height: 400px;
 }
 .cards:hover {
   transform: translateY(-0.5em);
-  background: #EBEBEB;
+  background: #ebebeb;
 }
-
 
 .cards {
   column-count: 1;
   column-gap: 1em;
-    margin-top: 70px;
-
-} 
-
+  margin-top: 70px;
+}
 </style>
