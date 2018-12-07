@@ -15,6 +15,7 @@
 			"Gender": "Mixed",
 			"Religion" : "Secular",
 			"Level" : "Combined"
+			
 		},
 		{
 			"school_name" : "APAPER",
@@ -33,4 +34,4 @@
 			"Level" : "Combined"
 		}
    ]
-}	
+}

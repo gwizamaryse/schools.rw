@@ -1,342 +1,91 @@
 {
-	"school_1": {
-		"school_name": "Green Hills Academy",
-		"school_type": [
-			"pre-nursery",
-			"nursery",
-			"primary school",
-			"General Secondary"
-		],
-		"basic_info": {
-			"number_students": "1600 Students",
-			"students_per_class": "Average 20 students per class",
-			"languages": [
-				"French",
-				"English",
-				"Kinyarwanda"
-			],
-			"uniform" : "Mandatory",
-			"school_ownership": [
-				"Private",
-				"Public",
-				"Government Aided"
-			],
-			"Religion": [
-				"catholic",
-				"Protestant",
-				"Secular",
-				"Muslim"
-			],
-			"Gender": [
-				"Boys Only",
-				"Girls Only",
-				"Mixed"
-			],
-			"Labs": [
-				"Science Labs",
-				"Computer Labs"
-			],
-			"Activities": {
-				"Library": "3000 Books",
-				"sport": 	" 4 Sport Activities",
-				"music": " 10 Music Activities",
-				"other_activities": "10 Other Activities"
-			}
-
-		},
-
-		"School Fees": {
-			"Pre_Nursery": 200000,
-			"Nursery": 250000,
-			"Primary School Grade 1-6": 300000,
-			"Secondary School Grade 1- 3": 400000,
-			"Secondary School Grade 4-6": 420000
-
-		},
-
-		"Ranking_National_Exams": {
-			"2016": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			},
-			"2017": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			}
-
-
-		},
-		"Admissions": {
-			"Entrance_Exam": "True",
-			"Acceptance_Rate": "3 Applicants for 1 place",
-			"Acceptance_based_on_National_Examination": ["S1 and S4 Entrance Based on National Examination"]
-
-		},
-		"Curriculum": [
-			"Rwanda National Curriculum",
-			"Montessori",
-			"Cambridge"
-		],
-
-		"Information": {
-			"Headmaster's Name": "Ngaboyisonga Richard",
-			"Telephone": "0788575166",
-			"Email": "lalalala@gmail.com",
-			"Business Hours": "7am to 6pm",
-			"Website": "greenhillsacademy.rw",
-			"Address": "KG 270 St,  Kigali , Rwanda"
-		},
-		"reviews": {
-			"review_1": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_2": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_3": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_4": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			}
-
-		}
+	"school_name": "Green Hills Academy",
+	"school_type": [
+		"pre-nursery",
+		"nursery",
+		"primary school",
+		"General Secondary"
+	],
+	"basic_info": {
+		"number_students": "1600 Students",
+		"students_per_class": "Average 20 students per class",
+		"languages": ["French", "English", "Kinyarwanda"],
+		"uniform": "Mandatory",
+		"school_ownership": ["Private", "Public", "Government Aided"],
+		"religion": ["catholic", "Protestant", "Secular", "Muslim"],
+		"gender": ["Boys Only", "Girls Only", "Mixed"],
+		"labs": ["Science Labs", "Computer Labs"],
+		"library": ["Library", "3000 Books"],
+		"sport": " 4 Sport Activities",
+		"music": " 10 Music Activities",
+		"other_activities": "10 Other Activities"
 	},
 
-	"school_2": {
-		"school_name": "Green Hills Academy",
-		"school_type": [
-			"pre-nursery",
-			"nursery",
-			"primary school",
-			"General Secondary"
-		],
-		"Basic Info": {
-			"number_students": "1600",
-			"students_per_class": "20",
-			"languages": [
-				"French",
-				"English",
-				"Kinyarwanda"
-			],
-			"uniform": "mandatory",
-			"school_ownership": [
-				"Private",
-				"Public",
-				"Government Aided"
-			],
-			"Religion": [
-				"catholic",
-				"Protestant",
-				"Secular",
-				"Muslim"
-			],
-			"Gender": [
-				"Boys Only",
-				"Girls Only",
-				"Mixed"
-			],
-			"Labs": [
-				"Science Labs",
-				"Computer Labs"
-			],
-			"Activities": {
-				"Library": "3000 Books",
-				" 4 Sport Activities": null,
-				" 10 Music Activities": null,
-				"10 Other Activities": null
-			}
-
-		},
-
-		"School Fees": {
-			"Pre_Nursery": 200000,
-			"Nursery": 250000,
-			"Primary School Grade 1-6": 300000,
-			"Secondary School Grade 1- 3": 400000,
-			"Secondary School Grade 4-6": 420000
-
-		},
-
-		"Ranking_National_Exams": {
-			"2016": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			},
-			"2017": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			}
-
-
-		},
-		"Admissions": {
-			"Entrance_Exam": "True",
-			"Acceptance_Rate": "3 Applicants for 1 place",
-			"Acceptance_based_on_National_Examination": ["S1 and S4 Entrance Based on National Examination"]
-
-		},
-		"Curriculum": [
-			"Rwanda National Curriculum",
-			"Montessori",
-			"Cambridge"
-		],
-
-		"Information": {
-			"Headmaster's Name": "Ngaboyisonga Richard",
-			"Telephone": "0788575166",
-			"Email": "lalalala@gmail.com",
-			"Business Hours": "7am to 6pm",
-			"Website": "greenhillsacademy.rw",
-			"Address": "KG 270 St, Kigali, Rwanda"
-		},
-		"reviews": {
-			"review_1": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_2": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_3": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_4": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			}
-
-		}
+	"school_fee": {
+		"inscription": "Inscription Fee: 20,000 RWF",
+		"pre_nursery": "Pre-Nursery: 200,000 RWF",
+		"nursery": "Nursery: 300,000 RWF",
+		"primary_fee": "400,000 RWF",
+		"secondary_fee1": "500,000 RWF",
+		"secondary_fee2": "600,000 RWF"
 	},
-	"school_3": {
-		"school_name": "Green Hills Academy",
-		"school_type": [
-			"pre-nursery",
-			"nursery",
-			"primary school",
-			"General Secondary"
+
+	"ranking": {
+
+		"p6": [
+			"2017",
+			"30th out of 2877 schools",
+			"90% of Students at this School Passed the Exam"
 		],
-		"Basic Info": {
-			"number_students": "1600",
-			"students_per_class": "20",
-			"languages": [
-				"French",
-				"English",
-				"Kinyarwanda"
-			],
-			"uniform": "mandatory",
-			"school_ownership": [
-				"Private",
-				"Public",
-				"Government Aided"
-			],
-			"Religion": [
-				"catholic",
-				"Protestant",
-				"Secular",
-				"Muslim"
-			],
-			"Gender": [
-				"Boys Only",
-				"Girls Only",
-				"Mixed"
-			],
-			"Labs": [
-				"Science Labs",
-				"Computer Labs"
-			],
-			"Activities": {
-				"Library": "3000 Books",
-				" 4 Sport Activities": null,
-				" 10 Music Activities": null,
-				"10 Other Activities": null
-			}
-
-		},
-
-		"School Fees": {
-			"Pre_Nursery": 200000,
-			"Nursery": 250000,
-			"Primary School Grade 1-6": 300000,
-			"Secondary School Grade 1- 3": 400000,
-			"Secondary School Grade 4-6": 420000
-
-		},
-
-		"Ranking_National_Exams": {
-			"2016": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			},
-			"2017": {
-				"Primary (P6)": ["30th out of 2877 schools", "90% of Students at this School Passed the Exam"],
-				"Senior 3 (S3)": ["20th out of 1375 schools", "70% of Students at this School Passed the Exam"],
-				"Senior 6 (S6)": ["10th out of 1375 schools", "100% of Students at this School Passed the Exam"]
-			}
-
-
-		},
-		"Admissions": {
-			"Entrance_Exam": "True",
-			"Acceptance_Rate": "3 Applicants for 1 place",
-			"Acceptance_based_on_National_Examination": ["S1 and S4 Entrance Based on National Examination"]
-
-		},
-		"Curriculum": [
-			"Rwanda National Curriculum",
-			"Montessori",
-			"Cambridge"
+		"s3": [
+			"2017",
+			"20th out of 1375 schools",
+			"70% of Students at this School Passed the Exam"
 		],
+		"s6": [
+			"2017",
+			"10th out of 1375 schools",
+			"100% of Students at this School Passed the Exam"
+		]
+	},
 
-		"Information": {
-			"Headmaster's Name": "Ngaboyisonga Richard",
-			"Telephone": "0788575166",
-			"Email": "lalalala@gmail.com",
-			"Business Hours": "7am to 6pm",
-			"Website": "greenhillsacademy.rw",
-			"Address": "KG 270 St, Kigali, Rwanda"
+	"Admissions": {
+		"Entrance_Exam": "True",
+		"Acceptance_Rate": "3 Applicants for 1 place",
+		"Acceptance_based_on_National_Examination": [
+			"S1 and S4 Entrance Based on National Examination"
+		]
+	},
+	"Curriculum": ["Rwanda National Curriculum", "Montessori", "Cambridge"],
+
+	"Information": {
+		"Headmaster's Name": "Ngaboyisonga Richard",
+		"Telephone": "0788575166",
+		"Email": "lalalala@gmail.com",
+		"Business Hours": "7am to 6pm",
+		"Website": "greenhillsacademy.rw",
+		"Address": "KG 270 St,  Kigali , Rwanda"
+	},
+	"reviews": {
+		"review_1": {
+			"title": "Great School",
+			"review's_name": "Mary Kabalisa",
+			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
 		},
-		"reviews": {
-			"review_1": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_2": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_3": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			},
-			"review_4": {
-				"title": "Great School",
-				"review's_name": "Mary Kabalisa",
-				"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-			}
-
+		"review_2": {
+			"title": "Great School",
+			"review's_name": "Mary Kabalisa",
+			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
+		},
+		"review_3": {
+			"title": "Great School",
+			"review's_name": "Mary Kabalisa",
+			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
+		},
+		"review_4": {
+			"title": "Great School",
+			"review's_name": "Mary Kabalisa",
+			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
 		}
 	}
 }

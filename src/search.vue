@@ -107,278 +107,62 @@
 
         <v-card flat tile>
           <!--   search result #1 -->
-          
-          <v-card flat tile>
-            <v-container fluid>
-              <v-layout row wrap>
-                <v-flex xs16 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm8 md8>
-                  <v-flex xs12 sm8>
-                    <v-card-text>
-                      <p class="display-1"> ffff </p>
+          <div v-for="(item, i) in SCHOOL" :key="i">
+            <v-card flat tile>
+              <v-container fluid>
+                <v-layout row wrap>
+                  <v-flex xs16 sm2>
+                    <v-layout align-center justify-center row fill-height>
+                      <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
+                    </v-layout>
+                  </v-flex>
+                  <v-flex xs12 sm8 md8>
+                    <v-flex xs12 sm8>
+                      <v-card-text>
+                        <p class="display-1">{{ item.school_name}}</p>
 
-                      <p class="subheading"> 
-                        <v-icon>fas fa-map-marker-alt</v-icon>
-                      </p>
-                    </v-card-text>
+                        <p class="subheading">
+                          <v-icon>fas fa-map-marker-alt</v-icon>
+                        </p>
+                      </v-card-text>
+                    </v-flex>
+                    <v-flex xs12>
+                      <v-btn depressed small color="error">Pre-Nursery School</v-btn>
+                      <v-btn depressed small color="success">Nursery School</v-btn>
+                      <v-btn depressed small color="warning">Primary school</v-btn>
+                      <v-btn depressed small class="cyan white--text">General Secondary</v-btn>
+                    </v-flex>
+                    <v-flex xs12>
+                      <v-container fluid>
+                        <v-layout row wrap>
+                          <v-flex xs3>
+                            <v-icon>fas fa-building</v-icon>Sector : Private
+                          </v-flex>
+                          <v-flex xs3>
+                            <v-icon>wc</v-icon>Gender: Mixed
+                          </v-flex>
+                          <v-flex xs3>
+                            <v-icon>fas fa-church</v-icon>Religion: Secular
+                          </v-flex>
+                          <v-flex xs3>
+                            <v-icon>fas fa-users</v-icon>Levels: Combined
+                          </v-flex>
+                        </v-layout>
+                      </v-container>
+                    </v-flex>
                   </v-flex>
-                  <v-flex xs12>
-                    <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                    <v-btn depressed small color="success">Nursery School</v-btn>
-                    <v-btn depressed small color="warning">Primary school</v-btn>
-                    <v-btn depressed small class="cyan white--text">General Secondary</v-btn>
+                  <v-flex xs12 sm2>
+                    <v-layout align-center justify-center row fill-height>
+                      <v-btn block round x-large color="info">
+                        <v-icon>fas fa-balance-scale</v-icon>Compare
+                      </v-btn>
+                    </v-layout>
                   </v-flex>
-                  <v-flex xs12>
-                    <v-container fluid>
-                      <v-layout row wrap>
-                        <v-flex xs3>
-                          <v-icon>fas fa-building</v-icon>Sector : Private
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>wc</v-icon>Gender: Mixed
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-church</v-icon>Religion: Secular
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-users</v-icon>Levels: Combined
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-flex>
-                <v-flex xs12 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-btn block round x-large color="info">
-                      <v-icon>fas fa-balance-scale</v-icon>Compare
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-          <v-divider class="light-blue"></v-divider>
-
-          <!--   search result 2 -->
-          <v-card color="light-blue lighten-5">
-            <v-container fluid>
-              <v-layout row wrap>
-                <v-flex xs16 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm8 md8>
-                  <v-flex xs12 sm8>
-                    <v-card-text>
-                      <p class="display-1">Green Hills Academy</p>
-                      <p class="subheading">kigali, gasabo, nyarutarama
-                        <v-icon>fas fa-map-marker-alt</v-icon>
-                      </p>
-                    </v-card-text>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                    <v-btn depressed small color="success">Nursery School</v-btn>
-                    <v-btn depressed small color="warning">Primary school</v-btn>
-                    <v-btn depressed small class="info">General Secondary</v-btn>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-container fluid>
-                      <v-layout row wrap>
-                        <v-flex xs3>
-                          <v-icon>fas fa-building</v-icon>Sector : Private
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>wc</v-icon>Gender: Mixed
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-church</v-icon>Religion: Secular
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-users</v-icon>Levels: Combined
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-flex>
-                <v-flex xs12 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-btn block round x-large color="info">
-                      <v-icon>fas fa-balance-scale</v-icon>Compare
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-          <v-divider class="light-blue"></v-divider>
-          <!--   search result 3 -->
-          <v-card>
-            <v-container fluid>
-              <v-layout row wrap>
-                <v-flex xs16 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm8 md8>
-                  <v-flex xs12 sm8>
-                    <v-card-text>
-                      <p class="display-1">Green Hills Academy</p>
-                      <p class="subheading">kigali, gasabo, nyarutarama
-                        <v-icon>fas fa-map-marker-alt</v-icon>
-                      </p>
-                    </v-card-text>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                    <v-btn depressed small color="success">Nursery School</v-btn>
-                    <v-btn depressed small color="warning">Primary school</v-btn>
-                    <v-btn depressed small class="info">General Secondary</v-btn>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-container fluid>
-                      <v-layout row wrap>
-                        <v-flex xs3>
-                          <v-icon>fas fa-building</v-icon>Sector : Private
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>wc</v-icon>Gender: Mixed
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-church</v-icon>Religion: Secular
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-users</v-icon>Levels: Combined
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-flex>
-                <v-flex xs12 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-btn block round x-large color="info">
-                      <v-icon>fas fa-balance-scale</v-icon>Compare
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-          <v-divider class="light-blue"></v-divider>
-          <!--   search result 4 -->
-          <v-card color="light-blue lighten-5">
-            <v-container fluid>
-              <v-layout row wrap>
-                <v-flex xs16 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm8 md8>
-                  <v-flex xs12 sm8>
-                    <v-card-text>
-                      <p class="display-1">Green Hills Academy</p>
-                      <p class="subheading">kigali, gasabo, nyarutarama
-                        <v-icon>fas fa-map-marker-alt</v-icon>
-                      </p>
-                    </v-card-text>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                    <v-btn depressed small color="success">Nursery School</v-btn>
-                    <v-btn depressed small color="warning">Primary school</v-btn>
-                    <v-btn depressed small class="info">General Secondary</v-btn>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-container fluid>
-                      <v-layout row wrap>
-                        <v-flex xs3>
-                          <v-icon>fas fa-building</v-icon>Sector : Private
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>wc</v-icon>Gender: Mixed
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-church</v-icon>Religion: Secular
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-users</v-icon>Levels: Combined
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-flex>
-                <v-flex xs12 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-btn block round x-large color="info">
-                      <v-icon>fas fa-balance-scale</v-icon>Compare
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-          <v-divider class="light-blue"></v-divider>
-          <!--   search result 5 -->
-          <v-card>
-            <v-container fluid>
-              <v-layout row wrap>
-                <v-flex xs16 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
-                  </v-layout>
-                </v-flex>
-                <v-flex xs12 sm8 md8>
-                  <v-flex xs12 sm8>
-                    <v-card-text>
-                      <p class="display-1">Green Hills Academy</p>
-                      <p class="subheading">kigali, gasabo, nyarutarama
-                        <v-icon>fas fa-map-marker-alt</v-icon>
-                      </p>
-                    </v-card-text>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                    <v-btn depressed small color="success">Nursery School</v-btn>
-                    <v-btn depressed small color="warning">Primary school</v-btn>
-                    <v-btn depressed small class="info">General Secondary</v-btn>
-                  </v-flex>
-                  <v-flex xs12>
-                    <v-container fluid>
-                      <v-layout row wrap>
-                        <v-flex xs3>
-                          <v-icon>fas fa-building</v-icon>Sector : Private
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>wc</v-icon>Gender: Mixed
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-church</v-icon>Religion: Secular
-                        </v-flex>
-                        <v-flex xs3>
-                          <v-icon>fas fa-users</v-icon>Levels: Combined
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-flex>
-                </v-flex>
-                <v-flex xs12 sm2>
-                  <v-layout align-center justify-center row fill-height>
-                    <v-btn block round x-large color="info">
-                      <v-icon>fas fa-balance-scale</v-icon>Compare
-                    </v-btn>
-                  </v-layout>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
-          <v-divider class="light-blue"></v-divider>
+                </v-layout>
+              </v-container>
+            </v-card>
+            <v-divider class="light-blue"></v-divider>
+          </div>
         </v-card>
         <!-- pagination -->
         <div class="text-xs-center pa-4">
@@ -390,8 +174,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Vue from 'vue';
+import axios from "axios";
+import Vue from "vue";
 export default {
   data() {
     return {
@@ -401,19 +185,17 @@ export default {
       SCHOOL: []
     };
   },
-  methods : {
-    getSchoolList : function(){
-      const _this=this;
-      axios.get('/lib/jason/school_list.json')
-      .then(function(res){
-        console.log(res.data)
-        Vue.set(_this, "SCHOOL" , res.data.list)
-      })
+  methods: {
+    getSchoolList: function() {
+      const _this = this;
+      axios.get("/lib/json/school_list.json").then(function(res) {
+        console.log(res.data);
+        Vue.set(_this, "SCHOOL", res.data.list);
+      });
     }
   },
-  created:function(){
-    this.getSchoolList()
+  created: function() {
+    this.getSchoolList();
   }
-
 };
 </script>

@@ -73,5 +73,10 @@ const app = new Vue({
 	 el			: '#app'
 	,router
 	,template	: '<App/>'
+	,data       : {
+		COLOR : {
+			color1: 'red accent-2'
+		}
+	}
 	,components	: { App }
 })

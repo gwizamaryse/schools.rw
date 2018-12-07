@@ -24,10 +24,10 @@
                         </v-card>
                       </v-flex>
                       <v-flex xs4 order-md3 order-xs2 d-flex>
-                        <v-card tile color="error">
+                        <v-card tile :color="$root.COLOR.color1">
                           <v-card-text>
                             <router-link to="/search">
-                              <v-btn block depressed color="error">
+                              <v-btn block depressed class="white--text" :color="$root.COLOR.color1">
                                 <v-icon>search</v-icon>Search
                               </v-btn>
                             </router-link>
