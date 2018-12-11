@@ -189,10 +189,10 @@
                     <p class="text-md-center">Basic Information</p>
                     <v-divider class="light-blue pb-1"></v-divider>
                   </v-card-text>
-                  <v-btn large color="error">{{SCHOOL.school_type[0]}}</v-btn>
-                  <v-btn large color="success">{{SCHOOL.school_type[1]}}</v-btn>
-                  <v-btn large color="warning">{{SCHOOL.school_type[2]}}</v-btn>
-                  <v-btn large class="info">{{SCHOOL.school_type[3]}}</v-btn>
+                  <v-btn large class="white--text" :color="$root.COLOR.color1">{{SCHOOL.school_type[0]}}</v-btn>
+                  <v-btn large class="white--text" :color="$root.COLOR.color2">{{SCHOOL.school_type[1]}}</v-btn>
+                  <v-btn large class="white--text" :color="$root.COLOR.color3">{{SCHOOL.school_type[2]}}</v-btn>
+                  <v-btn large class="white--text"  :color="$root.COLOR.color4">{{SCHOOL.school_type[3]}}</v-btn>
 
                   <v-card-text pl-5>
                     <v-divider class="light-blue"></v-divider>
@@ -350,44 +350,44 @@
                           <p class="text-md-center">Results Primary 6- P6</p>
                         </v-card-text>
                         <v-divider></v-divider>
-                        <strong>Year:{{ SCHOOL.ranking.p6[0]}}</strong>
-                        <br>Ranked : 30th on 230
-                        <br>90% of students passed
+                        <strong>Year:{{ SCHOOL.ranking.p6_17[0]}}</strong>
+                        <br>Ranked : Year:{{ SCHOOL.ranking.p6_17[1]}}
+                        <br>Year:{{ SCHOOL.ranking.p6_17[2]}}
                         <v-divider pa-2></v-divider>
-                        <strong>Year: 2016</strong>
-                        <br>Ranked : 30th on 230
-                        <br>90% of students passed
+                        <strong>Year: {{ SCHOOL.ranking.p6_16[0]}} </strong>
+                        <br>Ranked : Year:{{ SCHOOL.ranking.p6_16[1]}}
+                        <br>Year:{{ SCHOOL.ranking.p6_16[2]}}
                         <v-divider></v-divider>
                         <v-card-text class="light-blue--text title">
                           <p class="text-md-center">Ranking Senior 3- S3</p>
                         </v-card-text>
                         <v-divider></v-divider>
-                        <strong>Year: 2017</strong>
-                        <br>Ranked : 30th on 230
-                        <br>90% of students passed
+                        <strong>Year:{{ SCHOOL.ranking.s3_17[0]}}</strong>
+                        <br>Ranked : Year:{{ SCHOOL.ranking.s3_17[1]}}
+                        <br>Year:{{ SCHOOL.ranking.s3_17[2]}}
                         <v-divider pa-2></v-divider>
-                        <strong>Year: 2016</strong>
-                        <br>Ranked: 30th on 230
-                        <br>90% of students passed
+                        <strong>Year: {{ SCHOOL.ranking.s3_16[0]}}</strong>
+                        <br>{{ SCHOOL.ranking.s3_16[1]}}
+                        <br>{{ SCHOOL.ranking.s3_16[2]}}
                         <v-divider></v-divider>
                         <v-card-text class="light-blue--text title">
                           <p class="text-md-center">Ranking Senior 6- S6</p>
                         </v-card-text>
                         <v-divider></v-divider>
-                        <strong>Year: 2017</strong>
-                        <br>Ranked : 30th on 230
-                        <br>90% of students passed
+                        <strong>Year: {{ SCHOOL.ranking.s6_17[0]}}</strong>
+                        <br>Ranked : {{ SCHOOL.ranking.s6_17[1]}}
+                        <br>{{ SCHOOL.ranking.s6_17[2]}}
                         <v-divider pa-2></v-divider>
-                        <strong>Year: 2016</strong>
-                        <br>Ranked : 30th on 230
-                        <br>90% of students passed
+                        <strong>Year: {{ SCHOOL.ranking.s6_16[0]}}</strong>
+                        <br>Ranked : {{ SCHOOL.ranking.s6_16[1]}}
+                        <br>{{ SCHOOL.ranking.s6_16[2]}}
                         <v-divider></v-divider>
                       </v-card-text>
                     </v-card>
                   </v-flex>
 
                   <!-- Admissions -->
-                  <v-card-text class="light-blue--text display-2">
+                  <v-card-text pt- class="light-blue--text display-2">
                     <p class="text-md-center">Admission Requirements</p>
                     <v-divider class="light-blue pb-1"></v-divider>
                   </v-card-text>
@@ -395,15 +395,15 @@
                     <v-layout row wrap>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">Entrance Exam</p>
+                        <p class="title">{{SCHOOL.Admissions.Entrance_Exam}}</p>
                       </v-flex>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">3 applicants for 1 place</p>
+                        <p class="title">{{SCHOOL.Admissions.Acceptance_Rate}}</p>
                       </v-flex>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">for S1 and S4 Entrance Based on National Exam's Result</p>
+                        <p class="title"> {{SCHOOL.Admissions.National_Exams}} </p>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -416,15 +416,15 @@
                     <v-layout row wrap>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">Montessori</p>
+                        <p class="title">{{SCHOOL.Curriculum[0]}}</p>
                       </v-flex>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">Rwanda National Curriculum</p>
+                        <p class="title">{{SCHOOL.Curriculum[1]}}</p>
                       </v-flex>
                       <v-flex xs12 sm4 text-xs-center>
                         <v-icon size="50" color="light-blue">fas fa-info-circle</v-icon>
-                        <p class="title">Cambridge Curriculum</p>
+                        <p class="title">{{SCHOOL.Curriculum[2]}}</p>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -440,12 +440,12 @@
           <v-card-text class="orange--text display-2">Information</v-card-text>
           <v-card-text class="headline">Green Hills Academy</v-card-text>
           <v-card-text class="grey--text subheading">
-            <p>Headmaster's Name:</p>
-            <p>Telephone:</p>
-            <p>Email:</p>
-            <p>Business Hours:</p>
-            <p>School's website:</p>
-            <p>Address:</p>
+            <p>Headmaster's Name: {{SCHOOL.Information.Headmaster}} </p>
+            <p>Telephone: {{SCHOOL.Information.Telephone}}</p>
+            <p>Email:{{SCHOOL.Information.Email}}</p>
+            <p>Business Hours:{{SCHOOL.Information.Business_Hours}}</p>
+            <p>School's website:{{SCHOOL.Information.Website}}</p>
+            <p>Address: {{SCHOOL.Information.Address}}</p>
           </v-card-text>
           <p class="text-md-center">
             <iframe
@@ -461,14 +461,15 @@
           <v-card-text>
             <p class="text-md-center orange--text display-2">Reviews</p>
           </v-card-text>
+          <div v-for="(item, i) in SCHOOL.review" :key="i">
           <v-card tile width="280" class="elevation-16 mx-auto">
-            <v-card-title class="headline" primary-title>Great School !!</v-card-title>
+            <v-card-title class="headline" primary-title>{{item.title}}</v-card-title>
             <v-divider></v-divider>
             <v-card-text class="subheading">
-              <v-icon>person</v-icon>Review by Mary Kabalisa
+              <v-icon>person</v-icon>{{item.reviewer}}
             </v-card-text>
             <v-divider></v-divider>
-            <v-card-text>This school is great. I would highly recommend. the teachers are very encouraging
+            <v-card-text>{{item.review_content}}
               <div class="text-xs-center mt-5">
                 <v-rating
                   v-model="rating"
@@ -481,48 +482,8 @@
               </div>
             </v-card-text>
           </v-card>
+          </div>
           <v-divider class="pb-2"></v-divider>
-          <v-card class="elevation-12 mx-auto" width="280">
-            <v-card-title class="headline" primary-title>Great School !!</v-card-title>
-            <v-divider></v-divider>
-            <v-card-text class="subheading">
-              <v-icon>person</v-icon>Review by Mary Kabalisa
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-text>This school is great. I would highly recommend. the teachers are very encouraging
-              <div class="text-xs-center mt-5">
-                <v-rating
-                  v-model="rating"
-                  color="yellow darken-3"
-                  background-color="grey darken-1"
-                  empty-icon="$vuetify.icons.ratingFull"
-                  half-increments
-                  hover
-                ></v-rating>
-              </div>
-            </v-card-text>
-          </v-card>
-          <v-divider class="pb-2"></v-divider>
-          <v-card width="280" class="elevation-16 mx-auto">
-            <v-card-title class="headline" primary-title>Great School !!</v-card-title>
-            <v-divider></v-divider>
-            <v-card-text class="subheading white">
-              <v-icon>person</v-icon>Review by Mary Kabalisa
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-text>This school is great. I would highly recommend. the teachers are very encouraging
-              <div class="text-xs-center mt-5">
-                <v-rating
-                  v-model="rating"
-                  color="yellow darken-3"
-                  background-color="grey darken-1"
-                  empty-icon="$vuetify.icons.ratingFull"
-                  half-increments
-                  hover
-                ></v-rating>
-              </div>
-            </v-card-text>
-          </v-card>
           <v-card-text class="orange--text title pt-4">
             <p class="text-xs-center display-1">Write a Review</p>
           </v-card-text>

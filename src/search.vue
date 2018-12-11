@@ -12,9 +12,9 @@
                 </v-card>
               </v-flex>
               <v-flex xs4 order-md3 order-xs2 d-flex>
-                <v-card tile color="error">
+                <v-card tile :color="$root.COLOR.color1">
                   <router-link to="/search">
-                    <v-btn block depressed color="error">
+                    <v-btn block depressed class="white--text" :color="$root.COLOR.color1">
                       <v-icon>search</v-icon>Search
                     </v-btn>
                   </router-link>
@@ -24,12 +24,13 @@
             <v-spacer></v-spacer>
             <v-layout row align-end right>
               <v-flex xs4 order-lg2>
-                <v-card tile flat color="success">
+                <v-card tile flat :color="$root.COLOR.color2">
                   <v-card-text>
                     <v-btn
                       depressed
                       block
-                      color="success"
+                      class="white--text"
+                      :color="$root.COLOR.color2"
                       @click="advancedSearch = !advancedSearch"
                     >
                       <v-icon>search</v-icon>Advanced Search
@@ -38,9 +39,9 @@
                 </v-card>
               </v-flex>
               <v-flex xs4>
-                <v-card tile flat color="warning">
+                <v-card tile flat :color="$root.COLOR.color3">
                   <v-card-text>
-                    <v-btn depressed block color="warning">
+                    <v-btn depressed block class="white--text" :color="$root.COLOR.color3">
                       <v-icon>search</v-icon>Search by Map
                     </v-btn>
                   </v-card-text>
@@ -123,29 +124,30 @@
 
                         <p class="subheading">
                           <v-icon>fas fa-map-marker-alt</v-icon>
+                          {{ item.location}}
                         </p>
                       </v-card-text>
                     </v-flex>
                     <v-flex xs12>
-                      <v-btn depressed small color="error">Pre-Nursery School</v-btn>
-                      <v-btn depressed small color="success">Nursery School</v-btn>
-                      <v-btn depressed small color="warning">Primary school</v-btn>
-                      <v-btn depressed small class="cyan white--text">General Secondary</v-btn>
+                      <v-btn depressed small class="white--text" :color="$root.COLOR.color1">{{item.levels[0]}}</v-btn>
+                      <v-btn depressed small class="white--text" :color="$root.COLOR.color2">{{ item.levels[1]}}</v-btn>
+                      <v-btn depressed small class="white--text" :color="$root.COLOR.color3">{{item.levels[2]}}</v-btn>
+                      <v-btn depressed small class="white--text" :color="$root.COLOR.color4">{{item.levels[3]}}</v-btn>
                     </v-flex>
                     <v-flex xs12>
                       <v-container fluid>
                         <v-layout row wrap>
                           <v-flex xs3>
-                            <v-icon>fas fa-building</v-icon>Sector : Private
+                            <v-icon>fas fa-building</v-icon>Sector : {{item.sector}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>wc</v-icon>Gender: Mixed
+                            <v-icon>wc</v-icon>Gender: {{item.gender}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>fas fa-church</v-icon>Religion: Secular
+                            <v-icon>fas fa-church</v-icon>Religion: {{item.religion}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>fas fa-users</v-icon>Levels: Combined
+                            <v-icon>fas fa-users</v-icon>Levels: {{item.level}}
                           </v-flex>
                         </v-layout>
                       </v-container>

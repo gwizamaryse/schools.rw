@@ -29,54 +29,63 @@ Vue.config.productionTip = false;
 
 // Router
 const router = new VueRouter({
-	 mode	: 'history'
-	,base	: '/'
-	,routes	: [
-		{
-			 path		: '/',
-			 name		: 'home',
-			component	: home,
-		},
-		{
-			path		: '/search',
-			name		: 'search',
-			component	: search,
-			
-		},
-		{
-			path		: '/school_details',
-			name		: 'school_details',
-			component	: school_details
-			
-		},
-		{
-			path		: '/test',
-			name		: 'test',
-			component	: test
-			
-		},
-		{
-			path		: '/test2',
-			name		: 'test2',
-			component	: test2
-			
-		}
-	]
-	,scrollBehavior : function( to, from, savedPosition ){
-		return { x:0, y:0 }
-	}
+  mode: 'history',
+  base: '/',
+  routes: [{
+      path: '/',
+      name: 'home',
+      component: home,
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: search,
+
+    },
+    {
+      path: '/school_details',
+      name: 'school_details',
+      component: school_details
+
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
+
+    },
+    {
+      path: '/test2',
+      name: 'test2',
+      component: test2
+
+    }
+  ],
+  scrollBehavior: function (to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 });
 
 /* eslint-disable no-new */
 // Main
 const app = new Vue({
-	 el			: '#app'
-	,router
-	,template	: '<App/>'
-	,data       : {
-		COLOR : {
-			color1: 'red accent-2'
-		}
-	}
-	,components	: { App }
+  el: '#app',
+  router,
+  template: '<App/>',
+  data: {
+    COLOR: {
+      color1: 'red accent-2',
+      color2: 'green',
+      color3: 'amber',
+      color4: 'cyan',
+      color5: 'lime',
+      color6: 'pink'
+    }
+  },
+  components: {
+    App
+  }
 })

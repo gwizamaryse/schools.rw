@@ -32,60 +32,69 @@
 
 	"ranking": {
 
-		"p6": [
+		"p6_17": [
 			"2017",
 			"30th out of 2877 schools",
 			"90% of Students at this School Passed the Exam"
 		],
-		"s3": [
+		"s3_17": [
 			"2017",
 			"20th out of 1375 schools",
 			"70% of Students at this School Passed the Exam"
 		],
-		"s6": [
+		"s6_17": [
 			"2017",
+			"10th out of 1375 schools",
+			"100% of Students at this School Passed the Exam"
+		],
+		"p6_16": [
+			"2016",
+			"30th out of 2877 schools",
+			"90% of Students at this School Passed the Exam"
+		],
+		"s3_16": [
+			"2016",
+			"20th out of 1375 schools",
+			"70% of Students at this School Passed the Exam"
+		],
+		"s6_16": [
+			"2016",
 			"10th out of 1375 schools",
 			"100% of Students at this School Passed the Exam"
 		]
 	},
 
 	"Admissions": {
-		"Entrance_Exam": "True",
+		"Entrance_Exam": "Mandatory Entrance Exam",
 		"Acceptance_Rate": "3 Applicants for 1 place",
-		"Acceptance_based_on_National_Examination": [
-			"S1 and S4 Entrance Based on National Examination"
-		]
+		"National_Exams": "For S1 and S4 Entrance Based on National Examination"
+
 	},
 	"Curriculum": ["Rwanda National Curriculum", "Montessori", "Cambridge"],
 
 	"Information": {
-		"Headmaster's Name": "Ngaboyisonga Richard",
+		"Headmaster": "Ngaboyisonga Richard",
 		"Telephone": "0788575166",
 		"Email": "lalalala@gmail.com",
-		"Business Hours": "7am to 6pm",
+		"Business_Hours": "7am to 6pm",
 		"Website": "greenhillsacademy.rw",
 		"Address": "KG 270 St,  Kigali , Rwanda"
 	},
-	"reviews": {
-		"review_1": {
+		"review": [
+			{
 			"title": "Great School",
-			"review's_name": "Mary Kabalisa",
+			"reviewer": "Mary Kabalisa",
 			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
 		},
-		"review_2": {
-			"title": "Great School",
-			"review's_name": "Mary Kabalisa",
-			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-		},
-		"review_3": {
-			"title": "Great School",
-			"review's_name": "Mary Kabalisa",
-			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-		},
-		"review_4": {
-			"title": "Great School",
-			"review's_name": "Mary Kabalisa",
-			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
-		}
-	}
+		{
+		"title": "Good School",
+		"reviewer": "Rene Kabalisa",
+		"review_content": "This school is great. I would highly recommend.my son enjoy learning since he joined that school"
+	},
+	{
+	"title": "Lack good teacher",
+	"reviewer": "Gwiza Maryse",
+	"review_content": "The school buildings looks nice but it seems to me that they lack good teaching stuffs"
+}
+	]
 }

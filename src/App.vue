@@ -16,42 +16,42 @@
     
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="error">school</v-icon>
+          <v-icon :color="$root.COLOR.color1">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Pre-Nursery</v-list-tile-title>
       </v-list-tile>
       
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="green">school</v-icon>
+          <v-icon :color="$root.COLOR.color2"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Nursery</v-list-tile-title>
       </v-list-tile>
       
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="warning">school</v-icon>
+          <v-icon :color="$root.COLOR.color3"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Primary</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="cyan">school</v-icon>
+          <v-icon :color="$root.COLOR.color4"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Secondary Schools</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
       <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="lime">school</v-icon>
+          <v-icon :color="$root.COLOR.color5"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>
       </v-list-tile>
       <v-divider></v-divider>
        <v-list-tile>
         <v-list-tile-action>
-          <v-icon color="pink">school</v-icon>
+          <v-icon :color="$root.COLOR.color6"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>University and Polytechnics </v-list-tile-title>
       </v-list-tile>

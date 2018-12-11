@@ -12848,6 +12848,7 @@ module.exports = defaults;
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -12875,6 +12876,8 @@ module.exports = defaults;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
+//
+//
 //
 //
 //
@@ -13877,45 +13880,6 @@ module.exports = Cancel;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -14126,50 +14090,60 @@ _vue2.default.config.productionTip = false;
 
 // Router
 var router = new _vueRouter2.default({
-	mode: 'history',
-	base: '/',
-	routes: [{
-		path: '/',
-		name: 'home',
-		component: _home2.default
-	}, {
-		path: '/search',
-		name: 'search',
-		component: _search2.default
+  mode: 'history',
+  base: '/',
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: _home2.default
+  }, {
+    path: '/search',
+    name: 'search',
+    component: _search2.default
 
-	}, {
-		path: '/school_details',
-		name: 'school_details',
-		component: _school_details2.default
+  }, {
+    path: '/school_details',
+    name: 'school_details',
+    component: _school_details2.default
 
-	}, {
-		path: '/test',
-		name: 'test',
-		component: _test2.default
+  }, {
+    path: '/test',
+    name: 'test',
+    component: _test2.default
 
-	}, {
-		path: '/test2',
-		name: 'test2',
-		component: _test4.default
+  }, {
+    path: '/test2',
+    name: 'test2',
+    component: _test4.default
 
-	}],
-	scrollBehavior: function scrollBehavior(to, from, savedPosition) {
-		return { x: 0, y: 0 };
-	}
+  }],
+  scrollBehavior: function scrollBehavior(to, from, savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    };
+  }
 });
 
 /* eslint-disable no-new */
 // Main
 var app = new _vue2.default({
-	el: '#app',
-	router: router,
-	template: '<App/>',
-	data: {
-		COLOR: {
-			color1: 'red accent-2'
-		}
-	},
-	components: { App: _App2.default }
+  el: '#app',
+  router: router,
+  template: '<App/>',
+  data: {
+    COLOR: {
+      color1: 'red accent-2',
+      color2: 'green',
+      color3: 'amber',
+      color4: 'cyan',
+      color5: 'lime',
+      color6: 'pink'
+    }
+  },
+  components: {
+    App: _App2.default
+  }
 });
 
 /***/ }),
@@ -40021,7 +39995,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAuJA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"error\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"green\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"warning\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"cyan\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"lime\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"pink\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University and Polytechnics </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>English </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Kinyarwanda </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>French </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test'>  <v-list-tile-title>test page-Axios</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test2'>  <v-list-tile-title>test page2-Vue</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAuJA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color1\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color2\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color3\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color4\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color5\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color6\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University and Polytechnics </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>English </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Kinyarwanda </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>French </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test'>  <v-list-tile-title>test page-Axios</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test2'>  <v-list-tile-title>test page2-Vue</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40113,9 +40087,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "error" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color1 } },
+                        [_vm._v("school")]
+                      )
                     ],
                     1
                   ),
@@ -40131,9 +40107,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "green" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color2 } },
+                        [_vm._v(" school")]
+                      )
                     ],
                     1
                   ),
@@ -40149,9 +40127,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "warning" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color3 } },
+                        [_vm._v(" school")]
+                      )
                     ],
                     1
                   ),
@@ -40169,9 +40149,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "cyan" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color4 } },
+                        [_vm._v(" school")]
+                      )
                     ],
                     1
                   ),
@@ -40189,9 +40171,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "lime" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color5 } },
+                        [_vm._v(" school")]
+                      )
                     ],
                     1
                   ),
@@ -40209,9 +40193,11 @@ var render = function() {
                   _c(
                     "v-list-tile-action",
                     [
-                      _c("v-icon", { attrs: { color: "pink" } }, [
-                        _vm._v("school")
-                      ])
+                      _c(
+                        "v-icon",
+                        { attrs: { color: _vm.$root.COLOR.color6 } },
+                        [_vm._v(" school")]
+                      )
                     ],
                     1
                   ),
@@ -40686,7 +40672,8 @@ var render = function() {
                                                   attrs: {
                                                     tile: "",
                                                     flat: "",
-                                                    color: "success"
+                                                    color:
+                                                      _vm.$root.COLOR.color2
                                                   }
                                                 },
                                                 [
@@ -40696,10 +40683,14 @@ var render = function() {
                                                       _c(
                                                         "v-btn",
                                                         {
+                                                          staticClass:
+                                                            "white--text",
                                                           attrs: {
                                                             depressed: "",
                                                             block: "",
-                                                            color: "success"
+                                                            color:
+                                                              _vm.$root.COLOR
+                                                                .color2
                                                           },
                                                           on: {
                                                             click: function(
@@ -40739,7 +40730,8 @@ var render = function() {
                                                   attrs: {
                                                     tile: "",
                                                     flat: "",
-                                                    color: "warning"
+                                                    color:
+                                                      _vm.$root.COLOR.color3
                                                   }
                                                 },
                                                 [
@@ -40749,10 +40741,14 @@ var render = function() {
                                                       _c(
                                                         "v-btn",
                                                         {
+                                                          staticClass:
+                                                            "white--text",
                                                           attrs: {
                                                             depressed: "",
                                                             block: "",
-                                                            color: "warning"
+                                                            color:
+                                                              _vm.$root.COLOR
+                                                                .color3
                                                           }
                                                         },
                                                         [
@@ -41022,7 +41018,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "error", hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color1, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: {
@@ -41037,11 +41033,12 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
+                              staticClass: "white--text",
                               attrs: {
                                 large: "",
                                 block: "",
                                 depressed: "",
-                                color: "error"
+                                color: _vm.$root.COLOR.color1
                               }
                             },
                             [
@@ -41067,7 +41064,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "success", hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color2, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: { src: "/lib/img/Nursery.jpg", height: "300px" }
@@ -41079,11 +41076,12 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
+                              staticClass: "white--text",
                               attrs: {
                                 large: "",
                                 block: "",
                                 depressed: "",
-                                color: "success"
+                                color: _vm.$root.COLOR.color2
                               }
                             },
                             [
@@ -41109,7 +41107,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "warning", hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color3, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: { src: "/lib/img/Primary.jpg", height: "300px" }
@@ -41121,11 +41119,12 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
+                              staticClass: "white--text",
                               attrs: {
                                 large: "",
                                 block: "",
                                 depressed: "",
-                                color: "warning"
+                                color: _vm.$root.COLOR.color3
                               }
                             },
                             [
@@ -41151,7 +41150,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { staticClass: "cyan", attrs: { hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color4, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: {
@@ -41166,16 +41165,16 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
-                              staticClass: "cyan white--text",
+                              staticClass: "white--text",
                               attrs: {
                                 block: "",
                                 depressed: "",
-                                flat: "",
-                                large: ""
+                                large: "",
+                                color: _vm.$root.COLOR.color4
                               }
                             },
                             [
-                              _vm._v("Secondary School\n              "),
+                              _vm._v(" Secondary Schools\n              "),
                               _c("v-spacer"),
                               _vm._v("1,375\n            ")
                             ],
@@ -41197,7 +41196,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "lime", hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color5, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: { src: "/lib/img/TVET.jpg", height: "305px" }
@@ -41209,8 +41208,12 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
-                              staticClass: "lime white--text",
-                              attrs: { flat: "", depressed: "", block: "" }
+                              staticClass: "white--text",
+                              attrs: {
+                                depressed: "",
+                                block: "",
+                                color: _vm.$root.COLOR.color5
+                              }
                             },
                             [
                               _vm._v("TVET\n              "),
@@ -41235,7 +41238,7 @@ var render = function() {
                 [
                   _c(
                     "v-card",
-                    { attrs: { color: "pink", hover: "" } },
+                    { attrs: { color: _vm.$root.COLOR.color6, hover: "" } },
                     [
                       _c("v-img", {
                         attrs: { src: "/lib/img/Tertiary.jpg", height: "305px" }
@@ -41247,8 +41250,12 @@ var render = function() {
                           _c(
                             "v-btn",
                             {
-                              staticClass: "pink white--text",
-                              attrs: { block: "", flat: "" }
+                              staticClass: "white--text",
+                              attrs: {
+                                block: "",
+                                depressed: "",
+                                color: _vm.$root.COLOR.color6
+                              }
                             },
                             [
                               _vm._v(
@@ -42380,7 +42387,12 @@ var render = function() {
                             [
                               _c(
                                 "v-card",
-                                { attrs: { tile: "", color: "error" } },
+                                {
+                                  attrs: {
+                                    tile: "",
+                                    color: _vm.$root.COLOR.color1
+                                  }
+                                },
                                 [
                                   _c(
                                     "router-link",
@@ -42389,10 +42401,11 @@ var render = function() {
                                       _c(
                                         "v-btn",
                                         {
+                                          staticClass: "white--text",
                                           attrs: {
                                             block: "",
                                             depressed: "",
-                                            color: "error"
+                                            color: _vm.$root.COLOR.color1
                                           }
                                         },
                                         [
@@ -42430,7 +42443,7 @@ var render = function() {
                                   attrs: {
                                     tile: "",
                                     flat: "",
-                                    color: "success"
+                                    color: _vm.$root.COLOR.color2
                                   }
                                 },
                                 [
@@ -42440,10 +42453,11 @@ var render = function() {
                                       _c(
                                         "v-btn",
                                         {
+                                          staticClass: "white--text",
                                           attrs: {
                                             depressed: "",
                                             block: "",
-                                            color: "success"
+                                            color: _vm.$root.COLOR.color2
                                           },
                                           on: {
                                             click: function($event) {
@@ -42479,7 +42493,7 @@ var render = function() {
                                   attrs: {
                                     tile: "",
                                     flat: "",
-                                    color: "warning"
+                                    color: _vm.$root.COLOR.color3
                                   }
                                 },
                                 [
@@ -42489,10 +42503,11 @@ var render = function() {
                                       _c(
                                         "v-btn",
                                         {
+                                          staticClass: "white--text",
                                           attrs: {
                                             depressed: "",
                                             block: "",
-                                            color: "warning"
+                                            color: _vm.$root.COLOR.color3
                                           }
                                         },
                                         [
@@ -42792,7 +42807,12 @@ var render = function() {
                                                   _vm._v(
                                                     "fas fa-map-marker-alt"
                                                   )
-                                                ])
+                                                ]),
+                                                _vm._v(
+                                                  "\n                        " +
+                                                    _vm._s(item.location) +
+                                                    "\n                      "
+                                                )
                                               ],
                                               1
                                             )
@@ -42808,49 +42828,53 @@ var render = function() {
                                           _c(
                                             "v-btn",
                                             {
+                                              staticClass: "white--text",
                                               attrs: {
                                                 depressed: "",
                                                 small: "",
-                                                color: "error"
+                                                color: _vm.$root.COLOR.color1
                                               }
                                             },
-                                            [_vm._v("Pre-Nursery School")]
+                                            [_vm._v(_vm._s(item.levels[0]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
                                             "v-btn",
                                             {
+                                              staticClass: "white--text",
                                               attrs: {
                                                 depressed: "",
                                                 small: "",
-                                                color: "success"
+                                                color: _vm.$root.COLOR.color2
                                               }
                                             },
-                                            [_vm._v("Nursery School")]
+                                            [_vm._v(_vm._s(item.levels[1]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
                                             "v-btn",
                                             {
+                                              staticClass: "white--text",
                                               attrs: {
                                                 depressed: "",
                                                 small: "",
-                                                color: "warning"
+                                                color: _vm.$root.COLOR.color3
                                               }
                                             },
-                                            [_vm._v("Primary school")]
+                                            [_vm._v(_vm._s(item.levels[2]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
                                             "v-btn",
                                             {
-                                              staticClass: "cyan white--text",
+                                              staticClass: "white--text",
                                               attrs: {
                                                 depressed: "",
-                                                small: ""
+                                                small: "",
+                                                color: _vm.$root.COLOR.color4
                                               }
                                             },
-                                            [_vm._v("General Secondary")]
+                                            [_vm._v(_vm._s(item.levels[3]))]
                                           )
                                         ],
                                         1
@@ -42880,7 +42904,9 @@ var render = function() {
                                                         )
                                                       ]),
                                                       _vm._v(
-                                                        "Sector : Private\n                        "
+                                                        "Sector : " +
+                                                          _vm._s(item.sector) +
+                                                          "\n                        "
                                                       )
                                                     ],
                                                     1
@@ -42894,7 +42920,9 @@ var render = function() {
                                                         _vm._v("wc")
                                                       ]),
                                                       _vm._v(
-                                                        "Gender: Mixed\n                        "
+                                                        "Gender: " +
+                                                          _vm._s(item.gender) +
+                                                          "\n                        "
                                                       )
                                                     ],
                                                     1
@@ -42908,7 +42936,11 @@ var render = function() {
                                                         _vm._v("fas fa-church")
                                                       ]),
                                                       _vm._v(
-                                                        "Religion: Secular\n                        "
+                                                        "Religion: " +
+                                                          _vm._s(
+                                                            item.religion
+                                                          ) +
+                                                          "\n                        "
                                                       )
                                                     ],
                                                     1
@@ -42922,7 +42954,9 @@ var render = function() {
                                                         _vm._v("fas fa-users")
                                                       ]),
                                                       _vm._v(
-                                                        "Levels: Combined\n                        "
+                                                        "Levels: " +
+                                                          _vm._s(item.level) +
+                                                          "\n                        "
                                                       )
                                                     ],
                                                     1
@@ -43128,7 +43162,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAqmBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CClmBL;ADqmBG;;;EACE,WAAA;CCjmBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n#example-custom-transition {\r\n  .fade {\r\n    &-enter-active, &-leave-active, &-leave-to {\r\n      transition: 0.3s ease-out;\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n    }\r\n\r\n    &-enter, &-leave, &-leave-to {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AA8jBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CC3jBL;AD8jBG;;;EACE,WAAA;CC1jBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n#example-custom-transition {\r\n  .fade {\r\n    &-enter-active, &-leave-active, &-leave-to {\r\n      transition: 0.3s ease-out;\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n    }\r\n\r\n    &-enter, &-leave, &-leave-to {\r\n      opacity: 0;\r\n    }\r\n  }\r\n}\r\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -43928,27 +43962,48 @@ var render = function() {
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
-                                    { attrs: { large: "", color: "error" } },
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color1
+                                      }
+                                    },
                                     [_vm._v(_vm._s(_vm.SCHOOL.school_type[0]))]
                                   ),
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
-                                    { attrs: { large: "", color: "success" } },
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color2
+                                      }
+                                    },
                                     [_vm._v(_vm._s(_vm.SCHOOL.school_type[1]))]
                                   ),
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
-                                    { attrs: { large: "", color: "warning" } },
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color3
+                                      }
+                                    },
                                     [_vm._v(_vm._s(_vm.SCHOOL.school_type[2]))]
                                   ),
                                   _vm._v(" "),
                                   _c(
                                     "v-btn",
                                     {
-                                      staticClass: "info",
-                                      attrs: { large: "" }
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color4
+                                      }
                                     },
                                     [_vm._v(_vm._s(_vm.SCHOOL.school_type[3]))]
                                   ),
@@ -44857,34 +44912,58 @@ var render = function() {
                                                 _vm._v(
                                                   "Year:" +
                                                     _vm._s(
-                                                      _vm.SCHOOL.ranking.p6[0]
+                                                      _vm.SCHOOL.ranking
+                                                        .p6_17[0]
                                                     )
                                                 )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked : 30th on 230\n                      "
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_17[1]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_17[2]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("v-divider", {
                                                 attrs: { "pa-2": "" }
                                               }),
                                               _vm._v(" "),
                                               _c("strong", [
-                                                _vm._v("Year: 2016")
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .p6_16[0]
+                                                    ) +
+                                                    " "
+                                                )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked : 30th on 230\n                      "
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_16[1]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_16[2]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("v-divider"),
                                               _vm._v(" "),
@@ -44913,32 +44992,56 @@ var render = function() {
                                               _c("v-divider"),
                                               _vm._v(" "),
                                               _c("strong", [
-                                                _vm._v("Year: 2017")
+                                                _vm._v(
+                                                  "Year:" +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s3_17[0]
+                                                    )
+                                                )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked : 30th on 230\n                      "
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s3_17[1]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s3_17[2]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("v-divider", {
                                                 attrs: { "pa-2": "" }
                                               }),
                                               _vm._v(" "),
                                               _c("strong", [
-                                                _vm._v("Year: 2016")
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s3_16[0]
+                                                    )
+                                                )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked: 30th on 230\n                      "
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s3_16[1]
+                                                ) + "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s3_16[2]
+                                                ) + "\n                      "
                                               ),
                                               _c("v-divider"),
                                               _vm._v(" "),
@@ -44967,32 +45070,56 @@ var render = function() {
                                               _c("v-divider"),
                                               _vm._v(" "),
                                               _c("strong", [
-                                                _vm._v("Year: 2017")
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s6_17[0]
+                                                    )
+                                                )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked : 30th on 230\n                      "
+                                                "Ranked : " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s6_17[1]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s6_17[2]
+                                                ) + "\n                      "
                                               ),
                                               _c("v-divider", {
                                                 attrs: { "pa-2": "" }
                                               }),
                                               _vm._v(" "),
                                               _c("strong", [
-                                                _vm._v("Year: 2016")
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s6_16[0]
+                                                    )
+                                                )
                                               ]),
                                               _vm._v(" "),
                                               _c("br"),
                                               _vm._v(
-                                                "Ranked : 30th on 230\n                      "
+                                                "Ranked : " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s6_16[1]
+                                                  ) +
+                                                  "\n                      "
                                               ),
                                               _c("br"),
                                               _vm._v(
-                                                "90% of students passed\n                      "
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s6_16[2]
+                                                ) + "\n                      "
                                               ),
                                               _c("v-divider")
                                             ],
@@ -45008,7 +45135,8 @@ var render = function() {
                                   _c(
                                     "v-card-text",
                                     {
-                                      staticClass: "light-blue--text display-2"
+                                      staticClass: "light-blue--text display-2",
+                                      attrs: { "pt-": "" }
                                     },
                                     [
                                       _c(
@@ -45056,39 +45184,12 @@ var render = function() {
                                               _c(
                                                 "p",
                                                 { staticClass: "title" },
-                                                [_vm._v("Entrance Exam")]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-flex",
-                                            {
-                                              attrs: {
-                                                xs12: "",
-                                                sm4: "",
-                                                "text-xs-center": ""
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "v-icon",
-                                                {
-                                                  attrs: {
-                                                    size: "50",
-                                                    color: "light-blue"
-                                                  }
-                                                },
-                                                [_vm._v("fas fa-info-circle")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "p",
-                                                { staticClass: "title" },
                                                 [
                                                   _vm._v(
-                                                    "3 applicants for 1 place"
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Admissions
+                                                        .Entrance_Exam
+                                                    )
                                                   )
                                                 ]
                                               )
@@ -45122,7 +45223,49 @@ var render = function() {
                                                 { staticClass: "title" },
                                                 [
                                                   _vm._v(
-                                                    "for S1 and S4 Entrance Based on National Exam's Result"
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Admissions
+                                                        .Acceptance_Rate
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    " " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.Admissions
+                                                          .National_Exams
+                                                      ) +
+                                                      " "
                                                   )
                                                 ]
                                               )
@@ -45187,39 +45330,11 @@ var render = function() {
                                               _c(
                                                 "p",
                                                 { staticClass: "title" },
-                                                [_vm._v("Montessori")]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-flex",
-                                            {
-                                              attrs: {
-                                                xs12: "",
-                                                sm4: "",
-                                                "text-xs-center": ""
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "v-icon",
-                                                {
-                                                  attrs: {
-                                                    size: "50",
-                                                    color: "light-blue"
-                                                  }
-                                                },
-                                                [_vm._v("fas fa-info-circle")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "p",
-                                                { staticClass: "title" },
                                                 [
                                                   _vm._v(
-                                                    "Rwanda National Curriculum"
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[0]
+                                                    )
                                                   )
                                                 ]
                                               )
@@ -45251,7 +45366,49 @@ var render = function() {
                                               _c(
                                                 "p",
                                                 { staticClass: "title" },
-                                                [_vm._v("Cambridge Curriculum")]
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[1]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[2]
+                                                    )
+                                                  )
+                                                ]
                                               )
                                             ],
                                             1
@@ -45298,17 +45455,43 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("v-card-text", { staticClass: "grey--text subheading" }, [
-                    _c("p", [_vm._v("Headmaster's Name:")]),
+                    _c("p", [
+                      _vm._v(
+                        "Headmaster's Name: " +
+                          _vm._s(_vm.SCHOOL.Information.Headmaster) +
+                          " "
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Telephone:")]),
+                    _c("p", [
+                      _vm._v(
+                        "Telephone: " + _vm._s(_vm.SCHOOL.Information.Telephone)
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Email:")]),
+                    _c("p", [
+                      _vm._v("Email:" + _vm._s(_vm.SCHOOL.Information.Email))
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Business Hours:")]),
+                    _c("p", [
+                      _vm._v(
+                        "Business Hours:" +
+                          _vm._s(_vm.SCHOOL.Information.Business_Hours)
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("School's website:")]),
+                    _c("p", [
+                      _vm._v(
+                        "School's website:" +
+                          _vm._s(_vm.SCHOOL.Information.Website)
+                      )
+                    ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("Address:")])
+                    _c("p", [
+                      _vm._v(
+                        "Address: " + _vm._s(_vm.SCHOOL.Information.Address)
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "text-md-center" }, [
@@ -45333,195 +45516,78 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "v-card",
-                    {
-                      staticClass: "elevation-16 mx-auto",
-                      attrs: { tile: "", width: "280" }
-                    },
-                    [
-                      _c(
-                        "v-card-title",
-                        {
-                          staticClass: "headline",
-                          attrs: { "primary-title": "" }
-                        },
-                        [_vm._v("Great School !!")]
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c(
-                        "v-card-text",
-                        { staticClass: "subheading" },
-                        [
-                          _c("v-icon", [_vm._v("person")]),
-                          _vm._v("Review by Mary Kabalisa\n          ")
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _vm._v(
-                          "This school is great. I would highly recommend. the teachers are very encouraging\n            "
-                        ),
+                  _vm._l(_vm.SCHOOL.review, function(item, i) {
+                    return _c(
+                      "div",
+                      { key: i },
+                      [
                         _c(
-                          "div",
-                          { staticClass: "text-xs-center mt-5" },
+                          "v-card",
+                          {
+                            staticClass: "elevation-16 mx-auto",
+                            attrs: { tile: "", width: "280" }
+                          },
                           [
-                            _c("v-rating", {
-                              attrs: {
-                                color: "yellow darken-3",
-                                "background-color": "grey darken-1",
-                                "empty-icon": "$vuetify.icons.ratingFull",
-                                "half-increments": "",
-                                hover: ""
+                            _c(
+                              "v-card-title",
+                              {
+                                staticClass: "headline",
+                                attrs: { "primary-title": "" }
                               },
-                              model: {
-                                value: _vm.rating,
-                                callback: function($$v) {
-                                  _vm.rating = $$v
-                                },
-                                expression: "rating"
-                              }
-                            })
+                              [_vm._v(_vm._s(item.title))]
+                            ),
+                            _vm._v(" "),
+                            _c("v-divider"),
+                            _vm._v(" "),
+                            _c(
+                              "v-card-text",
+                              { staticClass: "subheading" },
+                              [
+                                _c("v-icon", [_vm._v("person")]),
+                                _vm._v(_vm._s(item.reviewer) + "\n          ")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("v-divider"),
+                            _vm._v(" "),
+                            _c("v-card-text", [
+                              _vm._v(
+                                _vm._s(item.review_content) + "\n            "
+                              ),
+                              _c(
+                                "div",
+                                { staticClass: "text-xs-center mt-5" },
+                                [
+                                  _c("v-rating", {
+                                    attrs: {
+                                      color: "yellow darken-3",
+                                      "background-color": "grey darken-1",
+                                      "empty-icon": "$vuetify.icons.ratingFull",
+                                      "half-increments": "",
+                                      hover: ""
+                                    },
+                                    model: {
+                                      value: _vm.rating,
+                                      callback: function($$v) {
+                                        _vm.rating = $$v
+                                      },
+                                      expression: "rating"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ])
                           ],
                           1
                         )
-                      ])
-                    ],
-                    1
-                  ),
+                      ],
+                      1
+                    )
+                  }),
                   _vm._v(" "),
                   _c("v-divider", { staticClass: "pb-2" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-card",
-                    {
-                      staticClass: "elevation-12 mx-auto",
-                      attrs: { width: "280" }
-                    },
-                    [
-                      _c(
-                        "v-card-title",
-                        {
-                          staticClass: "headline",
-                          attrs: { "primary-title": "" }
-                        },
-                        [_vm._v("Great School !!")]
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c(
-                        "v-card-text",
-                        { staticClass: "subheading" },
-                        [
-                          _c("v-icon", [_vm._v("person")]),
-                          _vm._v("Review by Mary Kabalisa\n          ")
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _vm._v(
-                          "This school is great. I would highly recommend. the teachers are very encouraging\n            "
-                        ),
-                        _c(
-                          "div",
-                          { staticClass: "text-xs-center mt-5" },
-                          [
-                            _c("v-rating", {
-                              attrs: {
-                                color: "yellow darken-3",
-                                "background-color": "grey darken-1",
-                                "empty-icon": "$vuetify.icons.ratingFull",
-                                "half-increments": "",
-                                hover: ""
-                              },
-                              model: {
-                                value: _vm.rating,
-                                callback: function($$v) {
-                                  _vm.rating = $$v
-                                },
-                                expression: "rating"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ])
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-divider", { staticClass: "pb-2" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-card",
-                    {
-                      staticClass: "elevation-16 mx-auto",
-                      attrs: { width: "280" }
-                    },
-                    [
-                      _c(
-                        "v-card-title",
-                        {
-                          staticClass: "headline",
-                          attrs: { "primary-title": "" }
-                        },
-                        [_vm._v("Great School !!")]
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c(
-                        "v-card-text",
-                        { staticClass: "subheading white" },
-                        [
-                          _c("v-icon", [_vm._v("person")]),
-                          _vm._v("Review by Mary Kabalisa\n          ")
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _vm._v(
-                          "This school is great. I would highly recommend. the teachers are very encouraging\n            "
-                        ),
-                        _c(
-                          "div",
-                          { staticClass: "text-xs-center mt-5" },
-                          [
-                            _c("v-rating", {
-                              attrs: {
-                                color: "yellow darken-3",
-                                "background-color": "grey darken-1",
-                                "empty-icon": "$vuetify.icons.ratingFull",
-                                "half-increments": "",
-                                hover: ""
-                              },
-                              model: {
-                                value: _vm.rating,
-                                callback: function($$v) {
-                                  _vm.rating = $$v
-                                },
-                                expression: "rating"
-                              }
-                            })
-                          ],
-                          1
-                        )
-                      ])
-                    ],
-                    1
-                  ),
                   _vm._v(" "),
                   _c(
                     "v-card-text",
@@ -45688,7 +45754,7 @@ var render = function() {
                     1
                   )
                 ],
-                1
+                2
               )
             ],
             1

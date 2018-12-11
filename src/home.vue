@@ -37,12 +37,13 @@
                     </v-layout>
                     <v-layout row>
                       <v-flex xs6 order-lg2>
-                        <v-card tile flat color="success">
+                        <v-card tile flat :color="$root.COLOR.color2">
                           <v-card-text>
                             <v-btn
                               depressed
                               block
-                              color="success"
+                              class="white--text"
+                              :color="$root.COLOR.color2"
                               @click="advancedSearch = !advancedSearch"
                             >
                               <v-icon>search</v-icon>Advanced Search
@@ -51,9 +52,9 @@
                         </v-card>
                       </v-flex>
                       <v-flex xs6>
-                        <v-card tile flat color="warning">
+                        <v-card tile flat :color="$root.COLOR.color3">
                           <v-card-text>
-                            <v-btn depressed block color="warning">
+                            <v-btn depressed block class="white--text" :color="$root.COLOR.color3">
                               <v-icon>search</v-icon>Search by Map
                             </v-btn>
                           </v-card-text>
@@ -128,60 +129,60 @@
     <v-container>
       <v-layout row wrap>
         <v-flex xs12 sm4 pa-2>
-          <v-card color="error" hover>
+          <v-card :color="$root.COLOR.color1" hover>
             <v-img src="/lib/img/Pre-Nursery.jpg" height="300"></v-img>
             <v-card-text>
-              <v-btn large block depressed color="error">Pre-Nursery
+              <v-btn large block depressed class="white--text" :color="$root.COLOR.color1">Pre-Nursery
                 <v-spacer></v-spacer>90
               </v-btn>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 pa-2>
-          <v-card color="success" hover>
+          <v-card :color="$root.COLOR.color2" hover>
             <v-img src="/lib/img/Nursery.jpg" height="300px"></v-img>
             <v-card-text>
-              <v-btn large block depressed color="success">Nursery
+              <v-btn large block depressed class="white--text" :color="$root.COLOR.color2">Nursery
                 <v-spacer></v-spacer>3,186
               </v-btn>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 pa-2>
-          <v-card color="warning" hover>
+          <v-card :color="$root.COLOR.color3" hover>
             <v-img src="/lib/img/Primary.jpg" height="300px"></v-img>
             <v-card-text>
-              <v-btn large block depressed color="warning">Primary Schools
+              <v-btn large block depressed class="white--text" :color="$root.COLOR.color3">Primary Schools
                 <v-spacer></v-spacer>2,877
               </v-btn>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 pa-2>
-          <v-card class="cyan" hover>
+          <v-card :color="$root.COLOR.color4" hover>
             <v-img src="/lib/img/Secondary.jpg" height="300px"></v-img>
             <v-card-text>
-              <v-btn block depressed flat large class="cyan white--text">Secondary School
+              <v-btn block depressed large  class="white--text" :color="$root.COLOR.color4"> Secondary Schools
                 <v-spacer></v-spacer>1,375
               </v-btn>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 pa-2>
-          <v-card color="lime" hover>
+          <v-card :color="$root.COLOR.color5" hover>
             <v-img src="/lib/img/TVET.jpg" height="305px"></v-img>
             <v-card-text>
-              <v-btn flat depressed block class="lime white--text">TVET
+              <v-btn depressed block :color="$root.COLOR.color5" class="white--text">TVET
                 <v-spacer></v-spacer>402
               </v-btn>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm4 pa-2>
-          <v-card color="pink" hover>
+          <v-card :color="$root.COLOR.color6" hover>
             <v-img src="/lib/img/Tertiary.jpg" height="305px"></v-img>
             <v-card-text>
-              <v-btn block flat class="pink white--text">Universities and Polytechnics
+              <v-btn block depressed :color="$root.COLOR.color6" class="white--text">Universities and Polytechnics
                 <v-spacer></v-spacer>37
               </v-btn>
             </v-card-text>
