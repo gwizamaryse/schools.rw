@@ -4,14 +4,14 @@
     <v-card color="grey lighten-3" tile flat>
       <v-form>
         <v-container fluid>
-          <v-layout row wrap pl-4>
+          <v-layout row wrap >
             <v-layout row>
-              <v-flex xs8 order-md2 order-xs1 d-flex>
+              <v-flex xs8  d-flex>
                 <v-card>
                   <v-text-field type="text" label="Search school by district or school's name"></v-text-field>
                 </v-card>
               </v-flex>
-              <v-flex xs4 order-md3 order-xs2 d-flex>
+              <v-flex xs4 d-flex>
                 <v-card tile :color="$root.COLOR.color1">
                   <router-link to="/search">
                     <v-btn block depressed class="white--text" :color="$root.COLOR.color1">
@@ -23,7 +23,7 @@
             </v-layout>
             <v-spacer></v-spacer>
             <v-layout row align-end right>
-              <v-flex xs4 order-lg2>
+              <v-flex xs6 order-lg2>
                 <v-card tile flat :color="$root.COLOR.color2">
                   <v-card-text>
                     <v-btn
@@ -38,7 +38,7 @@
                   </v-card-text>
                 </v-card>
               </v-flex>
-              <v-flex xs4>
+              <v-flex xs6>
                 <v-card tile flat :color="$root.COLOR.color3">
                   <v-card-text>
                     <v-btn depressed block class="white--text" :color="$root.COLOR.color3">

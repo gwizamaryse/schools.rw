@@ -43,7 +43,7 @@ const router = new VueRouter({
 
     },
     {
-      path: '/school_details',
+      path: '/school_details/:id',
       name: 'school_details',
       component: school_details
 
