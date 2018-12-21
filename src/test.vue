@@ -1,69 +1,112 @@
 <template>
   <div id="app">
-    <header>
-      <span>Handling Ajax Request with Axios in Vue</span>
-    </header>
-    <main>
-      <h2>Click the button to get Random jokes</h2>
-      <button id="btn" class="btn" v-on:click="getJokes">Get Jokes</button>
+<input type="text" v-model="searchKey" placeholder="search me">
+  <ul>
+      <li v-for="user in paginatedUsers">{{ user.name }}</li>
+  </ul>
+<ul>
+    <li v-for="pageNumber in totalPages" v-if="Math.abs(pageNumber - currentPage) < 3 || pageNumber == totalPages || pageNumber == 1">
+      <a
+        href="#"
+        @click="setPage(pageNumber)"
+        :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)}"
+      >
+        {{ pageNumber }}
+      </a>
+    </li>
+  </ul>
 
-      <div v-if="loading">Loading.....</div>
-
-      <div class="wrapper">
-        <div class="row">
-          <div v-for="joke in jokes" :key="joke.id">
-            <div class="col-md-4 cards">
-              <img
-                src="https://placeimg.com/300/300/nature"
-                class="img-responsive"
-                alt="Random images placeholder"
-              >
-              <div>
-                <h3>{{ joke.id }}</h3>
-                <p>{{ joke.joke }}</p>
-                <p>{{ joke.category }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <div id="app-2">
-      <span v-bind:title="message">
-        Hover your mouse over me for a few seconds
-        to see my dynamically bound title!
-        <p>{{ info }}</p>
-      </span>
-    </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+
 
 export default {
   name: "app",
   data() {
     return {
-      jokes: [],
-      loading: false,
-      info: null
+      users: [
+        { id: 1, name: "Tom" },
+        { id: 2, name: "Kate" },
+        { id: 3, name: "Jack" },
+        { id: 4, name: "Jill" },
+        { id: 4, name: "bill" },
+        { id: 4, name: "aill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+{"id":1, "name":"Tom"},
+            {"id":2, "name":"Kate"},
+            {"id":3, "name":"Jack"},
+            {"id":4, "name":"Jill"},
+            {"id":4, "name":"bill"},
+            {"id":4, "name":"aill"},
+            {"id":4, "name":"cill"},
+            {"id":4, "name":"dill"},
+            {"id":4, "name":"eill"},
+            {"id":4, "name":"cill"},
+            {"id":4, "name":"dill"},
+            {"id":4, "name":"eill"},
+            {"id":4, "name":"cill"},
+            {"id":4, "name":"dill"},
+            {"id":4, "name":"eill"},
+            {"id":4, "name":"cill"},
+            {"id":4, "name":"dill"},
+            {"id":4, "name":"eill"},
+            {"id":4, "name":"cill"},
+            {"id":4, "name":"dill"},
+            {"id":4, "name":"eill"},
+      ],
+      searchKey: '',
+      currentPage: 1,
+      itemsPerPage: 1,
     };
   },
-  methods: {
-    getJokes: function() {
-      this.loading = true;
-      axios.get("http://api.icndb.com/jokes/random/10").then(
-        response => {
-          this.loading = false;
-          this.jokes = response.data.value;
-        },
-        error => {
-          this.loading = false;
+computed: {
+      resultCount() {
+        return this.filteredUsers.length;
+      },
+      totalPages: function() {
+        return Math.ceil(this.resultCount / this.itemsPerPage)
+      },
+      filteredUsers: function() {
+        let key = this.searchKey.toUpperCase();
+        return this.users.filter((user) => {
+          return user.name.toUpperCase().indexOf(key) !== -1
+        })
+      },
+      paginatedUsers: function() {
+        var index = this.currentPage * this.itemsPerPage
+        return this.filteredUsers.slice(index - 1, index - 1 + this.itemsPerPage)
+      }
+    },
+    methods: {
+        setPage: function(pageNumber) {
+          this.currentPage = pageNumber
         }
-      );
+    },
+  watch: {
+      currentPage(value) {
+        if (value > this.totalPages) {
+          this.currentPage = this.totalPages;
+        }
+      }
     }
-  }
+
+
 };
 </script>
 
@@ -71,63 +114,26 @@ export default {
 
 
 <style>
-body {
-  margin: 0;
+a {
+  color: #999;
+}
+.current {
+  color: red;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline;
+  margin: 5px 5px;
 }
 
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+a.first::after {
+  content:'...'
 }
 
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495e;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
-
-btn {
-  background: #51b767;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 0;
-  font-weight: bold;
-  font-size: 15px;
-  border: 0;
-}
-
-.cards {
-  background: #f5f5f5;
-  height: 400px;
-}
-.cards:hover {
-  transform: translateY(-0.5em);
-  background: #ebebeb;
-}
-
-.cards {
-  column-count: 1;
-  column-gap: 1em;
-  margin-top: 70px;
+a.last::before {
+  content:'...'
 }
 </style>

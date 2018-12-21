@@ -56,6 +56,120 @@
 			"gender": "Girls Only",
 			"religion" : "catholic",
 			"level" : "Combined"
+		},
+		{
+			"school_name" : "Riviera",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Mixed",
+			"religion" : "Secular",
+			"level" : "Combined"
+		}
+		,{
+			"school_name" : "Green Hills Academy",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"Sector": "Private",
+			"gender": "Mixed",
+			"religion" : "Secular",
+			"level" : "Combined"
+
+		},
+		{
+			"school_name" : "APAPER",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Boys Only",
+			"religion" : "Secular",
+			"level" : "Combined"
+		},
+		{
+			"school_name" : "Ecole Internationale de Kigali",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Girls Only",
+			"religion" : "catholic",
+			"level" : "Combined"
+		},
+		{
+			"school_name" : "Riviera",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Mixed",
+			"religion" : "Secular",
+			"level" : "Combined"
+		}
+		,{
+			"school_name" : "Green Hills Academy",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"Sector": "Private",
+			"gender": "Mixed",
+			"religion" : "Secular",
+			"level" : "Combined"
+
+		},
+		{
+			"school_name" : "APAPER",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Boys Only",
+			"religion" : "Secular",
+			"level" : "Combined"
+		},
+		{
+			"school_name" : "Ecole Internationale de Kigali",
+			"location" : "Kigali, gasabo, Nyarutarama",
+			"levels":[
+				"Pre-Nursery SCHOOL",
+				"Nursery SCHOOL",
+				"Primary SCHOOL",
+				"General Secondary"
+			],
+			"sector": "Private",
+			"gender": "Girls Only",
+			"religion" : "catholic",
+			"level" : "Combined"
 		}
    ]
 }

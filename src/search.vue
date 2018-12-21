@@ -4,11 +4,15 @@
     <v-card color="grey lighten-3" tile flat>
       <v-form>
         <v-container fluid>
-          <v-layout row wrap >
+          <v-layout row wrap>
             <v-layout row>
-              <v-flex xs8  d-flex>
+              <v-flex xs8 d-flex>
                 <v-card>
-                  <v-text-field type="text" label="Search school by district or school's name"></v-text-field>
+                  <v-text-field
+                    type="text"
+                    label="Search school by district or school's name"
+                    v-model="search"
+                  ></v-text-field>
                 </v-card>
               </v-flex>
               <v-flex xs4 d-flex>
@@ -108,7 +112,7 @@
 
         <v-card flat tile>
           <!--   search result #1 -->
-          <div v-for="(item, i) in SCHOOL" :key="i">
+          <div v-for="(item,i) in SCHOOL" :key="i">
             <v-card flat tile>
               <v-container fluid>
                 <v-layout row wrap>
@@ -129,25 +133,49 @@
                       </v-card-text>
                     </v-flex>
                     <v-flex xs12>
-                      <v-btn depressed small class="white--text" :color="$root.COLOR.color1">{{item.levels[0]}}</v-btn>
-                      <v-btn depressed small class="white--text" :color="$root.COLOR.color2">{{ item.levels[1]}}</v-btn>
-                      <v-btn depressed small class="white--text" :color="$root.COLOR.color3">{{item.levels[2]}}</v-btn>
-                      <v-btn depressed small class="white--text" :color="$root.COLOR.color4">{{item.levels[3]}}</v-btn>
+                      <v-btn
+                        depressed
+                        small
+                        class="white--text"
+                        :color="$root.COLOR.color1"
+                      >{{item.levels[0]}}</v-btn>
+                      <v-btn
+                        depressed
+                        small
+                        class="white--text"
+                        :color="$root.COLOR.color2"
+                      >{{ item.levels[1]}}</v-btn>
+                      <v-btn
+                        depressed
+                        small
+                        class="white--text"
+                        :color="$root.COLOR.color3"
+                      >{{item.levels[2]}}</v-btn>
+                      <v-btn
+                        depressed
+                        small
+                        class="white--text"
+                        :color="$root.COLOR.color4"
+                      >{{item.levels[3]}}</v-btn>
                     </v-flex>
                     <v-flex xs12>
                       <v-container fluid>
                         <v-layout row wrap>
                           <v-flex xs3>
-                            <v-icon>fas fa-building</v-icon>Sector : {{item.sector}}
+                            <v-icon>fas fa-building</v-icon>
+                            Sector : {{item.sector}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>wc</v-icon>Gender: {{item.gender}}
+                            <v-icon>wc</v-icon>
+                            Gender: {{item.gender}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>fas fa-church</v-icon>Religion: {{item.religion}}
+                            <v-icon>fas fa-church</v-icon>
+                            Religion: {{item.religion}}
                           </v-flex>
                           <v-flex xs3>
-                            <v-icon>fas fa-users</v-icon>Levels: {{item.level}}
+                            <v-icon>fas fa-users</v-icon>
+                            Levels: {{item.level}}
                           </v-flex>
                         </v-layout>
                       </v-container>
@@ -184,7 +212,8 @@ export default {
       advancedSearch: false,
       page: 2,
       items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-      SCHOOL: []
+      SCHOOL: [],
+      search: ""
     };
   },
   methods: {
@@ -198,6 +227,15 @@ export default {
   },
   created: function() {
     this.getSchoolList();
+  },
+  computed: {
+    filteredList() {
+      return this.SCHOOL.filter(post => {
+        return list.school_name
+          .toLowerCase()
+          .includes(this.search.toLowerCase());
+      });
+    }
   }
 };
 </script>
