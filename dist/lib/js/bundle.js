@@ -12373,12 +12373,6 @@ process.umask = function() { return 0; };
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(34);
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -12480,7 +12474,7 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12627,7 +12621,7 @@ module.exports = defaults;
 });
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12868,11 +12862,11 @@ module.exports = defaults;
 });
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
@@ -13089,34 +13083,39 @@ module.exports = defaults;
     return {
       advancedSearch: false,
       page: 2,
-      items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-      SCHOOL: [],
+      schools: [],
       search: ""
     };
   },
 
   methods: {
-    getSchoolList: function getSchoolList() {
+    schoolList: function schoolList() {
       var _this = this;
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get("/lib/json/school_list.json").then(function (res) {
         console.log(res.data);
-        __WEBPACK_IMPORTED_MODULE_1_vue___default.a.set(_this, "SCHOOL", res.data.list);
+        __WEBPACK_IMPORTED_MODULE_1_vue___default.a.set(_this, "schools", res.data.list);
       });
     }
   },
   created: function created() {
-    this.getSchoolList();
+    this.schoolList();
   },
   computed: {
-    filteredList: function filteredList() {
+    filteredSchools: function filteredSchools() {
       var _this2 = this;
 
-      return this.SCHOOL.filter(function (post) {
-        return list.school_name.toLowerCase().includes(_this2.search.toLowerCase());
+      return this.schools.filter(function (school) {
+        return school.school_name.match(_this2.search) || school.province.match(_this2.search) || school.akarere.match(_this2.search) || school.umurenge.match(_this2.search);
       });
     }
   }
 });
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(34);
 
 /***/ }),
 /* 13 */
@@ -13392,7 +13391,7 @@ module.exports = Cancel;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
@@ -13986,16 +13985,18 @@ module.exports = Cancel;
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "app",
   data: function data() {
     return {
-      users: [{ id: 1, name: "Tom" }, { id: 2, name: "Kate" }, { id: 3, name: "Jack" }, { id: 4, name: "Jill" }, { id: 4, name: "bill" }, { id: 4, name: "aill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { "id": 1, "name": "Tom" }, { "id": 2, "name": "Kate" }, { "id": 3, "name": "Jack" }, { "id": 4, "name": "Jill" }, { "id": 4, "name": "bill" }, { "id": 4, "name": "aill" }, { "id": 4, "name": "cill" }, { "id": 4, "name": "dill" }, { "id": 4, "name": "eill" }, { "id": 4, "name": "cill" }, { "id": 4, "name": "dill" }, { "id": 4, "name": "eill" }, { "id": 4, "name": "cill" }, { "id": 4, "name": "dill" }, { "id": 4, "name": "eill" }, { "id": 4, "name": "cill" }, { "id": 4, "name": "dill" }, { "id": 4, "name": "eill" }, { "id": 4, "name": "cill" }, { "id": 4, "name": "dill" }, { "id": 4, "name": "eill" }],
+      users: [{ id: 1, name: "Tom" }, { id: 2, name: "Kate" }, { id: 3, name: "Jack" }, { id: 4, name: "Jill" }, { id: 4, name: "bill" }, { id: 4, name: "aill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { "id": 1, "name": "Tom" }, { id: 1, name: "Tom" }, { id: 2, name: "Kate" }, { id: 3, name: "Jack" }, { id: 4, name: "Jill" }, { id: 4, name: "bill" }, { id: 4, name: "aill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { id: 4, name: "cill" }, { id: 4, name: "dill" }, { id: 4, name: "eill" }, { "id": 1, "name": "Tom" }],
       searchKey: '',
       currentPage: 1,
-      itemsPerPage: 1
+      itemsPerPage: 5,
+      resultCount: 0
     };
   },
 
@@ -14014,6 +14015,7 @@ module.exports = Cancel;
       });
     },
     paginatedUsers: function paginatedUsers() {
+
       var index = this.currentPage * this.itemsPerPage;
       return this.filteredUsers.slice(index - 1, index - 1 + this.itemsPerPage);
     }
@@ -14060,6 +14062,7 @@ module.exports = Cancel;
 //
 //
 //
+//
 
 var Post = function Post(title, link, author, img) {
   __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_classCallCheck___default()(this, Post);
@@ -14073,7 +14076,8 @@ var Post = function Post(title, link, author, img) {
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      searchKey: ""
+      search: '',
+      postList: [new Post('Vue.js', 'https://vuejs.org/', 'Chris', 'https://vuejs.org//images/logo.png'), new Post('React.js', 'https://facebook.github.io/react/', 'Tim', 'https://daynin.github.io/clojurescript-presentation/img/react-logo.png'), new Post('Angular.js', 'https://angularjs.org/', 'Sam', 'https://angularjs.org/img/ng-logo.png'), new Post('Ember.js', 'http://emberjs.com/', 'Rachel', 'http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200'), new Post('Meteor.js', 'https://www.meteor.com/', 'Chris', 'http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png'), new Post('Aurelia', 'http://aurelia.io/', 'Tim', 'https://cdn.auth0.com/blog/aurelia-logo.png'), new Post('Node.js', 'https://nodejs.org/en/', 'A. A. Ron', 'https://code-maven.com/img/node.png'), new Post('Pusher', 'https://pusher.com/', 'Alex', 'https://avatars1.githubusercontent.com/u/739550?v=3&s=400'), new Post('Feathers.js', 'http://feathersjs.com/', 'Chuck', 'https://cdn.worldvectorlogo.com/logos/feathersjs.svg')]
 
     };
   },
@@ -14083,10 +14087,11 @@ var Post = function Post(title, link, author, img) {
       var _this = this;
 
       return this.postList.filter(function (post) {
-        return post.title.toLowerCase().includes(_this.searchKey.toLowerCase());
+        return post.title.toLowerCase().includes(_this.search.toLowerCase());
       });
     }
   }
+
 });
 
 /***/ }),
@@ -39978,7 +39983,7 @@ return VueRouter;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(9);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7ba5bd90_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_App_vue__ = __webpack_require__(30);
 var disposed = false
@@ -40064,7 +40069,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/App.vue"],"names":[],"mappings":";AAuJA;EACE,oDAAoD;EACpD,oCAAoC;EACpC,mCAAmC;EACnC,eAAe;CAChB","file":"App.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/App.vue"],"names":[],"mappings":";AAuJA;EACA,oDAAA;EACA,oCAAA;EACA,mCAAA;EACA,eAAA;CACA","file":"App.vue","sourcesContent":["<template>\r\n  <v-app >\r\n    <v-navigation-drawer app v-model=\"drawer\" right fixed pt-2>\r\n    \r\n\r\n    <v-divider></v-divider>\r\n\r\n    <v-list>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">home</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Home</v-list-tile-title>\r\n      </v-list-tile>\r\n\r\n    \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color1\">school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Pre-Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color2\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Nursery</v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color3\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Primary</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color4\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Secondary Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color5\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>TVET-Vocational Schools</v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon :color=\"$root.COLOR.color6\"> school</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>University and Polytechnics </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-divider></v-divider>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>English </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>Kinyarwanda </v-list-tile-title>\r\n      </v-list-tile>\r\n      \r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon color=\"light-blue\">language</v-icon>\r\n        </v-list-tile-action>\r\n        <v-list-tile-title>French </v-list-tile-title>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/school_details/5'>  <v-list-tile-title>School Details page</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n      <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test'>  <v-list-tile-title>test page-Axios</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n       <v-list-tile>\r\n        <v-list-tile-action>\r\n          <v-icon>school</v-icon>\r\n        </v-list-tile-action>\r\n      <router-link to='/test2'>  <v-list-tile-title>test page2-Vue</v-list-tile-title></router-link>\r\n      </v-list-tile>\r\n    </v-list>  \r\n    </v-navigation-drawer>\r\n\r\n  \r\n      <v-toolbar app fixed class=\"white\" height=\"90\"> \r\n        <v-toolbar-title>\r\n          <h1 > <router-link to=\"/\"> \r\n        <img src=\"/lib/img/logo/ishuri_logo.svg\">  </router-link> </h1> </v-toolbar-title>\r\n        <v-spacer></v-spacer>\r\n        <v-toolbar-items class=\"hidden-sm-and-down\">\r\n          <v-btn  flat large color=\"primary\"  > \r\n        <v-icon  large outline color=\"light-blue\"> language    </v-icon> \r\n        Change Language \r\n     \r\n         </v-btn>\r\n     \r\n       <v-toolbar-side-icon @click.stop=\"drawer = !drawer\" outline fab color=\"light-blue\"></v-toolbar-side-icon>\r\n      \r\n    </v-toolbar-items>\r\n  </v-toolbar>\r\n\r\n\r\n <v-content>\r\n      <router-view></router-view>\r\n    </v-content>\r\n          <v-footer height=\"auto\" class=\"light-blue\">\r\n            <v-layout justify-center row wrap>\r\n              <v-btn  v-for=\"link in links\" :key=\"link\"  color=\"white\" flat round>{{ link }}</v-btn>\r\n              <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>\r\n            </v-layout>\r\n          </v-footer>\r\n      \r\n      \r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\n  export default {\r\n    data () {\r\n      return {\r\n        drawer: null,\r\n         links: [\r\n        'Home',\r\n        'About Us',\r\n        'Team',\r\n        'Services',\r\n        'Contact Us'\r\n      ]\r\n      }\r\n    }\r\n  }\r\n</script>\r\n\r\n\r\n<style>\r\n#app {\r\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  color: #2c3e50;\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -40506,7 +40511,7 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_home_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_home_vue__ = __webpack_require__(10);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1fa66eb8_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_home_vue__ = __webpack_require__(32);
 var disposed = false
@@ -41455,7 +41460,7 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_search_vue__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_search_vue__ = __webpack_require__(11);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_a220b27e_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_search_vue__ = __webpack_require__(52);
 var disposed = false
@@ -41512,7 +41517,7 @@ if (false) {(function () {
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(13);
 var Axios = __webpack_require__(36);
-var defaults = __webpack_require__(9);
+var defaults = __webpack_require__(8);
 
 /**
  * Create an instance of Axios
@@ -41595,7 +41600,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(9);
+var defaults = __webpack_require__(8);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(45);
 var dispatchRequest = __webpack_require__(46);
@@ -42134,7 +42139,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(47);
 var isCancel = __webpack_require__(16);
-var defaults = __webpack_require__(9);
+var defaults = __webpack_require__(8);
 var isAbsoluteURL = __webpack_require__(48);
 var combineURLs = __webpack_require__(49);
 
@@ -42426,7 +42431,7 @@ var render = function() {
                                     attrs: {
                                       type: "text",
                                       label:
-                                        "Search school by district or school's name"
+                                        "Search school by school's name or area"
                                     },
                                     model: {
                                       value: _vm.search,
@@ -42801,10 +42806,10 @@ var render = function() {
               _c(
                 "v-card",
                 { attrs: { flat: "", tile: "" } },
-                _vm._l(_vm.SCHOOL, function(item, i) {
+                _vm._l(_vm.filteredSchools, function(school) {
                   return _c(
                     "div",
-                    { key: i },
+                    { key: school.id },
                     [
                       _c(
                         "v-card",
@@ -42858,7 +42863,11 @@ var render = function() {
                                             _c(
                                               "p",
                                               { staticClass: "display-1" },
-                                              [_vm._v(_vm._s(item.school_name))]
+                                              [
+                                                _vm._v(
+                                                  _vm._s(school.school_name)
+                                                )
+                                              ]
                                             ),
                                             _vm._v(" "),
                                             _c(
@@ -42872,7 +42881,11 @@ var render = function() {
                                                 ]),
                                                 _vm._v(
                                                   "\n                        " +
-                                                    _vm._s(item.location) +
+                                                    _vm._s(school.province) +
+                                                    " , " +
+                                                    _vm._s(school.akarere) +
+                                                    " , " +
+                                                    _vm._s(school.umurenge) +
                                                     "\n                      "
                                                 )
                                               ],
@@ -42897,7 +42910,7 @@ var render = function() {
                                                 color: _vm.$root.COLOR.color1
                                               }
                                             },
-                                            [_vm._v(_vm._s(item.levels[0]))]
+                                            [_vm._v(_vm._s(school.levels[0]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -42910,7 +42923,7 @@ var render = function() {
                                                 color: _vm.$root.COLOR.color2
                                               }
                                             },
-                                            [_vm._v(_vm._s(item.levels[1]))]
+                                            [_vm._v(_vm._s(school.levels[1]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -42923,7 +42936,7 @@ var render = function() {
                                                 color: _vm.$root.COLOR.color3
                                               }
                                             },
-                                            [_vm._v(_vm._s(item.levels[2]))]
+                                            [_vm._v(_vm._s(school.levels[2]))]
                                           ),
                                           _vm._v(" "),
                                           _c(
@@ -42936,7 +42949,7 @@ var render = function() {
                                                 color: _vm.$root.COLOR.color4
                                               }
                                             },
-                                            [_vm._v(_vm._s(item.levels[3]))]
+                                            [_vm._v(_vm._s(school.levels[3]))]
                                           )
                                         ],
                                         1
@@ -42967,7 +42980,9 @@ var render = function() {
                                                       ]),
                                                       _vm._v(
                                                         "\n                          Sector : " +
-                                                          _vm._s(item.sector) +
+                                                          _vm._s(
+                                                            school.sector
+                                                          ) +
                                                           "\n                        "
                                                       )
                                                     ],
@@ -42983,7 +42998,9 @@ var render = function() {
                                                       ]),
                                                       _vm._v(
                                                         "\n                          Gender: " +
-                                                          _vm._s(item.gender) +
+                                                          _vm._s(
+                                                            school.gender
+                                                          ) +
                                                           "\n                        "
                                                       )
                                                     ],
@@ -43000,7 +43017,7 @@ var render = function() {
                                                       _vm._v(
                                                         "\n                          Religion: " +
                                                           _vm._s(
-                                                            item.religion
+                                                            school.religion
                                                           ) +
                                                           "\n                        "
                                                       )
@@ -43017,7 +43034,7 @@ var render = function() {
                                                       ]),
                                                       _vm._v(
                                                         "\n                          Levels: " +
-                                                          _vm._s(item.level) +
+                                                          _vm._s(school.level) +
                                                           "\n                        "
                                                       )
                                                     ],
@@ -45931,7 +45948,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\na {\n  color: #999;\n}\n.current {\n  color: red;\n}\nul {\n  padding: 0;\n  list-style-type: none;\n}\nli {\n  display: inline;\n  margin: 5px 5px;\n}\na.first::after {\n  content:'...'\n}\na.last::before {\n  content:'...'\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/test.vue"],"names":[],"mappings":";AAoHA;EACA,YAAA;CACA;AACA;EACA,WAAA;CACA;AACA;EACA,WAAA;EACA,sBAAA;CACA;AACA;EACA,gBAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,aAAA;CACA","file":"test.vue","sourcesContent":["<template>\n  <div id=\"app\">\n<input type=\"text\" v-model=\"searchKey\" placeholder=\"search me\">\n  <ul>\n      <li v-for=\"user in paginatedUsers\">{{ user.name }}</li>\n  </ul>\n<ul>\n    <li v-for=\"pageNumber in totalPages\" v-if=\"Math.abs(pageNumber - currentPage) < 3 || pageNumber == totalPages || pageNumber == 1\">\n      <a\n        href=\"#\"\n        @click=\"setPage(pageNumber)\"\n        :class=\"{current: currentPage === pageNumber, last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)}\"\n      >\n        {{ pageNumber }}\n      </a>\n    </li>\n  </ul>\n\n  </div>\n</template>\n\n<script>\n\n\nexport default {\n  name: \"app\",\n  data() {\n    return {\n      users: [\n        { id: 1, name: \"Tom\" },\n        { id: 2, name: \"Kate\" },\n        { id: 3, name: \"Jack\" },\n        { id: 4, name: \"Jill\" },\n        { id: 4, name: \"bill\" },\n        { id: 4, name: \"aill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n{\"id\":1, \"name\":\"Tom\"},\n            {\"id\":2, \"name\":\"Kate\"},\n            {\"id\":3, \"name\":\"Jack\"},\n            {\"id\":4, \"name\":\"Jill\"},\n            {\"id\":4, \"name\":\"bill\"},\n            {\"id\":4, \"name\":\"aill\"},\n            {\"id\":4, \"name\":\"cill\"},\n            {\"id\":4, \"name\":\"dill\"},\n            {\"id\":4, \"name\":\"eill\"},\n            {\"id\":4, \"name\":\"cill\"},\n            {\"id\":4, \"name\":\"dill\"},\n            {\"id\":4, \"name\":\"eill\"},\n            {\"id\":4, \"name\":\"cill\"},\n            {\"id\":4, \"name\":\"dill\"},\n            {\"id\":4, \"name\":\"eill\"},\n            {\"id\":4, \"name\":\"cill\"},\n            {\"id\":4, \"name\":\"dill\"},\n            {\"id\":4, \"name\":\"eill\"},\n            {\"id\":4, \"name\":\"cill\"},\n            {\"id\":4, \"name\":\"dill\"},\n            {\"id\":4, \"name\":\"eill\"},\n      ],\n      searchKey: '',\n      currentPage: 1,\n      itemsPerPage: 1,\n    };\n  },\ncomputed: {\n      resultCount() {\n        return this.filteredUsers.length;\n      },\n      totalPages: function() {\n        return Math.ceil(this.resultCount / this.itemsPerPage)\n      },\n      filteredUsers: function() {\n        let key = this.searchKey.toUpperCase();\n        return this.users.filter((user) => {\n          return user.name.toUpperCase().indexOf(key) !== -1\n        })\n      },\n      paginatedUsers: function() {\n        var index = this.currentPage * this.itemsPerPage\n        return this.filteredUsers.slice(index - 1, index - 1 + this.itemsPerPage)\n      }\n    },\n    methods: {\n        setPage: function(pageNumber) {\n          this.currentPage = pageNumber\n        }\n    },\n  watch: {\n      currentPage(value) {\n        if (value > this.totalPages) {\n          this.currentPage = this.totalPages;\n        }\n      }\n    }\n\n\n};\n</script>\n\n\n\n\n<style>\na {\n  color: #999;\n}\n.current {\n  color: red;\n}\nul {\n  padding: 0;\n  list-style-type: none;\n}\nli {\n  display: inline;\n  margin: 5px 5px;\n}\n\na.first::after {\n  content:'...'\n}\n\na.last::before {\n  content:'...'\n}\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\na {\n  color: #999;\n}\n.current {\n  color: red;\n}\nul {\n  padding: 0;\n  list-style-type: none;\n}\nli {\n  display: inline;\n  margin: 5px 5px;\n}\na.first::after {\n  content:'...'\n}\na.last::before {\n  content:'...'\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/test.vue"],"names":[],"mappings":";AA2HA;EACA,YAAA;CACA;AACA;EACA,WAAA;CACA;AACA;EACA,WAAA;EACA,sBAAA;CACA;AACA;EACA,gBAAA;EACA,gBAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,aAAA;CACA","file":"test.vue","sourcesContent":["<template>\n  <div id=\"app\">\n<input type=\"text\" v-model=\"searchKey\" placeholder=\"search me\">\n  <ul>\n{{resultCount}}\n      <li v-for=\"user in paginatedUsers\">{{ user.name }}</li>\n  </ul>\n<ul>\n    <li v-for=\"pageNumber in totalPages\" v-if=\"Math.abs(pageNumber - currentPage) < 3 || pageNumber == totalPages || pageNumber == 1\">\n      <a\n        href=\"#\"\n        @click=\"setPage(pageNumber)\"\n        :class=\"{current: currentPage === pageNumber, last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)}\"\n      >\n        {{ pageNumber }}\n      </a>\n    </li>\n  </ul>\n\n  </div>\n</template>\n\n<script>\n\n\nexport default {\n  name: \"app\",\n  data() {\n    return {\n      users: [\n        { id: 1, name: \"Tom\" },\n        { id: 2, name: \"Kate\" },\n        { id: 3, name: \"Jack\" },\n        { id: 4, name: \"Jill\" },\n        { id: 4, name: \"bill\" },\n        { id: 4, name: \"aill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        {\"id\":1, \"name\":\"Tom\"},\n{ id: 1, name: \"Tom\" },\n        { id: 2, name: \"Kate\" },\n        { id: 3, name: \"Jack\" },\n        { id: 4, name: \"Jill\" },\n        { id: 4, name: \"bill\" },\n        { id: 4, name: \"aill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        { id: 4, name: \"cill\" },\n        { id: 4, name: \"dill\" },\n        { id: 4, name: \"eill\" },\n        {\"id\":1, \"name\":\"Tom\"},\n\n      ],\n      searchKey: '',\n      currentPage: 1,\n      itemsPerPage: 5,\n      resultCount: 0\n    };\n  },\ncomputed: {\n      resultCount() {\n        return this.filteredUsers.length;\n      },\n      totalPages: function() {\n        return Math.ceil(this.resultCount / this.itemsPerPage)\n      },\n      filteredUsers: function() {\n        let key = this.searchKey.toUpperCase();\n        return this.users.filter((user) => {\n          return user.name.toUpperCase().indexOf(key) !== -1\n        })\n      },\n      paginatedUsers: function() {\n\n        var index = this.currentPage * this.itemsPerPage\n        return this.filteredUsers.slice(index - 1, index - 1 + this.itemsPerPage)\n      }\n    },\n    methods: {\n        setPage: function(pageNumber) {\n          this.currentPage = pageNumber\n        }\n    },\n  watch: {\n\n      currentPage(value) {\n        if (value > this.totalPages) {\n          this.currentPage = this.totalPages;\n        }\n      }\n    }\n\n\n};\n</script>\n\n\n\n\n<style>\na {\n  color: #999;\n}\n.current {\n  color: red;\n}\nul {\n  padding: 0;\n  list-style-type: none;\n}\nli {\n  display: inline;\n  margin: 5px 5px;\n}\n\na.first::after {\n  content:'...'\n}\n\na.last::before {\n  content:'...'\n}\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -45969,9 +45986,13 @@ var render = function() {
     _vm._v(" "),
     _c(
       "ul",
-      _vm._l(_vm.paginatedUsers, function(user) {
-        return _c("li", [_vm._v(_vm._s(user.name))])
-      })
+      [
+        _vm._v("\n" + _vm._s(_vm.resultCount) + "\n      "),
+        _vm._l(_vm.paginatedUsers, function(user) {
+          return _c("li", [_vm._v(_vm._s(user.name))])
+        })
+      ],
+      2
     ),
     _vm._v(" "),
     _c(
@@ -46111,7 +46132,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"test2.vue","sourceRoot":""}]);
+exports.push([module.i, "\nhtml, body {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  margin-top: 16px;\r\n  margin-bottom: 16px;\n}\ndiv#app {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\n.search-wrapper {\r\n    position: relative;\nlabel {\r\n      position: absolute;\r\n      font-size: 12px;\r\n      color: rgba(0,0,0,.50);\r\n      top: 8px;\r\n      left: 12px;\r\n      z-index: -1;\r\n      transition: .15s all ease-in-out;\n}\ninput {\r\n      padding: 4px 12px;\r\n      color: rgba(0,0,0,.70);\r\n      border: 1px solid rgba(0,0,0,.12);\r\n      transition: .15s all ease-in-out;\r\n      background: white;\n&:focus {\r\n        outline: none;\r\n        transform: scale(1.05);\n& + label  {\r\n          font-size: 10px;\r\n          transform: translateY(-24px) translateX(-12px);\n}\n}\n&::-webkit-input-placeholder {\r\n          font-size: 12px;\r\n          color: rgba(0,0,0,.50);\r\n          font-weight: 100;\n}\n}\n}\n.wrapper {\r\n    display: flex;\r\n    max-width: 444px;\r\n    flex-wrap: wrap;\r\n    padding-top: 12px;\n}\n.card {\r\n    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;\r\n    max-width: 124px;\r\n    margin: 12px;\r\n    transition: .15s all ease-in-out;\n&:hover {\r\n      transform: scale(1.1);\n}\na {\r\n      text-decoration: none;\r\n      padding: 12px;\r\n      color: #03A9F4;\r\n      font-size: 24px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      align-items: center;\nimg {\r\n        height: 100px;\n}\nsmall {\r\n        font-size: 10px;\r\n        padding: 4px;\n}\n}\n}\n.hotpink {\r\n    background: hotpink;\n}\n.green {\r\n    background: green;\n}\n.box {\r\n    width: 100px;\r\n    height: 100px;\r\n    border: 1px solid rgba(0,0,0,.12);\n}\n}\r\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/test2.vue"],"names":[],"mappings":";AAuGA;EACA,cAAA;EACA,oBAAA;EACA,wBAAA;EACA,uBAAA;EACA,iBAAA;EACA,oBAAA;CACA;AAEA;EACA,cAAA;EACA,oBAAA;EACA,wBAAA;EACA,uBAAA;AAEA;IACA,mBAAA;AACA;MACA,mBAAA;MACA,gBAAA;MACA,uBAAA;MACA,SAAA;MACA,WAAA;MACA,YAAA;MACA,iCAAA;CACA;AACA;MACA,kBAAA;MACA,uBAAA;MACA,kCAAA;MACA,iCAAA;MACA,kBAAA;AACA;QACA,cAAA;QACA,uBAAA;AACA;UACA,gBAAA;UACA,+CAAA;CACA;CACA;AACA;UACA,gBAAA;UACA,uBAAA;UACA,iBAAA;CACA;CACA;CACA;AAEA;IACA,cAAA;IACA,iBAAA;IACA,gBAAA;IACA,kBAAA;CACA;AAEA;IACA,qFAAA;IACA,iBAAA;IACA,aAAA;IACA,iCAAA;AACA;MACA,sBAAA;CACA;AACA;MACA,sBAAA;MACA,cAAA;MACA,eAAA;MACA,gBAAA;MACA,cAAA;MACA,uBAAA;MACA,oBAAA;AACA;QACA,cAAA;CACA;AACA;QACA,gBAAA;QACA,aAAA;CACA;CACA;CACA;AAIA;IACA,oBAAA;CACA;AAEA;IACA,kBAAA;CACA;AAEA;IACA,aAAA;IACA,cAAA;IACA,kCAAA;CACA;CACA","file":"test2.vue","sourcesContent":["<template>\r\n\r\n  <div id=\"app\">\r\n    <div >\r\n      <input type=\"text\" v-model=\"search\" placeholder=\"Search title..\"/>\r\n          <label>Search title:</label>\r\n    </div>\r\n    <div class=\"wrapper\">\r\n      <div class=\"card\" v-for=\"post in filteredList\">\r\n        <a v-bind:href=\"post.link\" target=\"_blank\">\r\n          <img v-bind:src=\"post.img\"/>\r\n          <small>posted by: {{ post.author }}</small>\r\n          {{ post.title }}\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nclass Post {\r\n  constructor(title, link, author, img) {\r\n    this.title = title;\r\n    this.link = link;\r\n    this.author = author;\r\n    this.img = img;\r\n  }\r\n}\r\n  export default {\r\n    data () {\r\n      return {\r\n        search: '',\r\n    postList : [\r\n      new Post(\r\n        'Vue.js',\r\n        'https://vuejs.org/',\r\n        'Chris',\r\n        'https://vuejs.org//images/logo.png'\r\n      ),\r\n      new Post(\r\n        'React.js',\r\n        'https://facebook.github.io/react/',\r\n        'Tim',\r\n        'https://daynin.github.io/clojurescript-presentation/img/react-logo.png'\r\n      ),\r\n      new Post(\r\n        'Angular.js',\r\n        'https://angularjs.org/',\r\n        'Sam',\r\n        'https://angularjs.org/img/ng-logo.png'\r\n      ),\r\n      new Post(\r\n        'Ember.js',\r\n        'http://emberjs.com/',\r\n        'Rachel',\r\n        'http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200'\r\n      ),\r\n      new Post(\r\n        'Meteor.js',\r\n        'https://www.meteor.com/',\r\n        'Chris',\r\n        'http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png'\r\n      ),\r\n      new Post(\r\n        'Aurelia',\r\n        'http://aurelia.io/',\r\n        'Tim',\r\n        'https://cdn.auth0.com/blog/aurelia-logo.png'\r\n      ),\r\n      new Post(\r\n        'Node.js',\r\n        'https://nodejs.org/en/',\r\n        'A. A. Ron',\r\n        'https://code-maven.com/img/node.png'\r\n      ),\r\n      new Post(\r\n        'Pusher',\r\n        'https://pusher.com/',\r\n        'Alex',\r\n        'https://avatars1.githubusercontent.com/u/739550?v=3&s=400'\r\n      ),\r\n      new Post(\r\n        'Feathers.js',\r\n        'http://feathersjs.com/',\r\n        'Chuck',\r\n        'https://cdn.worldvectorlogo.com/logos/feathersjs.svg'\r\n      ),\r\n]\r\n\r\n      }\r\n    },\r\n    computed: {\r\n    filteredList() {\r\n      return this.postList.filter(post => {\r\n        return post.title.toLowerCase().includes(this.search.toLowerCase())\r\n      })\r\n    }\r\n  }\r\n\r\n  }\r\n</script>\r\n\r\n<style>\r\nhtml, body {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  margin-top: 16px;\r\n  margin-bottom: 16px;\r\n}\r\n\r\ndiv#app {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n\r\n  .search-wrapper {\r\n    position: relative;\r\n    label {\r\n      position: absolute;\r\n      font-size: 12px;\r\n      color: rgba(0,0,0,.50);\r\n      top: 8px;\r\n      left: 12px;\r\n      z-index: -1;\r\n      transition: .15s all ease-in-out;\r\n    }\r\n    input {\r\n      padding: 4px 12px;\r\n      color: rgba(0,0,0,.70);\r\n      border: 1px solid rgba(0,0,0,.12);\r\n      transition: .15s all ease-in-out;\r\n      background: white;\r\n      &:focus {\r\n        outline: none;\r\n        transform: scale(1.05);\r\n        & + label  {\r\n          font-size: 10px;\r\n          transform: translateY(-24px) translateX(-12px);\r\n        }\r\n      }\r\n      &::-webkit-input-placeholder {\r\n          font-size: 12px;\r\n          color: rgba(0,0,0,.50);\r\n          font-weight: 100;\r\n      }\r\n    }\r\n  }\r\n\r\n  .wrapper {\r\n    display: flex;\r\n    max-width: 444px;\r\n    flex-wrap: wrap;\r\n    padding-top: 12px;\r\n  }\r\n\r\n  .card {\r\n    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;\r\n    max-width: 124px;\r\n    margin: 12px;\r\n    transition: .15s all ease-in-out;\r\n    &:hover {\r\n      transform: scale(1.1);\r\n    }\r\n    a {\r\n      text-decoration: none;\r\n      padding: 12px;\r\n      color: #03A9F4;\r\n      font-size: 24px;\r\n      display: flex;\r\n      flex-direction: column;\r\n      align-items: center;\r\n      img {\r\n        height: 100px;\r\n      }\r\n      small {\r\n        font-size: 10px;\r\n        padding: 4px;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n\r\n  .hotpink {\r\n    background: hotpink;\r\n  }\r\n\r\n  .green {\r\n    background: green;\r\n  }\r\n\r\n  .box {\r\n    width: 100px;\r\n    height: 100px;\r\n    border: 1px solid rgba(0,0,0,.12);\r\n  }\r\n}\r\n</style>\r\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -46140,54 +46161,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "app" } },
-    [
-      _c(
-        "v-container",
-        [
-          _c("div", [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.searchKey,
-                  expression: "searchKey"
-                }
-              ],
-              attrs: { type: "text", placeholder: "Search title.." },
-              domProps: { value: _vm.searchKey },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.searchKey = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("label", [_vm._v("Search title:")])
-          ]),
-          _vm._v(" "),
-          _vm._l(_vm.filteredList, function(post) {
-            return _c("v-card", { key: post.id, attrs: { height: "400" } }, [
-              _c("a", { attrs: { href: post.link, target: "_blank" } }, [
-                _c("img", { attrs: { src: post.img } }),
-                _vm._v(" "),
-                _c("small", [_vm._v("posted by: " + _vm._s(post.author))]),
-                _vm._v("\n        " + _vm._s(post.title) + "\n      ")
-              ])
-            ])
-          })
+  return _c("div", { attrs: { id: "app" } }, [
+    _c("div", [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.search,
+            expression: "search"
+          }
         ],
-        2
-      )
-    ],
-    1
-  )
+        attrs: { type: "text", placeholder: "Search title.." },
+        domProps: { value: _vm.search },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.search = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("label", [_vm._v("Search title:")])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "wrapper" },
+      _vm._l(_vm.filteredList, function(post) {
+        return _c("div", { staticClass: "card" }, [
+          _c("a", { attrs: { href: post.link, target: "_blank" } }, [
+            _c("img", { attrs: { src: post.img } }),
+            _vm._v(" "),
+            _c("small", [_vm._v("posted by: " + _vm._s(post.author))]),
+            _vm._v("\n        " + _vm._s(post.title) + "\n      ")
+          ])
+        ])
+      })
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

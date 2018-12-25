@@ -1,175 +1,309 @@
 {
-	"list": [
-		{
-			"school_name" : "Riviera",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
-		}
-		,{
-			"school_name" : "Green Hills Academy",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"Sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
+  "list": [{
+      "school_name": "Riviera",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Green Hills Academy",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "Sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
 
-		},
-		{
-			"school_name" : "APAPER",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Boys Only",
-			"religion" : "Secular",
-			"level" : "Combined"
-		},
-		{
-			"school_name" : "Ecole Internationale de Kigali",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Girls Only",
-			"religion" : "catholic",
-			"level" : "Combined"
-		},
-		{
-			"school_name" : "Riviera",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
-		}
-		,{
-			"school_name" : "Green Hills Academy",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"Sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
+    },
+    {
+      "school_name": "APAPER",
+      "province": "North",
+      "akarere": "Musanze",
+      "umurenge": "Busogo",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Boys Only",
+      "religion": "Secular",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Ecole Internationale de Kigali",
+      "province": "South",
+      "akarere": "Huye",
+      "umurenge": "Kinazi",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Girls Only",
+      "religion": "catholic",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Riviera",
+      "province": "West",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+    }, {
+      "school_name": "Green Hills Academy",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "Sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
 
-		},
-		{
-			"school_name" : "APAPER",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Boys Only",
-			"religion" : "Secular",
-			"level" : "Combined"
-		},
-		{
-			"school_name" : "Ecole Internationale de Kigali",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Girls Only",
-			"religion" : "catholic",
-			"level" : "Combined"
-		},
-		{
-			"school_name" : "Riviera",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
-		}
-		,{
-			"school_name" : "Green Hills Academy",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"Sector": "Private",
-			"gender": "Mixed",
-			"religion" : "Secular",
-			"level" : "Combined"
+    },
+     {
+      "school_name": "Green Hills Academy",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "Sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
 
-		},
-		{
-			"school_name" : "APAPER",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Boys Only",
-			"religion" : "Secular",
-			"level" : "Combined"
-		},
-		{
-			"school_name" : "Ecole Internationale de Kigali",
-			"location" : "Kigali, gasabo, Nyarutarama",
-			"levels":[
-				"Pre-Nursery SCHOOL",
-				"Nursery SCHOOL",
-				"Primary SCHOOL",
-				"General Secondary"
-			],
-			"sector": "Private",
-			"gender": "Girls Only",
-			"religion" : "catholic",
-			"level" : "Combined"
-		}
-   ]
+    },
+    {
+      "school_name": "APAPER",
+      "province": "North",
+      "akarere": "Musanze",
+      "umurenge": "Busogo",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Boys Only",
+      "religion": "Secular",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Ecole Internationale de Kigali",
+      "province": "South",
+      "akarere": "Huye",
+      "umurenge": "Kinazi",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Girls Only",
+      "religion": "catholic",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Riviera",
+      "province": "West",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+    }, {
+      "school_name": "Green Hills Academy",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "Sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+
+    },
+    {
+      "school_name": "APAPER",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Boys Only",
+      "religion": "Secular",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Ecole Internationale de Kigali",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Girls Only",
+      "religion": "catholic",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Ecole Internationale de Kigali",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Girls Only",
+      "religion": "catholic",
+      "level": "Combined"
+    },
+    {
+      "school_name": "Riviera",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+    }, {
+      "school_name": "Green Hills Academy",
+      "province": "East",
+      "akarere": "Bugesera",
+      "umurenge": "Nyamata",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "Sector": "Private",
+      "gender": "Mixed",
+      "religion": "Secular",
+      "level": "Combined"
+
+    },
+    {
+      "school_name": "APAPER",
+      "province": "East",
+      "akarere": "Nyagatare",
+      "umurenge": "Karangazi",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Boys Only",
+      "religion": "Secular",
+      "level": "Combined"
+    },
+{
+  "school_name": "Ecole Secondaire de Kinazi",
+  "province": "East",
+  "akarere": "Nyagatare",
+  "umurenge": "Karangazi",
+  "levels": [
+    "Pre-Nursery SCHOOL",
+    "Nursery SCHOOL",
+    "Primary SCHOOL",
+    "General Secondary"
+  ],
+  "sector": "Private",
+  "gender": "Boys Only",
+  "religion": "Secular",
+  "level": "Combined"
+},
+    {
+      "school_name": "Ecole Internationale de Kigali",
+      "province": "Kigali",
+      "akarere": "Gasabo",
+      "umurenge": "Remera",
+      "levels": [
+        "Pre-Nursery SCHOOL",
+        "Nursery SCHOOL",
+        "Primary SCHOOL",
+        "General Secondary"
+      ],
+      "sector": "Private",
+      "gender": "Girls Only",
+      "religion": "catholic",
+      "level": "Combined"
+    }
+  ]
 }

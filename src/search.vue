@@ -10,7 +10,7 @@
                 <v-card>
                   <v-text-field
                     type="text"
-                    label="Search school by district or school's name"
+                    label="Search school by school's name or area"
                     v-model="search"
                   ></v-text-field>
                 </v-card>
@@ -112,7 +112,7 @@
 
         <v-card flat tile>
           <!--   search result #1 -->
-          <div v-for="(item,i) in SCHOOL" :key="i">
+          <div v-for="school in filteredSchools" :key="school.id">
             <v-card flat tile>
               <v-container fluid>
                 <v-layout row wrap>
@@ -124,11 +124,11 @@
                   <v-flex xs12 sm8 md8>
                     <v-flex xs12 sm8>
                       <v-card-text>
-                        <p class="display-1">{{ item.school_name}}</p>
+                        <p class="display-1">{{ school.school_name}}</p>
 
                         <p class="subheading">
                           <v-icon>fas fa-map-marker-alt</v-icon>
-                          {{ item.location}}
+                          {{ school.province}} , {{ school.akarere}} , {{ school.umurenge}}
                         </p>
                       </v-card-text>
                     </v-flex>
@@ -138,44 +138,44 @@
                         small
                         class="white--text"
                         :color="$root.COLOR.color1"
-                      >{{item.levels[0]}}</v-btn>
+                      >{{school.levels[0]}}</v-btn>
                       <v-btn
                         depressed
                         small
                         class="white--text"
                         :color="$root.COLOR.color2"
-                      >{{ item.levels[1]}}</v-btn>
+                      >{{ school.levels[1]}}</v-btn>
                       <v-btn
                         depressed
                         small
                         class="white--text"
                         :color="$root.COLOR.color3"
-                      >{{item.levels[2]}}</v-btn>
+                      >{{school.levels[2]}}</v-btn>
                       <v-btn
                         depressed
                         small
                         class="white--text"
                         :color="$root.COLOR.color4"
-                      >{{item.levels[3]}}</v-btn>
+                      >{{school.levels[3]}}</v-btn>
                     </v-flex>
                     <v-flex xs12>
                       <v-container fluid>
                         <v-layout row wrap>
                           <v-flex xs3>
                             <v-icon>fas fa-building</v-icon>
-                            Sector : {{item.sector}}
+                            Sector : {{school.sector}}
                           </v-flex>
                           <v-flex xs3>
                             <v-icon>wc</v-icon>
-                            Gender: {{item.gender}}
+                            Gender: {{school.gender}}
                           </v-flex>
                           <v-flex xs3>
                             <v-icon>fas fa-church</v-icon>
-                            Religion: {{item.religion}}
+                            Religion: {{school.religion}}
                           </v-flex>
                           <v-flex xs3>
                             <v-icon>fas fa-users</v-icon>
-                            Levels: {{item.level}}
+                            Levels: {{school.level}}
                           </v-flex>
                         </v-layout>
                       </v-container>
@@ -211,29 +211,30 @@ export default {
     return {
       advancedSearch: false,
       page: 2,
-      items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-      SCHOOL: [],
+      schools: [],
       search: ""
     };
   },
   methods: {
-    getSchoolList: function() {
+    schoolList: function() {
       const _this = this;
       axios.get("/lib/json/school_list.json").then(function(res) {
         console.log(res.data);
-        Vue.set(_this, "SCHOOL", res.data.list);
+        Vue.set(_this, "schools", res.data.list);
       });
     }
   },
   created: function() {
-    this.getSchoolList();
+    this.schoolList();
   },
   computed: {
-    filteredList() {
-      return this.SCHOOL.filter(post => {
-        return list.school_name
-          .toLowerCase()
-          .includes(this.search.toLowerCase());
+    filteredSchools: function() {
+      return this.schools.filter((school) => {
+        return school.school_name.match(this.search) ||
+         school.province.match(this.search) ||
+        school.akarere.match(this.search) ||
+        school.umurenge.match(this.search);
+
       });
     }
   }

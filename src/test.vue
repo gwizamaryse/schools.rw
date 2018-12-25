@@ -2,6 +2,7 @@
   <div id="app">
 <input type="text" v-model="searchKey" placeholder="search me">
   <ul>
+{{resultCount}}
       <li v-for="user in paginatedUsers">{{ user.name }}</li>
   </ul>
 <ul>
@@ -48,31 +49,35 @@ export default {
         { id: 4, name: "cill" },
         { id: 4, name: "dill" },
         { id: 4, name: "eill" },
-{"id":1, "name":"Tom"},
-            {"id":2, "name":"Kate"},
-            {"id":3, "name":"Jack"},
-            {"id":4, "name":"Jill"},
-            {"id":4, "name":"bill"},
-            {"id":4, "name":"aill"},
-            {"id":4, "name":"cill"},
-            {"id":4, "name":"dill"},
-            {"id":4, "name":"eill"},
-            {"id":4, "name":"cill"},
-            {"id":4, "name":"dill"},
-            {"id":4, "name":"eill"},
-            {"id":4, "name":"cill"},
-            {"id":4, "name":"dill"},
-            {"id":4, "name":"eill"},
-            {"id":4, "name":"cill"},
-            {"id":4, "name":"dill"},
-            {"id":4, "name":"eill"},
-            {"id":4, "name":"cill"},
-            {"id":4, "name":"dill"},
-            {"id":4, "name":"eill"},
+        {"id":1, "name":"Tom"},
+{ id: 1, name: "Tom" },
+        { id: 2, name: "Kate" },
+        { id: 3, name: "Jack" },
+        { id: 4, name: "Jill" },
+        { id: 4, name: "bill" },
+        { id: 4, name: "aill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        { id: 4, name: "cill" },
+        { id: 4, name: "dill" },
+        { id: 4, name: "eill" },
+        {"id":1, "name":"Tom"},
+
       ],
       searchKey: '',
       currentPage: 1,
-      itemsPerPage: 1,
+      itemsPerPage: 5,
+      resultCount: 0
     };
   },
 computed: {
@@ -89,6 +94,7 @@ computed: {
         })
       },
       paginatedUsers: function() {
+
         var index = this.currentPage * this.itemsPerPage
         return this.filteredUsers.slice(index - 1, index - 1 + this.itemsPerPage)
       }
@@ -99,6 +105,7 @@ computed: {
         }
     },
   watch: {
+
       currentPage(value) {
         if (value > this.totalPages) {
           this.currentPage = this.totalPages;
