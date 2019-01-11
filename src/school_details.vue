@@ -66,22 +66,18 @@
                         <v-flex xs6 sm3>
                           <v-select :items="items" label="Distance"></v-select>
                         </v-flex>
-
                         <v-flex xs6 sm3>
                           <v-select :items="items" label="District"></v-select>
                         </v-flex>
-
                         <v-flex xs6 sm3>
                           <v-select :items="items" v-model="select" label="Public or Private"></v-select>
                         </v-flex>
                         <v-flex xs6 sm3>
                           <v-select :items="items" v-model="select" label="Gender"></v-select>
                         </v-flex>
-
                         <v-flex xs6 sm3>
                           <v-select :items="items" label="Primary School"></v-select>
                         </v-flex>
-
                         <v-flex xs6 sm3>
                           <v-select :items="items" label="Language"></v-select>
                         </v-flex>

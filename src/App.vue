@@ -1,7 +1,7 @@
 <template>
   <v-app >
     <v-navigation-drawer app v-model="drawer" right fixed pt-2>
-    
+
 
     <v-divider></v-divider>
 
@@ -13,21 +13,21 @@
         <v-list-tile-title>Home</v-list-tile-title>
       </v-list-tile>
 
-    
+
       <v-list-tile>
         <v-list-tile-action>
           <v-icon :color="$root.COLOR.color1">school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Pre-Nursery</v-list-tile-title>
       </v-list-tile>
-      
+
       <v-list-tile>
         <v-list-tile-action>
           <v-icon :color="$root.COLOR.color2"> school</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Nursery</v-list-tile-title>
       </v-list-tile>
-      
+
       <v-list-tile>
         <v-list-tile-action>
           <v-icon :color="$root.COLOR.color3"> school</v-icon>
@@ -62,14 +62,14 @@
         </v-list-tile-action>
         <v-list-tile-title>English </v-list-tile-title>
       </v-list-tile>
-      
+
        <v-list-tile>
         <v-list-tile-action>
           <v-icon color="light-blue">language</v-icon>
         </v-list-tile-action>
         <v-list-tile-title>Kinyarwanda </v-list-tile-title>
       </v-list-tile>
-      
+
        <v-list-tile>
         <v-list-tile-action>
           <v-icon color="light-blue">language</v-icon>
@@ -94,24 +94,24 @@
         </v-list-tile-action>
       <router-link to='/test2'>  <v-list-tile-title>test page2-Vue</v-list-tile-title></router-link>
       </v-list-tile>
-    </v-list>  
+    </v-list>
     </v-navigation-drawer>
 
-  
-      <v-toolbar app fixed class="white" height="90"> 
+
+      <v-toolbar app fixed class="white" height="90">
         <v-toolbar-title>
-          <h1 > <router-link to="/"> 
+          <h1 > <router-link to="/">
         <img src="/lib/img/logo/ishuri_logo.svg">  </router-link> </h1> </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn  flat large color="primary"  > 
-        <v-icon  large outline color="light-blue"> language    </v-icon> 
-        Change Language 
-     
+          <v-btn  flat large color="primary"  >
+        <v-icon  large outline color="light-blue"> language    </v-icon>
+        Change Language
+
          </v-btn>
-     
+
        <v-toolbar-side-icon @click.stop="drawer = !drawer" outline fab color="light-blue"></v-toolbar-side-icon>
-      
+
     </v-toolbar-items>
   </v-toolbar>
 
@@ -125,8 +125,8 @@
               <v-flex py-2 text-xs-center white--text xs12 ><strong>Studio Canbe Corp &copy; 2019</strong></v-flex>
             </v-layout>
           </v-footer>
-      
-      
+
+
   </v-app>
 </template>
 

@@ -4,6 +4,8 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
+import axios from "axios";
+
 
 Vue.use(Vuetify);
 Vue.use(VueRouter);
@@ -72,20 +74,21 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 // Main
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   router,
-  template: '<App/>',
+
   data: {
     COLOR: {
-      color1: 'red accent-2',
-      color2: 'green',
-      color3: 'amber',
-      color4: 'cyan',
-      color5: 'lime',
-      color6: 'pink'
+      color1: "red accent-2",
+      color2: "green",
+      color3: "amber",
+      color4: "cyan",
+      color5: "lime",
+      color6: "pink",
+      schools: [],
+      message:'Hello World'
     }
   },
-  components: {
-    App
-  }
-})
+  template: "<App/>",
+  components: { App }
+});

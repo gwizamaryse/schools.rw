@@ -17,8 +17,9 @@
                         <v-card tile flat color="white">
                           <v-card-text>
                             <v-text-field
-                              label="Search school by district or school's name"
+                              label="Search by school name or Area"
                               type="text"
+                              :v-model="search"
                             ></v-text-field>
                           </v-card-text>
                         </v-card>
@@ -44,8 +45,7 @@
                               block
                               class="white--text"
                               :color="$root.COLOR.color2"
-                              @click="advancedSearch = !advancedSearch"
-                            >
+                              @click="advancedSearch = !advancedSearch">
                               <v-icon>search</v-icon>Advanced Search
                             </v-btn>
                           </v-card-text>
@@ -85,7 +85,9 @@
               </v-flex>
 
               <v-flex xs6 sm3>
-                <v-select :items="items" v-model="select" label="Public or Private"></v-select>
+                <v-select :items="items"
+                v-model="select"
+                label="Public or Private"></v-select>
               </v-flex>
               <v-flex xs6 sm3>
                 <v-select :items="items" v-model="select" label="Gender"></v-select>
@@ -118,7 +120,7 @@
         <v-flex md12>
           <v-card class="elevation-0 transparent" tile>
             <v-card-title primary-title class="layout justify-center">
-              <div class="display-3 light-blue--text">Schools Listed</div>
+              <div class="display-3 light-blue--text">Schools Listed {{message}}</div>
             </v-card-title>
           </v-card>
         </v-flex>
@@ -217,22 +219,39 @@
 </template>
 
 <script>
+import axios from "axios";
+import Vue from "vue";
 export default {
-  data: () => ({
-    dropdown_font: ["Arial", "Calibri", "Courier", "Verdana"],
-    dropdown_icon: [
-      { text: "list", callback: () => console.log("list") },
-      { text: "favorite", callback: () => console.log("favorite") },
-      { text: "delete", callback: () => console.log("delete") }
-    ],
-    dropdown_edit: [
-      { text: "100%" },
-      { text: "75%" },
-      { text: "50%" },
-      { text: "25%" },
-      { text: "0%" }
-    ],
-    advancedSearch: false
-  })
-};
+  data: () => {
+    return {
+    advancedSearch: false,
+    schools: [],
+    search: ""
+    }
+  },
+methods: {
+schoolList: function() {
+const _this = this;
+axios.get("/lib/json/school_list.json").then(function(res){
+//console.log(res.data);
+Vue.set(_this, "schools", res.data.list);
+});
+}
+},
+created: function() {
+this.schoolList();
+},
+  computed: {
+    filteredSchools: function() {
+      return this.schools.filter((school) => {
+        return school.school_name.toLowerCase().match(this.search.toLowerCase()) ||
+         school.province.toLowerCase().match(this.search.toLowerCase()) ||
+        school.akarere.toLowerCase().match(this.search.toLowerCase()) ||
+        school.umurenge.toLowerCase().match(this.search.toLowerCase());
+
+      });
+    }
+  }
+
+}
 </script>

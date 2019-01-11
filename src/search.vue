@@ -102,7 +102,7 @@
     <!--  search results -->
     <div id="search results">
       <v-card tile flat>
-        <v-card-text class="title grey--text">we have found 686 schools matching your criteria
+        <v-card-text class="title grey--text">we have found {{resultCount}} schools matching your criteria
           <v-btn round x-large color="info">
             <v-icon>fas fa-balance-scale</v-icon>Compare
           </v-btn>
@@ -116,15 +116,16 @@
             <v-card flat tile>
               <v-container fluid>
                 <v-layout row wrap>
-                  <v-flex xs16 sm2>
+                  <v-flex xs12 sm2>
                     <v-layout align-center justify-center row fill-height>
-                      <v-img src="/lib/img/logo/logo-school.jpg"></v-img>
+                      <v-img
+                      v-if="school.src" :src="'/lib/img/'+ school.src" > </v-img>
                     </v-layout>
                   </v-flex>
                   <v-flex xs12 sm8 md8>
                     <v-flex xs12 sm8>
                       <v-card-text>
-                        <p class="display-1">{{ school.school_name}}</p>
+                        <p class="display-1">   <router-link to='/school_details/:id'>{{ school.school_name}} </router-link></p>
 
                         <p class="subheading">
                           <v-icon>fas fa-map-marker-alt</v-icon>
@@ -196,7 +197,7 @@
         </v-card>
         <!-- pagination -->
         <div class="text-xs-center pa-4">
-          <v-pagination v-model="page" :length="5" circle color="info"></v-pagination>
+          <v-pagination v-model="page" :length="8" circle color="info"></v-pagination>
         </div>
       </v-card>
     </div>
@@ -212,31 +213,35 @@ export default {
       advancedSearch: false,
       page: 2,
       schools: [],
-      search: ""
+      search: "",
+      resultCount: 0,
+      currentPage: 0,
     };
   },
   methods: {
     schoolList: function() {
       const _this = this;
       axios.get("/lib/json/school_list.json").then(function(res) {
-        console.log(res.data);
+        //console.log(res.data);
         Vue.set(_this, "schools", res.data.list);
       });
     }
   },
+
   created: function() {
     this.schoolList();
   },
   computed: {
     filteredSchools: function() {
       return this.schools.filter((school) => {
-        return school.school_name.match(this.search) ||
-         school.province.match(this.search) ||
-        school.akarere.match(this.search) ||
-        school.umurenge.match(this.search);
+        return school.school_name.toLowerCase().match(this.search.toLowerCase()) ||
+         school.province.toLowerCase().match(this.search.toLowerCase()) ||
+        school.akarere.toLowerCase().match(this.search.toLowerCase()) ||
+        school.umurenge.toLowerCase().match(this.search.toLowerCase());
 
       });
     }
-  }
+  },
+
 };
 </script>
