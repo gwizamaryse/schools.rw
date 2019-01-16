@@ -12,8 +12,6 @@
         </v-list-tile-action>
         <v-list-tile-title>Home</v-list-tile-title>
       </v-list-tile>
-
-
       <v-list-tile>
         <v-list-tile-action>
           <v-icon :color="$root.COLOR.color1">school</v-icon>
@@ -141,7 +139,7 @@
         'Team',
         'Services',
         'Contact Us'
-      ]
+      ],name: 'Hello World'
       }
     }
   }

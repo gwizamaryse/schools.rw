@@ -89,6 +89,26 @@ const app = new Vue({
       message:'Hello World'
     }
   },
-  template: "<App/>",
+   methods: {
+     schoolList: function () {
+       const _this = this;
+       axios.get("/lib/json/school_list.json").then(function (res) {
+         //console.log(res.data);
+         Vue.set(_this, "schools", res.data.list);
+       });
+     }
+   },
+computed: {
+  filteredSchools: function () {
+    return this.schools.filter((school) => {
+      return school.school_name.toLowerCase().match(this.search.toLowerCase()) ||
+        school.province.toLowerCase().match(this.search.toLowerCase()) ||
+        school.akarere.toLowerCase().match(this.search.toLowerCase()) ||
+        school.umurenge.toLowerCase().match(this.search.toLowerCase());
+
+    });
+  }
+},
+ template: "<App/>",
   components: { App }
 });

@@ -125,7 +125,7 @@
                   <v-flex xs12 sm8 md8>
                     <v-flex xs12 sm8>
                       <v-card-text>
-                        <p class="display-1">   <router-link to='/school_details/:id'>{{ school.school_name}} </router-link></p>
+                        <p class="display-1">   <router-link :to="'/school_details/' + school.id">{{ school.school_name}} </router-link></p>
 
                         <p class="subheading">
                           <v-icon>fas fa-map-marker-alt</v-icon>
@@ -135,29 +135,12 @@
                     </v-flex>
                     <v-flex xs12>
                       <v-btn
+                        v-for="level in school.levels" :key="level.id"
                         depressed
                         small
                         class="white--text"
-                        :color="$root.COLOR.color1"
-                      >{{school.levels[0]}}</v-btn>
-                      <v-btn
-                        depressed
-                        small
-                        class="white--text"
-                        :color="$root.COLOR.color2"
-                      >{{ school.levels[1]}}</v-btn>
-                      <v-btn
-                        depressed
-                        small
-                        class="white--text"
-                        :color="$root.COLOR.color3"
-                      >{{school.levels[2]}}</v-btn>
-                      <v-btn
-                        depressed
-                        small
-                        class="white--text"
-                        :color="$root.COLOR.color4"
-                      >{{school.levels[3]}}</v-btn>
+                        :color="$root.COLOR['color' + level.id]"
+                      >{{level.name}}</v-btn>
                     </v-flex>
                     <v-flex xs12>
                       <v-container fluid>

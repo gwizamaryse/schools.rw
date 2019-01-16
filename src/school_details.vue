@@ -553,7 +553,7 @@ export default {
   methods: {
     getSchoolData: function() {
       const _this = this;
-      axios.get("/lib/json/school_details.json").then(function(res) {
+      axios.get("/lib/json/school_details" + this.$param.id + ".json").then(function(res) {
         console.log(res.data);
         Vue.set(_this, "SCHOOL", res.data);
       });

@@ -6,10 +6,8 @@
       "akarere": "Gasabo",
       "umurenge": "Remera",
       "levels": [
-        "Pre-Nursery SCHOOL",
-        "Nursery SCHOOL",
-        "Primary SCHOOL",
-        "General Secondary"
+        {"id":1,"name":"Pre-Nursery SCHOOL"},
+        {"id":2,"name":"Nursery SCHOOL"}
       ],
       "sector": "Private",
       "gender": "Mixed",
@@ -110,7 +108,7 @@
 
     },
      {
-"id": 7,
+      "id": 7,
       "school_name": "Green Hills Academy",
       "province": "Kigali",
       "akarere": "Gasabo",

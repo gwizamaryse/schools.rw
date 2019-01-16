@@ -1,0 +1,100 @@
+{
+	"school_name": "Green Hills Academy",
+	"school_type": [
+		"pre-nursery",
+		"nursery",
+		"primary school",
+		"General Secondary"
+	],
+	"basic_info": {
+		"number_students": "1600 Students",
+		"students_per_class": "Average 20 students per class",
+		"languages": ["French", "English", "Kinyarwanda"],
+		"uniform": "Mandatory",
+		"school_ownership": ["Private", "Public", "Government Aided"],
+		"religion": ["catholic", "Protestant", "Secular", "Muslim"],
+		"gender": ["Boys Only", "Girls Only", "Mixed"],
+		"labs": ["Science Labs", "Computer Labs"],
+		"library": ["Library", "3000 Books"],
+		"sport": " 4 Sport Activities",
+		"music": " 10 Music Activities",
+		"other_activities": "10 Other Activities"
+	},
+
+	"school_fee": {
+		"inscription": "Inscription Fee: 20,000 RWF",
+		"pre_nursery": "Pre-Nursery: 200,000 RWF",
+		"nursery": "Nursery: 300,000 RWF",
+		"primary_fee": "400,000 RWF",
+		"secondary_fee1": "500,000 RWF",
+		"secondary_fee2": "600,000 RWF"
+	},
+
+	"ranking": {
+
+		"p6_17": [
+			"2017",
+			"30th out of 2877 schools",
+			"90% of Students at this School Passed the Exam"
+		],
+		"s3_17": [
+			"2017",
+			"20th out of 1375 schools",
+			"70% of Students at this School Passed the Exam"
+		],
+		"s6_17": [
+			"2017",
+			"10th out of 1375 schools",
+			"100% of Students at this School Passed the Exam"
+		],
+		"p6_16": [
+			"2016",
+			"30th out of 2877 schools",
+			"90% of Students at this School Passed the Exam"
+		],
+		"s3_16": [
+			"2016",
+			"20th out of 1375 schools",
+			"70% of Students at this School Passed the Exam"
+		],
+		"s6_16": [
+			"2016",
+			"10th out of 1375 schools",
+			"100% of Students at this School Passed the Exam"
+		]
+	},
+
+	"Admissions": {
+		"Entrance_Exam": "Mandatory Entrance Exam",
+		"Acceptance_Rate": "3 Applicants for 1 place",
+		"National_Exams": "For S1 and S4 Entrance Based on National Examination"
+
+	},
+	"Curriculum": ["Rwanda National Curriculum", "Montessori", "Cambridge"],
+
+	"Information": {
+		"Headmaster": "Ngaboyisonga Richard",
+		"Telephone": "0788575166",
+		"Email": "lalalala@gmail.com",
+		"Business_Hours": "7am to 6pm",
+		"Website": "greenhillsacademy.rw",
+		"Address": "KG 270 St,  Kigali , Rwanda"
+	},
+		"review": [
+			{
+			"title": "Great School",
+			"reviewer": "Mary Kabalisa",
+			"review_content": "This school is great. I would highly recommend. the teachers are very encouraging"
+		},
+		{
+		"title": "Good School",
+		"reviewer": "Rene Kabalisa",
+		"review_content": "This school is great. I would highly recommend.my son enjoy learning since he joined that school"
+	},
+	{
+	"title": "Lack good teacher",
+	"reviewer": "Gwiza Maryse",
+	"review_content": "The school buildings looks nice but it seems to me that they lack good teaching stuffs"
+}
+	]
+}
