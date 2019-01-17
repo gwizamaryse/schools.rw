@@ -8,17 +8,6 @@ import axios from "axios";
 import * as VueGoogleMaps from 'vue2-google-maps'
 
 
-
-
-Vue.use(Vuetify);
-Vue.use(VueRouter);
-Vue.use(VueGoogleMaps, {
-  load: {
-    key:"AIzaSyA3d6p5-TcYWJbfUzMtqFt0l05MMDWDmxE",
-    libraries: "places" // necessary for places input
-  }
-});
-
 // Vue JS Components
 import App from './App.vue';
 import home from './home.vue';

@@ -13927,8 +13927,18 @@ module.exports = Cancel;
       advancedSearch: false,
       tab: null,
       items: ["Basic Info", "Fees", "Ranking", "Admissions", "Curriculum"],
-      SCHOOL: {}
-
+      SCHOOL: {},
+      carousels: [{
+        "src": "/lib/img/school-images.jpg"
+      }, {
+        "src": "/lib/img/school-images2.jpg"
+      }, {
+        "src": "/lib/img/school-images3.jpg"
+      }, {
+        "src": "/lib/img/school-images5.jpg"
+      }, {
+        "src": "/lib/img/school-images6.jpg"
+      }]
     };
   },
 
@@ -14100,28 +14110,19 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_vue2.default.use(_vuetify2.default); // The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-// Vue JS Modules
-
-_vue2.default.use(_vueRouter2.default);
-_vue2.default.use(VueGoogleMaps, {
-  load: {
-    key: "AIzaSyA3d6p5-TcYWJbfUzMtqFt0l05MMDWDmxE",
-    libraries: "places" // necessary for places input
-  }
-});
-
-// Vue JS Components
+// Config (true = Development mode, false = Production mode)
 
 
 // CSS
 
 
-// Config (true = Development mode, false = Production mode)
+// Vue JS Components
 _vue2.default.config.productionTip = false;
 
 // Router
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+// Vue JS Modules
 var router = new _vueRouter2.default({
   mode: 'history',
   base: '/',
@@ -43111,7 +43112,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_school_details_vue__ = __webpack_require__(18);
 /* empty harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -43133,7 +43133,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_school_details_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__["default"],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7dd87110_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_school_details_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -43195,16 +43195,2577 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAwiBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CCriBL;ADwiBG;;;EACE,WAAA;CCpiBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition {\n  .fade {\n    &-enter-active, &-leave-active, &-leave-to {\n      transition: 0.3s ease-out;\n      position: absolute;\n      top: 0;\n      left: 0;\n    }\n\n    &-enter, &-leave, &-leave-to {\n      opacity: 0;\n    }\n  }\n}\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["C:/Users/marys/Documents/www.schools.rw/src/src/school_details.vue","C:/Users/marys/Documents/www.schools.rw/src/school_details.vue"],"names":[],"mappings":";AAyjBI;;;EACE,0BAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;CCtjBL;ADyjBG;;;EACE,WAAA;CCrjBL","file":"school_details.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#example-custom-transition {\n  .fade {\n    &-enter-active, &-leave-active, &-leave-to {\n      transition: 0.3s ease-out;\n      position: absolute;\n      top: 0;\n      left: 0;\n    }\n\n    &-enter, &-leave, &-leave-to {\n      opacity: 0;\n    }\n  }\n}\n","#example-custom-transition .fade-enter-active,\n#example-custom-transition .fade-leave-active,\n#example-custom-transition .fade-leave-to {\n  transition: 0.3s ease-out;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n#example-custom-transition .fade-enter,\n#example-custom-transition .fade-leave,\n#example-custom-transition .fade-leave-to {\n  opacity: 0;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
 /* 56 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token (1:19893)\n    at Parser.pp$4.raise (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2610:13)\n    at Parser.pp.unexpected (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:637:8)\n    at Parser.pp$3.parseParenAndDistinguishExpression (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2154:49)\n    at Parser.pp$3.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2061:41)\n    at Parser.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:4372:24)\n    at Parser.pp$3.parseExprSubscripts (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1955:19)\n    at Parser.pp$3.parseMaybeUnary (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1932:17)\n    at Parser.pp$3.parseExprOps (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1874:19)\n    at Parser.pp$3.parseMaybeConditional (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1857:19)\n    at Parser.pp$3.parseMaybeAssign (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1832:19)\n    at Parser.pp$3.parsePropertyValue (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2310:87)\n    at Parser.parseObj (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:4472:14)\n    at Parser.pp$3.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2077:17)\n    at Parser.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:4372:24)\n    at Parser.pp$3.parseExprSubscripts (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1955:19)\n    at Parser.pp$3.parseMaybeUnary (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1932:17)\n    at Parser.pp$3.parseExprOps (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1874:19)\n    at Parser.pp$3.parseMaybeConditional (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1857:19)\n    at Parser.pp$3.parseMaybeAssign (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1832:19)\n    at Parser.pp$3.parsePropertyValue (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2310:87)\n    at Parser.parseObj (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:4472:14)\n    at Parser.pp$3.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2077:17)\n    at Parser.parseExprAtom (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:4372:24)\n    at Parser.pp$3.parseExprSubscripts (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1955:19)\n    at Parser.pp$3.parseMaybeUnary (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1932:17)\n    at Parser.pp$3.parseExprOps (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1874:19)\n    at Parser.pp$3.parseMaybeConditional (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1857:19)\n    at Parser.pp$3.parseMaybeAssign (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1832:19)\n    at Parser.pp$3.parseExprList (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:2528:20)\n    at Parser.pp$3.parseSubscripts (C:\\Users\\marys\\Documents\\www.schools.rw\\node_modules\\vue-template-es2015-compiler\\buble.js:1983:29)");
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-layout",
+        { attrs: { row: "", wrap: "" } },
+        [
+          _c(
+            "v-flex",
+            { attrs: { "d-flex": "", xs12: "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { column: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { "d-flex": "" } },
+                    [
+                      _c(
+                        "v-card",
+                        {
+                          attrs: { color: "grey lighten-3", tile: "", flat: "" }
+                        },
+                        [
+                          _c(
+                            "v-form",
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { fluid: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    {
+                                      attrs: {
+                                        row: "",
+                                        wrap: "",
+                                        "pa-2": "",
+                                        "ml-5": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-layout",
+                                        { attrs: { row: "" } },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs8: "",
+                                                "order-md2": "",
+                                                "order-xs1": "",
+                                                "d-flex": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                [
+                                                  _c("v-text-field", {
+                                                    attrs: {
+                                                      type: "text",
+                                                      label:
+                                                        "Search school by district or school's name"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                "order-md3": "",
+                                                "order-xs2": "",
+                                                "d-flex": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    color: "error"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "router-link",
+                                                    {
+                                                      attrs: { to: "/search" }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            block: "",
+                                                            depressed: "",
+                                                            color: "error"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v("search")
+                                                          ]),
+                                                          _vm._v(
+                                                            "Search\n                          "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-layout",
+                                        {
+                                          attrs: {
+                                            row: "",
+                                            "align-end": "",
+                                            right: ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                "order-lg2": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    flat: "",
+                                                    color: "success"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card-text",
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            depressed: "",
+                                                            block: "",
+                                                            color: "success"
+                                                          },
+                                                          on: {
+                                                            click: function(
+                                                              $event
+                                                            ) {
+                                                              _vm.advancedSearch = !_vm.advancedSearch
+                                                            }
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v("search")
+                                                          ]),
+                                                          _vm._v(
+                                                            "Advanced Search\n                          "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            { attrs: { xs4: "" } },
+                                            [
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  attrs: {
+                                                    tile: "",
+                                                    flat: "",
+                                                    color: "warning"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-card-text",
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            depressed: "",
+                                                            block: "",
+                                                            color: "warning"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v("search")
+                                                          ]),
+                                                          _vm._v(
+                                                            "Search by Map\n                          "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm.advancedSearch
+                            ? _c(
+                                "section",
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      attrs: {
+                                        tile: "",
+                                        flat: "",
+                                        color: "grey lighten-3"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "form",
+                                        [
+                                          _c(
+                                            "v-container",
+                                            { attrs: { "grid-list-xl": "" } },
+                                            [
+                                              _c(
+                                                "v-layout",
+                                                {
+                                                  attrs: { row: "", wrap: "" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Distance"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "District"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label:
+                                                            "Public or Private"
+                                                        },
+                                                        model: {
+                                                          value: _vm.select,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.select = $$v
+                                                          },
+                                                          expression: "select"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Gender"
+                                                        },
+                                                        model: {
+                                                          value: _vm.select,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.select = $$v
+                                                          },
+                                                          expression: "select"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label:
+                                                            "Primary School"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Language"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-select", {
+                                                        attrs: {
+                                                          items: _vm.items,
+                                                          label: "Boarding"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-flex",
+                                                    {
+                                                      attrs: {
+                                                        xs6: "",
+                                                        sm3: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          attrs: {
+                                                            block: "",
+                                                            color: "info"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("v-icon", [
+                                                            _vm._v("search")
+                                                          ]),
+                                                          _vm._v(
+                                                            "Advanced Search\n                        "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            : _vm._e()
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-flex",
+            { attrs: { "d-flex": "", md9: "", xs12: "", sm9: "", "pl-3": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { "d-flex": "" } },
+                    [
+                      _c(
+                        "v-card",
+                        { attrs: { color: "white", tile: "", flat: "" } },
+                        [
+                          _c(
+                            "v-flex",
+                            { attrs: { "d-flex": "" } },
+                            [
+                              _c(
+                                "v-layout",
+                                {
+                                  attrs: {
+                                    "align-center": "",
+                                    "justify-end": "",
+                                    "fill-height": ""
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        "x-large": "",
+                                        round: "",
+                                        color: "info"
+                                      }
+                                    },
+                                    [
+                                      _c("v-icon", [_vm._v("print")]),
+                                      _vm._v("Print\n                ")
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        round: "",
+                                        "x-large": "",
+                                        color: "info"
+                                      }
+                                    },
+                                    [
+                                      _c("v-icon", [
+                                        _vm._v("fas fa-balance-scale")
+                                      ]),
+                                      _vm._v("Compare\n                ")
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { "d-flex": "" } },
+                            [
+                              _c(
+                                "v-layout",
+                                { attrs: { row: "", wrap: "" } },
+                                [
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: { md4: "", sm4: "", "d-flex": "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { flat: "", tile: "" } },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            { attrs: { xs6: "" } },
+                                            [
+                                              _vm.SCHOOL.src
+                                                ? _c("v-img", {
+                                                    attrs: {
+                                                      height: "150",
+                                                      src:
+                                                        "/lib/img/" +
+                                                        _vm.SCHOOL.src
+                                                    }
+                                                  })
+                                                : _vm._e()
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: { md8: "", xs8: "", "d-flex": "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        {
+                                          attrs: {
+                                            flat: "",
+                                            tile: "",
+                                            "align-content-center": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "display-2" },
+                                            [
+                                              _c("p", [
+                                                _vm._v(
+                                                  _vm._s(_vm.SCHOOL.school_name)
+                                                )
+                                              ])
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { "d-flex": "" } },
+                            [
+                              _c(
+                                "v-card",
+                                { attrs: { tile: "", flat: "" } },
+                                [
+                                  _c(
+                                    "v-carousel",
+                                    _vm._l(_vm.carousels, function(
+                                      carousel,
+                                      i
+                                    ) {
+                                      return _c("v-carousel-item", {
+                                        key: i,
+                                        attrs: {
+                                          src: carousel.src,
+                                          "reverse-transition": "fade",
+                                          transition: "fade"
+                                        }
+                                      })
+                                    })
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { "d-flex": "" } },
+                            [
+                              _c(
+                                "v-card",
+                                { attrs: { tile: "", flat: "" } },
+                                [
+                                  _c(
+                                    "v-tabs",
+                                    {
+                                      attrs: {
+                                        centered: "",
+                                        color: "light-blue",
+                                        "align-with-title": "",
+                                        dark: "",
+                                        "icons-and-text": ""
+                                      },
+                                      model: {
+                                        value: _vm.tab,
+                                        callback: function($$v) {
+                                          _vm.tab = $$v
+                                        },
+                                        expression: "tab"
+                                      }
+                                    },
+                                    [
+                                      _c("v-tabs-slider", {
+                                        attrs: { color: "warning" }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm._l(_vm.items, function(item) {
+                                        return _c("v-tab", { key: item }, [
+                                          _vm._v(_vm._s(item))
+                                        ])
+                                      })
+                                    ],
+                                    2
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-tabs-items",
+                                    {
+                                      model: {
+                                        value: _vm.tab,
+                                        callback: function($$v) {
+                                          _vm.tab = $$v
+                                        },
+                                        expression: "tab"
+                                      }
+                                    },
+                                    _vm._l(_vm.items, function(item) {
+                                      return _c(
+                                        "v-tab-item",
+                                        { key: item },
+                                        [
+                                          _c(
+                                            "v-card",
+                                            { attrs: { flat: "" } },
+                                            [
+                                              _c("v-card-text", [
+                                                _vm._v(
+                                                  _vm._s(
+                                                    _vm.SCHOOL.basic_info.intro
+                                                  )
+                                                )
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    })
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-flex",
+                            { attrs: { "d-flex": "" } },
+                            [
+                              _c(
+                                "v-card",
+                                { attrs: { tile: "", flat: "" } },
+                                [
+                                  _c(
+                                    "v-card-text",
+                                    {
+                                      staticClass: "light-blue--text display-2"
+                                    },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Basic Information")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", {
+                                        staticClass: "light-blue pb-1"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color1
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(_vm.SCHOOL.school_type[0]))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color2
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(_vm.SCHOOL.school_type[1]))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color3
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(_vm.SCHOOL.school_type[2]))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      staticClass: "white--text",
+                                      attrs: {
+                                        large: "",
+                                        color: _vm.$root.COLOR.color4
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(_vm.SCHOOL.school_type[3]))]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    { attrs: { "pl-5": "" } },
+                                    [
+                                      _c("v-divider", {
+                                        staticClass: "light-blue"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-container",
+                                    { attrs: { "grid-list-xl": "" } },
+                                    [
+                                      _c(
+                                        "v-layout",
+                                        { attrs: { row: "", wrap: "" } },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("person")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .number_students
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "supervised_user_circle"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .students_per_class
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("language")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.basic_info
+                                                          .languages[0]
+                                                      ) +
+                                                      "\n                        "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.basic_info
+                                                          .languages[1]
+                                                      ) +
+                                                      "\n                        "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.basic_info
+                                                          .languages[2]
+                                                      ) +
+                                                      "\n                      "
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-tshirt")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .uniform
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-school")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .school_ownership[0]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-church")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .religion[2]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs4: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("wc")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .gender[2]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-text",
+                                            { attrs: { "pl-5": "" } },
+                                            [
+                                              _c("v-divider", {
+                                                staticClass: "light-blue"
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-vials")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .labs[0]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-desktop")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .labs[1]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-text",
+                                            { attrs: { "pl-5": "" } },
+                                            [
+                                              _c("v-divider", {
+                                                staticClass: "light-blue"
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs6: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-book-reader")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.basic_info
+                                                          .library[0]
+                                                      ) +
+                                                      "\n                        "
+                                                  ),
+                                                  _c("br"),
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.basic_info
+                                                          .library[1]
+                                                      ) +
+                                                      "\n                      "
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs6: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "fas fa-volleyball-ball"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .sport
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs6: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-music")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .music
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs6: "",
+                                                sm3: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "80",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-palette")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.basic_info
+                                                        .other_activities
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    {
+                                      staticClass: "light-blue--text display-2"
+                                    },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("School Fees")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", {
+                                        staticClass: "light-blue pb-1"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    { staticClass: "light-blue--text title" },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Pre-Nursery and Nursery")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: {
+                                        xs12: "",
+                                        sm6: "",
+                                        "offset-sm3": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { "pa-3": "" } },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "subheading" },
+                                            [
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .inscription
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .pre_nursery
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .nursery
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider")
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    { staticClass: "light-blue--text title" },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Primary school")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: {
+                                        xs12: "",
+                                        sm6: "",
+                                        "offset-sm3": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { "pa-3": "" } },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "subheading" },
+                                            [
+                                              _vm._v(
+                                                "\n                      Grade 1: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 2: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 3: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 4: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 5: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 6: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .primary_fee
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    { staticClass: "light-blue--text title" },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Secondary School")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: {
+                                        xs12: "",
+                                        sm6: "",
+                                        "offset-sm3": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { "pb-5": "" } },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "subheading" },
+                                            [
+                                              _vm._v(
+                                                "\n                      Grade 1: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee1
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 2: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee1
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 3: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee1
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 4: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee2
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 5: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee2
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(
+                                                "\n                      Grade 6: " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.school_fee
+                                                      .secondary_fee2
+                                                  ) +
+                                                  "\n                    "
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    {
+                                      staticClass: "light-blue--text display-2"
+                                    },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Ranking at National Exams")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", {
+                                        staticClass: "light-blue pb-1"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-flex",
+                                    {
+                                      attrs: {
+                                        xs12: "",
+                                        sm6: "",
+                                        "offset-sm3": ""
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { "pa-3": "" } },
+                                        [
+                                          _c(
+                                            "v-card-text",
+                                            { staticClass: "subheading" },
+                                            [
+                                              _c(
+                                                "v-card-text",
+                                                {
+                                                  staticClass:
+                                                    "light-blue--text title"
+                                                },
+                                                [
+                                                  _c(
+                                                    "p",
+                                                    {
+                                                      staticClass:
+                                                        "text-md-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Results Primary 6- P6"
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider"),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year:" +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .p6_17[0]
+                                                    )
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_17[1]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_17[2]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider", {
+                                                attrs: { "pa-2": "" }
+                                              }),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .p6_16[0]
+                                                    ) +
+                                                    " "
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_16[1]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.p6_16[2]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card-text",
+                                                {
+                                                  staticClass:
+                                                    "light-blue--text title"
+                                                },
+                                                [
+                                                  _c(
+                                                    "p",
+                                                    {
+                                                      staticClass:
+                                                        "text-md-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Ranking Senior 3- S3"
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider"),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year:" +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s3_17[0]
+                                                    )
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Ranked : Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s3_17[1]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Year:" +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s3_17[2]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("v-divider", {
+                                                attrs: { "pa-2": "" }
+                                              }),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s3_16[0]
+                                                    )
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s3_16[1]
+                                                ) + "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s3_16[2]
+                                                ) + "\n                      "
+                                              ),
+                                              _c("v-divider"),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card-text",
+                                                {
+                                                  staticClass:
+                                                    "light-blue--text title"
+                                                },
+                                                [
+                                                  _c(
+                                                    "p",
+                                                    {
+                                                      staticClass:
+                                                        "text-md-center"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "Ranking Senior 6- S6"
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider"),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s6_17[0]
+                                                    )
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Ranked : " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s6_17[1]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s6_17[2]
+                                                ) + "\n                      "
+                                              ),
+                                              _c("v-divider", {
+                                                attrs: { "pa-2": "" }
+                                              }),
+                                              _vm._v(" "),
+                                              _c("strong", [
+                                                _vm._v(
+                                                  "Year: " +
+                                                    _vm._s(
+                                                      _vm.SCHOOL.ranking
+                                                        .s6_16[0]
+                                                    )
+                                                )
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("br"),
+                                              _vm._v(
+                                                "Ranked : " +
+                                                  _vm._s(
+                                                    _vm.SCHOOL.ranking.s6_16[1]
+                                                  ) +
+                                                  "\n                      "
+                                              ),
+                                              _c("br"),
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.SCHOOL.ranking.s6_16[2]
+                                                ) + "\n                      "
+                                              ),
+                                              _c("v-divider")
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    {
+                                      staticClass: "light-blue--text display-2",
+                                      attrs: { "pt-": "" }
+                                    },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Admission Requirements")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", {
+                                        staticClass: "light-blue pb-1"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-container",
+                                    { attrs: { "grid-list-xl": "" } },
+                                    [
+                                      _c(
+                                        "v-layout",
+                                        { attrs: { row: "", wrap: "" } },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Admissions
+                                                        .Entrance_Exam
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Admissions
+                                                        .Acceptance_Rate
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    " " +
+                                                      _vm._s(
+                                                        _vm.SCHOOL.Admissions
+                                                          .National_Exams
+                                                      ) +
+                                                      " "
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    {
+                                      staticClass: "light-blue--text display-2"
+                                    },
+                                    [
+                                      _c(
+                                        "p",
+                                        { staticClass: "text-md-center" },
+                                        [_vm._v("Curriculums")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", {
+                                        staticClass: "light-blue pb-1"
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-container",
+                                    { attrs: { "grid-list-xl": "" } },
+                                    [
+                                      _c(
+                                        "v-layout",
+                                        { attrs: { row: "", wrap: "" } },
+                                        [
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[0]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[1]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-flex",
+                                            {
+                                              attrs: {
+                                                xs12: "",
+                                                sm4: "",
+                                                "text-xs-center": ""
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    size: "50",
+                                                    color: "light-blue"
+                                                  }
+                                                },
+                                                [_vm._v("fas fa-info-circle")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "p",
+                                                { staticClass: "title" },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm.SCHOOL.Curriculum[2]
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-flex",
+            { attrs: { "d-flex": "", md3: "", xs12: "", sm3: "" } },
+            [
+              _c(
+                "v-card",
+                { attrs: { color: "amber lighten-5", tile: "", flat: "" } },
+                [
+                  _c("v-card-text", { staticClass: "orange--text display-2" }, [
+                    _vm._v("Information")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", { staticClass: "headline" }, [
+                    _vm._v("Green Hills Academy")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", { staticClass: "grey--text subheading" }, [
+                    _c("p", [
+                      _vm._v(
+                        "Headmaster's Name: " +
+                          _vm._s(_vm.SCHOOL.Information.Headmaster) +
+                          " "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Telephone: " + _vm._s(_vm.SCHOOL.Information.Telephone)
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("Email:" + _vm._s(_vm.SCHOOL.Information.Email))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Business Hours:" +
+                          _vm._s(_vm.SCHOOL.Information.Business_Hours)
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "School's website:" +
+                          _vm._s(_vm.SCHOOL.Information.Website)
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Address: " + _vm._s(_vm.SCHOOL.Information.Address)
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-md-center" }, [
+                    _vm.SCHOOL.src
+                      ? _c("iframe", {
+                          staticStyle: { border: "0" },
+                          attrs: {
+                            src: _vm.SCHOOL.coordinates.src,
+                            width: "300",
+                            height: "300",
+                            frameborder: "2",
+                            allowfullscreen: ""
+                          }
+                        })
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("v-card-text", [
+                    _c(
+                      "p",
+                      { staticClass: "text-md-center orange--text display-2" },
+                      [_vm._v("Reviews")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._l(_vm.SCHOOL.review, function(item, i) {
+                    return _c(
+                      "div",
+                      { key: i },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "elevation-16 mx-auto",
+                            attrs: { tile: "", width: "250" }
+                          },
+                          [
+                            _c(
+                              "v-card-title",
+                              {
+                                staticClass: "headline",
+                                attrs: { "primary-title": "" }
+                              },
+                              [_vm._v(_vm._s(item.title))]
+                            ),
+                            _vm._v(" "),
+                            _c("v-divider"),
+                            _vm._v(" "),
+                            _c(
+                              "v-card-text",
+                              { staticClass: "subheading" },
+                              [
+                                _c("v-icon", [_vm._v("person")]),
+                                _vm._v(_vm._s(item.reviewer) + "\n          ")
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("v-divider"),
+                            _vm._v(" "),
+                            _c("v-card-text", [
+                              _vm._v(
+                                _vm._s(item.review_content) + "\n            "
+                              ),
+                              _c(
+                                "div",
+                                { staticClass: "text-xs-center mt-5" },
+                                [
+                                  _c("v-rating", {
+                                    attrs: {
+                                      color: "yellow darken-3",
+                                      "background-color": "grey darken-1",
+                                      "empty-icon": "$vuetify.icons.ratingFull",
+                                      "half-increments": "",
+                                      hover: ""
+                                    },
+                                    model: {
+                                      value: _vm.rating,
+                                      callback: function($$v) {
+                                        _vm.rating = $$v
+                                      },
+                                      expression: "rating"
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "pb-2" }),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    { staticClass: "orange--text title pt-4" },
+                    [
+                      _c("p", { staticClass: "text-xs-center display-1" }, [
+                        _vm._v("Write a Review")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-xs-center" }, [
+                    _vm._v(
+                      "Are you a student or parent at this school? Help others make a well-informed choice.\n          "
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      "rate this school and leave a comment! Thank you\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "text-xs-center" },
+                    [
+                      _c("v-rating", {
+                        attrs: { large: "", hover: "" },
+                        model: {
+                          value: _vm.user_rating,
+                          callback: function($$v) {
+                            _vm.user_rating = $$v
+                          },
+                          expression: "user_rating"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-layout",
+                    { attrs: { "align-center": "", "justify-center": "" } },
+                    [
+                      _c(
+                        "v-form",
+                        [
+                          _c("v-text-field", {
+                            attrs: { label: "Title", required: "", light: "" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-textarea", {
+                            attrs: {
+                              label: "review",
+                              required: "",
+                              outline: "",
+                              light: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-btn", [_vm._v("submit")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    { staticClass: "orange--text title pt-4" },
+                    [
+                      _c("p", { staticClass: "text-xs-center display-1" }, [
+                        _vm._v("Contact Us")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-layout",
+                    { attrs: { "align-center": "", "justify-center": "" } },
+                    [
+                      _c(
+                        "v-form",
+                        { ref: "form", attrs: { "lazy-validation": "" } },
+                        [
+                          _c("v-text-field", {
+                            attrs: { counter: 10, label: "Name", required: "" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: { label: "E-mail", required: "" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-text-field", {
+                            attrs: { label: "Telephone", required: "" }
+                          }),
+                          _vm._v(" "),
+                          _c("v-textarea", {
+                            attrs: {
+                              label: "Comments / Questions",
+                              required: "",
+                              outline: "",
+                              solo: "",
+                              light: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("v-btn", [_vm._v("submit")])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                2
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7dd87110", esExports)
+  }
+}
 
 /***/ }),
 /* 57 */

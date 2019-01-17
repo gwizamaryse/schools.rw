@@ -2,25 +2,6 @@
   "school_name": "Green Hills Academy",
   "src": "logo-school.jpg",
   "coordinates": [-1.941244, 30.104437],
-  "carousels":
-  [
-    {
-      "src": "school-images.jpg"
-    },
-    {
-      "src": "school-images2.jpg"
-    },
-    {
-      "src": "school-images3.jpg"
-    },
-    {
-      "src": "school-images5.jpg"
-    },
-    {
-      "src": "school-images4.jpg"
-    }
-  ],
-
   "school_type": [
     "pre-nursery",
     "nursery",

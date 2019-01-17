@@ -144,7 +144,7 @@
                     <v-carousel-item
                       v-for="(carousel,i) in carousels"
                       :key="i"
-                      v-if="SCHOOL.src" v-bind:src="'/lib/img/'+SCHOOL.carousel.src"
+                      :src="carousel.src"
                       reverse-transition="fade"
                       transition="fade"
                     ></v-carousel-item>
@@ -459,7 +459,7 @@
             <p class="text-md-center orange--text display-2">Reviews</p>
           </v-card-text>
           <div v-for="(item, i) in SCHOOL.review" :key="i">
-          <v-card tile width="280" class="elevation-16 mx-auto">
+          <v-card tile width="250" class="elevation-16 mx-auto">
             <v-card-title class="headline" primary-title>{{item.title}}</v-card-title>
             <v-divider></v-divider>
             <v-card-text class="subheading">
@@ -503,12 +503,12 @@
             <p class="text-xs-center display-1">Contact Us</p>
           </v-card-text>
           <v-layout align-center justify-center>
-            <v-form ref="form" v-model="" lazy-validation>
-              <v-text-field v-model="" :rules="" :counter="10" label="Name" required></v-text-field>
-              <v-text-field v-model="" :rules="" label="E-mail" required></v-text-field>
-              <v-text-field v-model="" :rules="" label="Telephone" required></v-text-field>
+            <v-form ref="form"  lazy-validation>
+              <v-text-field  :counter="10" label="Name" required></v-text-field>
+              <v-text-field label="E-mail" required></v-text-field>
+              <v-text-field label="Telephone" required></v-text-field>
               <v-textarea label="Comments / Questions" required outline solo light></v-textarea>
-              <v-btn :disabled="!valid" @click="submit">submit</v-btn>
+              <v-btn>submit</v-btn>
             </v-form>
           </v-layout>
         </v-card>
@@ -529,7 +529,24 @@ export default {
       tab: null,
       items: ["Basic Info", "Fees", "Ranking", "Admissions", "Curriculum"],
       SCHOOL: {},
-
+     carousels:
+  [
+    {
+      "src": "/lib/img/school-images.jpg"
+    },
+    {
+     "src": "/lib/img/school-images2.jpg"
+    },
+    {
+      "src": "/lib/img/school-images3.jpg"
+    },
+    {
+      "src": "/lib/img/school-images5.jpg"
+    },
+    {
+      "src": "/lib/img/school-images6.jpg"
+    }
+  ]
     };
   },
   methods: {
