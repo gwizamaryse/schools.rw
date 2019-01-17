@@ -102,7 +102,7 @@
     <!--  search results -->
     <div id="search results">
       <v-card tile flat>
-        <v-card-text class="title grey--text">we have found {{resultCount}} schools matching your criteria
+        <v-card-text class="title grey--text">we have found {{schools.filteredtotal}} schools matching your criteria
           <v-btn round x-large color="info">
             <v-icon>fas fa-balance-scale</v-icon>Compare
           </v-btn>

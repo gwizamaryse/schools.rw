@@ -5,10 +5,19 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import VueRouter from 'vue-router';
 import axios from "axios";
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+
 
 
 Vue.use(Vuetify);
 Vue.use(VueRouter);
+Vue.use(VueGoogleMaps, {
+  load: {
+    key:"AIzaSyA3d6p5-TcYWJbfUzMtqFt0l05MMDWDmxE",
+    libraries: "places" // necessary for places input
+  }
+});
 
 // Vue JS Components
 import App from './App.vue';
@@ -98,17 +107,7 @@ const app = new Vue({
        });
      }
    },
-computed: {
-  filteredSchools: function () {
-    return this.schools.filter((school) => {
-      return school.school_name.toLowerCase().match(this.search.toLowerCase()) ||
-        school.province.toLowerCase().match(this.search.toLowerCase()) ||
-        school.akarere.toLowerCase().match(this.search.toLowerCase()) ||
-        school.umurenge.toLowerCase().match(this.search.toLowerCase());
 
-    });
-  }
-},
  template: "<App/>",
   components: { App }
 });

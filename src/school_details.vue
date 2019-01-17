@@ -122,7 +122,8 @@
                   <v-flex md4 sm4 d-flex>
                     <v-card flat tile>
                       <v-flex xs6>
-                        <v-img height="150" src="/lib/img/logo/logo-school.jpg"></v-img>
+                        <v-img height="150"
+                        v-if="SCHOOL.src" :src="'/lib/img/'+SCHOOL.src"></v-img>
                       </v-flex>
                     </v-card>
                   </v-flex>
@@ -141,9 +142,9 @@
                 <v-card tile flat>
                   <v-carousel>
                     <v-carousel-item
-                      v-for="(images_slider,i) in images_slider"
+                      v-for="(carousel,i) in carousels"
                       :key="i"
-                      :src="images_slider.src"
+                      v-if="SCHOOL.src" v-bind:src="'/lib/img/'+SCHOOL.carousel.src"
                       reverse-transition="fade"
                       transition="fade"
                     ></v-carousel-item>
@@ -169,7 +170,7 @@
                   <v-tabs-items v-model="tab">
                     <v-tab-item v-for="item in items" :key="item">
                       <v-card flat>
-                        <v-card-text>{{ text }}</v-card-text>
+                        <v-card-text>{{ SCHOOL.basic_info.intro }}</v-card-text>
                       </v-card>
                     </v-tab-item>
                   </v-tabs-items>
@@ -445,7 +446,7 @@
           </v-card-text>
           <p class="text-md-center">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5285372368317!2d30.102248015144955!3d-1.9412390372397264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6dd770ef2e5%3A0x494d6bac0a0eb50b!2sGreen+Hills+Academy!5e0!3m2!1sen!2sjp!4v1543291263894"
+              v-if="SCHOOL.src" :src="SCHOOL.coordinates.src"
               width="300"
               height="300"
               frameborder="2"
@@ -525,35 +526,16 @@ export default {
       rating: 4.5,
       user_rating: 3.5,
       advancedSearch: false,
-      images_slider: [
-        {
-          src: "/lib/img/school-images.jpg"
-        },
-        {
-          src: "/lib/img/school-images2.jpg"
-        },
-        {
-          src: "/lib/img/school-images3.jpg"
-        },
-        {
-          src: "/lib/img/school-images5.jpg"
-        },
-        {
-          src: "/lib/img/school-images4.jpg"
-        }
-      ],
       tab: null,
       items: ["Basic Info", "Fees", "Ranking", "Admissions", "Curriculum"],
       SCHOOL: {},
 
-      text:
-        "Green Hills Academy was established in 1997, with just 130 number of students. Today the school has grown to more than 1600 students with 56 different nationalities spanning from two years of age through Grade 12. Green Hills Academy is centrally located on a lush 26 acre campus in Nyarutarama, Kigali. Its facilities include a state of the art gymnasium, pool, music and band room, dining hall, boarding houses and soccer fields.  Green Hills Academy is the only school in Rwanda offering the International Baccalaureate (IB) Diploma Program, which helps our students get into competitive universities globally. Green Hills Academy is also the only school in Rwanda with Label France Education accreditation, helping students pursue further education and careers in Francophone countries. Our boarding facilities are offered from Grades 7 -12."
     };
   },
   methods: {
     getSchoolData: function() {
       const _this = this;
-      axios.get("/lib/json/school_details" + this.$param.id + ".json").then(function(res) {
+      axios.get("/lib/json/school_details.json").then(function(res) {
         console.log(res.data);
         Vue.set(_this, "SCHOOL", res.data);
       });
