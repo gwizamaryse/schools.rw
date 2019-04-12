@@ -71,6 +71,7 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 // Main
+Vue.use(Vuetify);
 const app = new Vue({
   el: "#app",
   router,
