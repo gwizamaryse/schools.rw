@@ -1,6 +1,6 @@
-# www.bongofaster.co.tz
+# www.schools.rw
 
-> BongoFaster Official Website
+> i-Shuri (school finder for Rwanda)
 
 ## Build Setup
 
